@@ -104,6 +104,7 @@ Landing - */
 # Local-only composition / brand source dumps (runtime uses public/assets)
 Apple.png
 HeroBase.png
+Whatsapp Header.png
 *.psd
 *.ai
 *.sketch
