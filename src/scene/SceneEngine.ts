@@ -85,6 +85,8 @@ export class SceneEngine {
   private targets: [Target, Target]
   private textures = new Map<string, Texture>()
   private images = new Map<string, Promise<HTMLImageElement>>()
+  /** Srcs that failed to decode/fetch — treated as settled so one 404 can't freeze the backdrop. */
+  private failed = new Set<string>()
   private width = 1
   private height = 1
   private disposed = false
@@ -158,17 +160,27 @@ export class SceneEngine {
       const img = new Image()
       img.decoding = 'async'
       img.src = src
-      pending = img.decode().then(() => {
-        this.upload(src, img)
-        return img
-      })
+      pending = img
+        .decode()
+        .then(() => {
+          this.upload(src, img)
+          return img
+        })
+        .catch((err) => {
+          this.failed.add(src)
+          throw err
+        })
       this.images.set(src, pending)
     }
     return pending
   }
 
   isReady(srcs: readonly string[]) {
-    return srcs.every((s) => this.textures.has(s))
+    return srcs.every((s) => this.textures.has(s) || this.failed.has(s))
+  }
+
+  hasTexture(src: string) {
+    return this.textures.has(src)
   }
 
   private upload(src: string, img: HTMLImageElement) {
@@ -297,6 +309,7 @@ export class SceneEngine {
     gl.deleteVertexArray(this.vao)
     this.textures.clear()
     this.images.clear()
+    this.failed.clear()
   }
 
   get context(): WebGL2RenderingContext {

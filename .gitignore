@@ -74,7 +74,9 @@ AGENTS.md
 # Offline pipeline caches & design dumps (not shipped)
 .cache-crops/
 extracted/
-parallax/
+# Local pipeline dump only — never ignore public/assets/parallax (hero layers)
+/parallax/
+!public/assets/parallax/
 scripts/.masks/
 scripts/.registered/
 scripts/gpt-input/
