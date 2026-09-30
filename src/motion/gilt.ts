@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { addFrame, FramePriority } from './frameLoop'
+import { isLiteUi } from './interactions'
 
 /** Without a mouse for this long the lamp drifts across the gilding on its own */
 const MOUSE_IDLE = 4000
@@ -26,6 +27,21 @@ export function useGilt(reduced: boolean) {
     void document.fonts.ready.then(place)
     const ro = new ResizeObserver(place)
     titles.forEach((t) => ro.observe(t))
+
+    // A moving lamp reads every title's box each frame. On a phone, leave the gold sitting still.
+    if (isLiteUi()) {
+      const park = () => {
+        for (const title of titles) {
+          title.style.setProperty('--gx', `${(title.clientWidth * 0.42).toFixed(0)}px`)
+          title.style.setProperty('--gy', `${(title.clientHeight * 0.45).toFixed(0)}px`)
+        }
+      }
+      park()
+      ro.disconnect()
+      const parked = new ResizeObserver(park)
+      titles.forEach((t) => parked.observe(t))
+      return () => parked.disconnect()
+    }
 
     const ptr = { x: 0, y: 0, seen: -Infinity }
     const onMove = (e: PointerEvent) => {

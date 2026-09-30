@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { whenPreloaded } from '../boot/preloader'
 import { assets } from '../data'
 import { usePrefersReducedMotion } from '../hooks/useMotion'
+import { isLiteUi } from '../motion/interactions'
 import { addFrame, FramePriority } from '../motion/frameLoop'
 import { burst } from '../scene/fxBus'
 import { heroBus } from '../scene/heroBus'
@@ -60,7 +61,9 @@ export function Hero({ onBegin }: HeroProps) {
       return
     }
 
+    const lite = isLiteUi()
     const pointer = { x: 0, y: 0, active: false }
+    let lastFocal = ''
     const cur = { x: 0, y: 0, dolly: 0, ignite: 0, spark: 0, ctaX: 0, ctaY: 0, touch: 0 }
     let start = Infinity
     let alive = true
@@ -107,8 +110,8 @@ export function Hero({ onBegin }: HeroProps) {
       const dollyTarget = clamp01(-rect.top / dollyRun)
       const igniteTarget = boundaryProgress(rect.bottom, vh, 'ignite')
 
-      const tx = pointer.active ? pointer.x : Math.sin(t * 0.28) * 0.28
-      const ty = pointer.active ? pointer.y : Math.cos(t * 0.22) * 0.16
+      const tx = lite ? 0 : pointer.active ? pointer.x : Math.sin(t * 0.28) * 0.28
+      const ty = lite ? 0 : pointer.active ? pointer.y : Math.cos(t * 0.22) * 0.16
       const kPointer = 1 - Math.exp(-dt * 2.6)
       const kScroll = 1 - Math.exp(-dt * 3.2)
       const kIgnite = 1 - Math.exp(-dt * 7)
@@ -135,16 +138,20 @@ export function Hero({ onBegin }: HeroProps) {
         const idle = yearn(key === 'god' ? 1.3 : 0)
         return (idle + (0.94 - idle) * cur.touch + (key === 'god' ? -strain : strain)) * settle
       }
-      const pr = pill && settle > 0 ? pill.getBoundingClientRect() : null
+      const pr = !lite && pill && settle > 0 ? pill.getBoundingClientRect() : null
       const vw = document.documentElement.clientWidth
       const focalX = heroFocalX(1.2 * vw, 1.2 * vh)
-      section.style.setProperty('--touch', (cur.touch * settle).toFixed(3))
-      section.style.setProperty('--focal-x', `${(focalX * 100).toFixed(2)}%`)
+      const focalStr = `${(focalX * 100).toFixed(2)}%`
+      if (focalStr !== lastFocal) {
+        lastFocal = focalStr
+        section.style.setProperty('--focal-x', focalStr)
+      }
+      if (!lite) section.style.setProperty('--touch', (cur.touch * settle).toFixed(3))
 
       PLANES.forEach((plane, i) => {
         const d = plane.depth
-        const driftX = plane.drift ? Math.sin(t * 0.055) * plane.drift : 0
-        const bobY = plane.bob ? Math.sin(t * 0.85) * plane.bob : 0
+        const driftX = !lite && plane.drift ? Math.sin(t * 0.055) * plane.drift : 0
+        const bobY = !lite && plane.bob ? Math.sin(t * 0.85) * plane.bob : 0
         const x = -cur.x * TILT_X * d + driftX
         const y = -cur.y * TILT_Y * d + bobY + (1 - d) * dolly * 72 - d * dolly * 28
         const scale =
@@ -192,7 +199,10 @@ export function Hero({ onBegin }: HeroProps) {
           state.pullY = py
         }
         const el = planeRefs.current[i]
-        if (el) el.style.transform = `translate3d(${x.toFixed(2)}px, ${y.toFixed(2)}px, 0) scale(${scale.toFixed(4)})`
+        // The WebGL canvas paints these planes; writing the hidden DOM copies forces layout.
+        if (el && !(lite && document.documentElement.classList.contains('gl-scene'))) {
+          el.style.transform = `translate3d(${x.toFixed(2)}px, ${y.toFixed(2)}px, 0) scale(${scale.toFixed(4)})`
+        }
       })
 
       section.style.setProperty('--dolly', dolly.toFixed(4))
@@ -208,8 +218,8 @@ export function Hero({ onBegin }: HeroProps) {
       // The CTA rides the painting's parallax, then is caught by the ignite and blown away
       const cta = ctaRef.current
       if (cta) {
-        const cx = -cur.x * TILT_X * 0.7 + Math.sin(t * 0.6) * 2
-        const cy = -cur.y * TILT_Y * 0.7 + Math.cos(t * 0.8) * 3
+        const cx = lite ? 0 : -cur.x * TILT_X * 0.7 + Math.sin(t * 0.6) * 2
+        const cy = lite ? 0 : -cur.y * TILT_Y * 0.7 + Math.cos(t * 0.8) * 3
         cur.ctaX += (cx - cur.ctaX) * kPointer
         cur.ctaY += (cy - cur.ctaY) * kPointer
         const gust = easeOutExpo(clamp01(ignite / 0.22))

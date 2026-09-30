@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { preloaderProgress, whenPreloaded } from '../boot/preloader'
 import { addFrame, FramePriority } from '../motion/frameLoop'
+import { isLiteUi } from '../motion/interactions'
 import { burst, fxBus } from '../scene/fxBus'
 import { loseWebGlContext, registerLandingGl, releaseLandingGl } from '../scene/glHandoff'
 import { heroBus } from '../scene/heroBus'
@@ -25,6 +26,8 @@ type ChapterBox = {
   top: number
   height: number
   progress: number
+  lastIn?: string
+  lastLift?: string
 }
 
 type TailSample = { x: number; y: number; r: number; born: number }
@@ -74,7 +77,8 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
     if (!canvas || reduced) return
 
     const root = document.documentElement
-    const engine = SceneEngine.create(canvas)
+    const lite = isLiteUi()
+    const engine = SceneEngine.create(canvas, lite)
     let chapters = measure()
     let dirty = false
     let live = false
@@ -105,7 +109,7 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
       pointer.tx = (e.clientX / window.innerWidth) * 2 - 1
       pointer.ty = (e.clientY / window.innerHeight) * 2 - 1
     }
-    window.addEventListener('pointermove', onPointer, { passive: true })
+    if (!lite) window.addEventListener('pointermove', onPointer, { passive: true })
 
     const tail = { x: 0, y: 0, lastMove: -Infinity, head: 0, samples: [] as TailSample[] }
     const onTrail = (e: PointerEvent) => {
@@ -128,9 +132,12 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
       if (e.target.closest(INTERACTIVE) || !e.target.closest(OPEN_CANVAS)) return
       burst(e.clientX, e.clientY, e.pointerType === 'mouse' ? 0.85 : 0.65)
     }
-    window.addEventListener('pointermove', onTrail, { passive: true })
-    window.addEventListener('pointerdown', onIgnite, { passive: true })
-    document.documentElement.addEventListener('pointerleave', onTrailLeave)
+    // A finger scroll would otherwise paint the lantern trail across the whole shader, every frame.
+    if (!lite) {
+      window.addEventListener('pointermove', onTrail, { passive: true })
+      window.addEventListener('pointerdown', onIgnite, { passive: true })
+      document.documentElement.addEventListener('pointerleave', onTrailLeave)
+    }
 
     const trailFrame = (now: number, dt: number): TrailPoint[] => {
       while (tail.samples.length && now - tail.samples[0].born > TAIL_LIFE) tail.samples.shift()
@@ -194,6 +201,8 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
     const dimFor = (ch: ChapterBox, y: number, h: number) =>
       ch.scene === 'hero' ? 0 : 0.26 + 0.46 * smoothstep(0.35, 1.1, (y - ch.top) / h)
 
+    let lastScroll = -1
+    let quiet = 0
     const removeFrame = addFrame((now, dt) => {
       if (dirty) {
         const prev = chapters
@@ -205,6 +214,9 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
 
       const [w, h] = cssSize()
       const y = window.scrollY
+      if (y === lastScroll) quiet += dt
+      else quiet = 0
+      lastScroll = y
       const k = 1 - Math.exp(-dt * 7)
       const kp = 1 - Math.exp(-dt * 2.4)
       pointer.x += (pointer.tx - pointer.x) * kp
@@ -217,8 +229,16 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
         const raw = boundaryProgress(ch.top - y, h, ch.variant)
         ch.progress += (raw - ch.progress) * k
         if (Math.abs(raw - ch.progress) < 1e-4) ch.progress = raw
-        ch.el.style.setProperty('--in', ch.progress.toFixed(4))
-        ch.el.style.setProperty('--lift', `${Math.min(2 * h, Math.max(0, ch.top - y)).toFixed(1)}px`)
+        const nextIn = ch.progress.toFixed(3)
+        const nextLift = `${Math.min(2 * h, Math.max(0, ch.top - y)).toFixed(0)}px`
+        if (nextIn !== ch.lastIn) {
+          ch.lastIn = nextIn
+          ch.el.style.setProperty('--in', nextIn)
+        }
+        if (nextLift !== ch.lastLift) {
+          ch.lastLift = nextLift
+          ch.el.style.setProperty('--lift', nextLift)
+        }
         if (ch.progress > 0) {
           idx = i
           p = ch.progress
@@ -226,7 +246,6 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
       }
 
       if (!engine) return
-      engine.resize(w, h)
 
       const to = chapters[idx]
       const from = p < 1 && idx > 0 ? chapters[idx - 1] : to
@@ -259,6 +278,13 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
           root.classList.add('gl-scene')
         }
       }
+
+      // Once a phone has settled, hold the last frame instead of redrawing a static full-screen shader.
+      const holding =
+        lite && intro >= 1 && !transitioning && quiet > 0.6 && fxBus.bursts.length === 0
+      if (holding) return
+
+      engine.resize(w, h)
 
       paperEl ??= document.querySelector<HTMLElement>('[data-paper]')
       const pr = paperEl?.getBoundingClientRect()
@@ -295,10 +321,12 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
       window.clearInterval(poll)
       ro.disconnect()
       window.removeEventListener('resize', remeasure)
-      window.removeEventListener('pointermove', onPointer)
-      window.removeEventListener('pointermove', onTrail)
-      window.removeEventListener('pointerdown', onIgnite)
-      document.documentElement.removeEventListener('pointerleave', onTrailLeave)
+      if (!lite) {
+        window.removeEventListener('pointermove', onPointer)
+        window.removeEventListener('pointermove', onTrail)
+        window.removeEventListener('pointerdown', onIgnite)
+        document.documentElement.removeEventListener('pointerleave', onTrailLeave)
+      }
       root.classList.remove('gl-scene', 'gl-void')
       const gl = engine?.context
       engine?.dispose()

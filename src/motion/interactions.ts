@@ -3,6 +3,13 @@ import { addFrame, FramePriority } from './frameLoop'
 
 export const FINE_POINTER = '(hover: hover) and (pointer: fine)'
 
+/** Phones, tablets, and the narrow layout. OR-list: any one match takes the lite path. */
+export const LITE_UI = '(hover: none), (pointer: coarse), (max-width: 899px)'
+
+export function isLiteUi(): boolean {
+  return window.matchMedia(LITE_UI).matches
+}
+
 type Spring = { x: number; y: number; tx: number; ty: number }
 type Magnet = Spring & { el: HTMLElement; inner: HTMLElement | null; strength: number }
 type Tilt = Spring & { el: HTMLElement; max: number; g: number; tg: number; gx: number; gy: number }

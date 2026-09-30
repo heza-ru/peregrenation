@@ -3152,6 +3152,43 @@ html.is-revealing .hero :is(.hero__glow, .hero__vignette, .comp-grid, .site-head
   }
 }
 
+/* Phones and the narrow layout: drop the effects that repaint the whole screen while scrolling. */
+@media (max-width: 899px), ((hover: none) and (pointer: coarse)) {
+  .cursor {
+    display: none;
+  }
+
+  .hero {
+    height: 200svh;
+  }
+
+  .hero__scene,
+  .hero__plane,
+  .hero__copy,
+  .hero__cta {
+    will-change: auto;
+  }
+
+  .hero__plane--god img,
+  .hero__plane--adam img {
+    filter: none;
+  }
+
+  .spark-field {
+    display: none;
+  }
+
+  .float-nav {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: rgba(20, 16, 12, 0.94);
+  }
+
+  [data-tilt] {
+    will-change: auto;
+  }
+}
+
 /* ——— Shopify Editions–inspired motion chrome ——— */
 .scroll-progress {
   position: fixed;

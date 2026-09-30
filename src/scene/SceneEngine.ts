@@ -96,8 +96,10 @@ export class SceneEngine {
   private disposed = false
   private trailBuf = new Float32Array(TRAIL_MAX * 4)
   private burstBuf = new Float32Array(BURST_MAX * 4)
+  /** Phones skip the soft figure shadow (it resamples every layer pixel many times). */
+  private shadows: boolean
 
-  static create(canvas: HTMLCanvasElement): SceneEngine | null {
+  static create(canvas: HTMLCanvasElement, lite = false): SceneEngine | null {
     const gl = canvas.getContext('webgl2', {
       alpha: false,
       antialias: false,
@@ -108,16 +110,18 @@ export class SceneEngine {
     })
     if (!gl) return null
     try {
-      return new SceneEngine(gl)
+      return new SceneEngine(gl, lite)
     } catch (err) {
       console.warn('[scene] WebGL init failed, using DOM fallback', err)
       return null
     }
   }
 
-  private constructor(gl: WebGL2RenderingContext) {
+  private constructor(gl: WebGL2RenderingContext, lite: boolean) {
     this.gl = gl
-    this.dpr = Math.min(MAX_DPR, window.devicePixelRatio || 1)
+    this.shadows = !lite
+    // A phone at 1.5× paints more than twice the pixels of a 1× canvas, for a full-screen shader.
+    this.dpr = Math.min(lite ? 1 : MAX_DPR, window.devicePixelRatio || 1)
     this.layerProg = compile(gl, LAYER_FRAG)
     this.compProg = compile(gl, COMPOSITE_FRAG)
     this.vao = gl.createVertexArray()!
@@ -228,7 +232,7 @@ export class SceneEngine {
       gl.uniform2f(u.get('uFocal')!, layer.focal[0], layer.focal[1])
       gl.uniform2f(u.get('uOrigin')!, layer.origin[0] * k, layer.origin[1] * k)
       gl.uniform3f(u.get('uXform')!, layer.tx * k, layer.ty * k, layer.scale)
-      gl.uniform1f(u.get('uShadow')!, layer.shadow ? k : 0)
+      gl.uniform1f(u.get('uShadow')!, this.shadows && layer.shadow ? k : 0)
       const r = layer.reach
       gl.uniform4f(u.get('uWarp')!, r?.tip[0] ?? 0, r?.tip[1] ?? 0, (r?.pull[0] ?? 0) * k, (r?.pull[1] ?? 0) * k)
       gl.uniform1f(u.get('uWarpR')!, r ? r.radius : 0)

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { addFrame, FramePriority } from '../motion/frameLoop'
-import { FINE_POINTER } from '../motion/interactions'
+import { isLiteUi, LITE_UI } from '../motion/interactions'
 
 type CursorMode = 'idle' | 'link' | 'label' | 'hide'
 
@@ -15,16 +15,16 @@ function modeFor(target: Element | null): { mode: CursorMode; label: string } {
 
 /** Precise dot + a lagging ring that stretches with speed and morphs over interactive targets. */
 export function Cursor({ reduced }: { reduced: boolean }) {
-  const [fine, setFine] = useState(() => window.matchMedia(FINE_POINTER).matches)
-  const enabled = fine && !reduced
+  const [lite, setLite] = useState(() => isLiteUi())
+  const enabled = !lite && !reduced
   const rootRef = useRef<HTMLDivElement>(null)
   const ringRef = useRef<HTMLDivElement>(null)
   const dotRef = useRef<HTMLDivElement>(null)
   const labelRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
-    const mq = window.matchMedia(FINE_POINTER)
-    const update = () => setFine(mq.matches)
+    const mq = window.matchMedia(LITE_UI)
+    const update = () => setLite(mq.matches)
     mq.addEventListener('change', update)
     return () => mq.removeEventListener('change', update)
   }, [])
