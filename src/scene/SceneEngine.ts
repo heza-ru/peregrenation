@@ -279,7 +279,12 @@ export class SceneEngine {
     gl.activeTexture(gl.TEXTURE0)
   }
 
+  /**
+   * Free GPU resources. Caller should follow with loseWebGlContext(canvas, gl)
+   * when handing off to the explore route — see glHandoff.ts.
+   */
   dispose() {
+    if (this.disposed) return
     this.disposed = true
     const gl = this.gl
     for (const t of this.textures.values()) gl.deleteTexture(t.tex)
@@ -292,12 +297,9 @@ export class SceneEngine {
     gl.deleteVertexArray(this.vao)
     this.textures.clear()
     this.images.clear()
-    // Free the GPU slot so the explore Canvas can create a fresh context
-    // without a brown / empty frame after navigating from the landing.
-    try {
-      gl.getExtension('WEBGL_lose_context')?.loseContext()
-    } catch {
-      /* ignore */
-    }
+  }
+
+  get context(): WebGL2RenderingContext {
+    return this.gl
   }
 }

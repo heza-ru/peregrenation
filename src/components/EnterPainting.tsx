@@ -16,6 +16,7 @@ import { assets, galleryWorldKind, galleryWorks, type GalleryWork } from '../dat
 import { lockScroll } from '../motion/scroll'
 import { useTouchPrimary } from '../hooks/useTouchPrimary'
 import { recognizePainting } from '../painting/recognizePainting'
+import { releaseLandingGl } from '../scene/glHandoff'
 import type { WorldKind } from '../world/worldMode'
 import { Words } from './Words'
 
@@ -210,11 +211,13 @@ export function EnterPainting({ open, onClose }: EnterPaintingProps) {
       window.clearInterval(interval)
       setBuildStatus('ready', BUILD_STEPS[BUILD_STEPS.length - 1])
       setPainting(worldId, preview)
-      // Navigate first. Calling onClose before navigate reset state → cleaned up this
-      // effect → cleared the timeout → stayed on `/`. Route change unmounts the landing.
+      // Free doorway WebGL *before* R3F mounts — same-tab nav otherwise leaves a
+      // dead/brown world Canvas until a full refresh.
       navigateTimer = window.setTimeout(() => {
-        navigate(`/world/${worldId}`)
-      }, 80)
+        void releaseLandingGl().then(() => {
+          navigate(`/world/${worldId}`)
+        })
+      }, 40)
     }, 550)
 
     return () => {

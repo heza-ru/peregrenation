@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { addFrame, FramePriority } from '../motion/frameLoop'
 import { burst, fxBus } from '../scene/fxBus'
+import { loseWebGlContext, registerLandingGl, releaseLandingGl } from '../scene/glHandoff'
 import { heroBus } from '../scene/heroBus'
 import { SceneEngine, TRAIL_MAX, type LayerDraw, type TrailPoint } from '../scene/SceneEngine'
 import {
@@ -251,7 +252,10 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
       fxBus.bursts = fxBus.bursts.filter((b) => now - b.born < BURST_LIFE * 1000)
     }, FramePriority.render)
 
-    return () => {
+    let tornDown = false
+    const teardown = async () => {
+      if (tornDown) return
+      tornDown = true
       removeFrame()
       window.clearInterval(poll)
       ro.disconnect()
@@ -261,8 +265,15 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
       window.removeEventListener('pointerdown', onIgnite)
       document.documentElement.removeEventListener('pointerleave', onTrailLeave)
       root.classList.remove('gl-scene')
+      const gl = engine?.context
       engine?.dispose()
-      // Drop the canvas node so Chromium releases the compositor surface promptly.
+      if (gl) {
+        try {
+          await loseWebGlContext(canvas, gl)
+        } catch {
+          /* ignore */
+        }
+      }
       try {
         canvas.width = 1
         canvas.height = 1
@@ -270,6 +281,13 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
       } catch {
         /* ignore */
       }
+    }
+
+    registerLandingGl(teardown)
+
+    return () => {
+      // Opens the world-route gate; safe if EnterPainting already released.
+      void releaseLandingGl()
     }
   }, [reduced])
 

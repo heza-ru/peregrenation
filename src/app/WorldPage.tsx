@@ -5,34 +5,30 @@ import { useWorldStore } from './worldStore'
 import { loadFacts, loadManifest } from '../painting/loadManifest'
 import type { PaintingFact, SceneManifest } from '../painting/types'
 import { useTouchPrimary } from '../hooks/useTouchPrimary'
+import { nextFrames, whenLandingGlReleased } from '../scene/glHandoff'
 import { WorldScene } from '../world/WorldScene'
 import { getDeviceProfile } from '../world/deviceProfile'
 import { WorldGameHud } from '../ui/world/WorldGameHud'
 
 /**
- * Wait a couple of frames after the landing unmounts so its WebGL context can
- * release before we open a second one — otherwise many GPUs show a brown clear.
+ * Wait until the landing WebGL context is gone, then a couple of frames,
+ * before mounting R3F — otherwise many GPUs show a brown / empty canvas
+ * until a full refresh.
  */
 function useGlHandoff(): boolean {
   const [ready, setReady] = useState(false)
   useEffect(() => {
     document.documentElement.classList.remove('gl-scene')
     let cancelled = false
-    let raf2 = 0
-    const raf1 = requestAnimationFrame(() => {
-      raf2 = requestAnimationFrame(() => {
-        if (!cancelled) setReady(true)
-      })
-    })
-    // Slow GPUs / React StrictMode: also arm a short timeout fallback.
-    const t = window.setTimeout(() => {
+    ;(async () => {
+      await whenLandingGlReleased()
+      await nextFrames(2)
+      // Extra beat for Chromium to recycle the compositor surface.
+      await new Promise<void>((r) => window.setTimeout(r, 50))
       if (!cancelled) setReady(true)
-    }, 120)
+    })()
     return () => {
       cancelled = true
-      cancelAnimationFrame(raf1)
-      cancelAnimationFrame(raf2)
-      window.clearTimeout(t)
     }
   }, [])
   return ready
@@ -45,6 +41,7 @@ export function WorldPage() {
   const [facts, setFacts] = useState<PaintingFact[]>([])
   const [error, setError] = useState<string | null>(null)
   const [sceneReady, setSceneReady] = useState(false)
+  const [canvasEpoch, setCanvasEpoch] = useState(0)
   const touchPrimary = useTouchPrimary()
   const setTouchPrimary = useWorldStore((s) => s.setTouchPrimary)
   const profile = useMemo(() => getDeviceProfile(), [])
@@ -96,6 +93,7 @@ export function WorldPage() {
     let cancelled = false
     setSceneReady(false)
     setError(null)
+    setCanvasEpoch(0)
     // Warm the hero still while JSON loads — biggest byte on 2D worlds.
     const preload = document.createElement('link')
     preload.rel = 'preload'
@@ -149,7 +147,7 @@ export function WorldPage() {
         </div>
       )}
       <Canvas
-        key={id}
+        key={`${id}-${canvasEpoch}`}
         shadows={!profile.lowPower}
         dpr={[1, profile.dprMax]}
         frameloop="always"
@@ -173,6 +171,12 @@ export function WorldPage() {
           const canvas = gl.domElement
           const onLost = (e: Event) => {
             e.preventDefault()
+            // First loss after doorway handoff: remount once. Refresh used to be the only fix.
+            if (canvasEpoch < 1) {
+              setSceneReady(false)
+              window.setTimeout(() => setCanvasEpoch((n) => n + 1), 120)
+              return
+            }
             setError(
               'This device ran out of graphics memory. Try closing other tabs, then reopen the world.',
             )
