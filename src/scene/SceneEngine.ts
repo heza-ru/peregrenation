@@ -179,8 +179,9 @@ export class SceneEngine {
     return srcs.every((s) => this.textures.has(s) || this.failed.has(s))
   }
 
-  hasTexture(src: string) {
-    return this.textures.has(src)
+  /** True if at least one layer uploaded — do not flip on gl-scene with an empty GPU. */
+  hasAnyTexture(srcs: readonly string[]) {
+    return srcs.some((s) => this.textures.has(s))
   }
 
   private upload(src: string, img: HTMLImageElement) {

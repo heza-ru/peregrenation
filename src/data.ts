@@ -18,13 +18,14 @@ export const assets = {
   exploreVideo: '/assets/231d7a96cad8f1f4e90d172e4cc35076.mp4',
   explorePoster: '/assets/fc937389f7260fb497fcf5247a063da7.jpg',
   lutePlayer: '/assets/0f6682fccb74ec118bfeb9d5bec93460.jpg',
+  // ?v= busts browsers/CDNs that cached 404s from the deploy before these shipped.
   parallax: {
-    far: '/assets/parallax/1-far.webp',
-    clouds: '/assets/parallax/2-clouds.webp',
-    landscape: '/assets/parallax/3-landscape.webp',
-    rock: '/assets/parallax/4-rock.webp',
-    adam: '/assets/parallax/5-adam.webp',
-    god: '/assets/parallax/6-god.webp',
+    far: '/assets/parallax/1-far.webp?v=2',
+    clouds: '/assets/parallax/2-clouds.webp?v=2',
+    landscape: '/assets/parallax/3-landscape.webp?v=2',
+    rock: '/assets/parallax/4-rock.webp?v=2',
+    adam: '/assets/parallax/5-adam.webp?v=2',
+    god: '/assets/parallax/6-god.webp?v=2',
   },
 } as const
 

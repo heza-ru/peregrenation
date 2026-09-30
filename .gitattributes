@@ -1,0 +1,14 @@
+# Binary media — never let core.autocrlf mangle these
+*.webp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.mp4 binary
+*.webm binary
+*.bin binary
+*.wasm binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary

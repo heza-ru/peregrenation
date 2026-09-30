@@ -222,7 +222,10 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
       const transitioning = from !== to
 
       if (!live) {
-        if (!engine.isReady(fromDef.layers.map((l) => l.src))) return
+        const layerSrcs = fromDef.layers.map((l) => l.src)
+        if (!engine.isReady(layerSrcs)) return
+        // All layers failed (e.g. cached 404s): keep DOM fallback visible.
+        if (!engine.hasAnyTexture(layerSrcs)) return
         live = true
         root.classList.add('gl-scene')
       }
