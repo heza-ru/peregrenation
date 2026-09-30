@@ -17,6 +17,8 @@ export function useLenis(reduced: boolean) {
       autoRaf: false,
     })
     setLenis(lenis)
+    // The doorway preloader may already hold the lock before Lenis exists.
+    if (document.documentElement.classList.contains('scroll-locked')) lenis.stop()
 
     const remove = addFrame((time) => lenis.raf(time), FramePriority.scroll)
 

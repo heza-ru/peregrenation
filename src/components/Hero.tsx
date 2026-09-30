@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { whenPreloaded } from '../boot/preloader'
 import { assets } from '../data'
 import { usePrefersReducedMotion } from '../hooks/useMotion'
 import { addFrame, FramePriority } from '../motion/frameLoop'
@@ -59,7 +60,12 @@ export function Hero({ onBegin }: HeroProps) {
 
     const pointer = { x: 0, y: 0, active: false }
     const cur = { x: 0, y: 0, dolly: 0, ignite: 0, spark: 0, ctaX: 0, ctaY: 0, touch: 0 }
-    const start = performance.now()
+    let start = performance.now()
+    let alive = true
+    // The dolly-in intro should play as the doorway opens, not behind the preloader.
+    void whenPreloaded().then(() => {
+      if (alive) start = performance.now()
+    })
     let visible = true
     let hover = false
     const imgs = planeRefs.current.map((el) => el?.querySelector('img') ?? null)
@@ -221,6 +227,7 @@ export function Hero({ onBegin }: HeroProps) {
     const removeFrame = addFrame(frame, FramePriority.state)
 
     return () => {
+      alive = false
       removeFrame()
       io.disconnect()
       window.removeEventListener('pointermove', onPointer)
