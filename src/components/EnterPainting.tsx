@@ -199,6 +199,8 @@ export function EnterPainting({ open, onClose }: EnterPaintingProps) {
     let step = 0
     setBuildIndex(0)
     let navigateTimer = 0
+    // Capture now — closing the modal must not wipe pendingWorldId mid-flight.
+    const worldId = pendingWorldId
     const interval = window.setInterval(() => {
       step += 1
       if (step < BUILD_STEPS.length) {
@@ -207,11 +209,11 @@ export function EnterPainting({ open, onClose }: EnterPaintingProps) {
       }
       window.clearInterval(interval)
       setBuildStatus('ready', BUILD_STEPS[BUILD_STEPS.length - 1])
-      setPainting(pendingWorldId, preview)
-      onCloseRef.current()
-      // Let the landing WebGL backdrop unmount before the world Canvas opens.
+      setPainting(worldId, preview)
+      // Navigate first. Calling onClose before navigate reset state → cleaned up this
+      // effect → cleared the timeout → stayed on `/`. Route change unmounts the landing.
       navigateTimer = window.setTimeout(() => {
-        navigate(`/world/${pendingWorldId}`)
+        navigate(`/world/${worldId}`)
       }, 80)
     }, 550)
 
@@ -223,6 +225,8 @@ export function EnterPainting({ open, onClose }: EnterPaintingProps) {
 
   useEffect(() => {
     if (open) return
+    // Don't tear down mid-handoff if a world route is already loading.
+    if (window.location.pathname.startsWith('/world/')) return
     setState('idle')
     setQuery('')
     setPicked(null)
