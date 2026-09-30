@@ -1,13 +1,7 @@
 import { assets } from '../data'
 import { lockScroll } from '../motion/scroll'
 
-const STATUS: readonly (readonly [number, string])[] = [
-  [0, 'Gathering the stars'],
-  [0.3, 'Grinding the pigments'],
-  [0.62, 'Tracing the sinopia'],
-  [0.9, 'Parting the heavens'],
-]
-const READY_LABEL = 'Fiat lux'
+const NUMERALS = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'] as const
 
 /** Chapter backdrops: warmed while the hero loads so scrolling never waits on them. */
 const CHAPTER_BACKDROPS = [assets.annunciation, assets.explorePoster, assets.cranach, assets.pontormo]
@@ -83,8 +77,6 @@ export function startPreloader(appMounted: Promise<void>) {
   }
 
   const countEl = root.querySelector<HTMLElement>('[data-preloader-count]')
-  const statusEls = root.querySelectorAll<HTMLElement>('[data-preloader-status]')
-  const setStatus = (text: string) => statusEls.forEach((el) => (el.textContent = text))
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   const minMs = seenThisSession() ? MIN_REPEAT_MS : MIN_FIRST_VISIT_MS
 
@@ -108,25 +100,22 @@ export function startPreloader(appMounted: Promise<void>) {
 
   let shown = 0
   let last = performance.now()
-  let statusIdx = -1
+  let numeral = -1
   let raf = 0
 
   const render = (p: number) => {
     progress = p
     root.style.setProperty('--p', p.toFixed(4))
-    if (countEl) countEl.textContent = String(Math.round(p * 100)).padStart(2, '0')
-    let idx = 0
-    for (let i = 0; i < STATUS.length; i++) if (p >= STATUS[i][0]) idx = i
-    if (idx !== statusIdx) {
-      statusIdx = idx
-      setStatus(STATUS[idx][1])
+    const n = Math.min(NUMERALS.length - 1, Math.floor(p * NUMERALS.length))
+    if (n !== numeral && countEl) {
+      numeral = n
+      countEl.textContent = NUMERALS[n]
     }
   }
 
   const finish = () => {
     render(1)
     markSeen()
-    setStatus(READY_LABEL)
     root.classList.add('is-complete')
     root.setAttribute('aria-busy', 'false')
     window.setTimeout(

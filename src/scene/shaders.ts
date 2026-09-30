@@ -322,8 +322,7 @@ vec3 intro(vec2 uv) {
   float p = uIntro;
   float ease = p * p * (3.0 - 2.0 * p);
 
-  float hole = mix(0.045, 0.19, uLoad) + sin(uTime * 1.3) * 0.003;
-  float front = mix(hole, 1.8, pow(ease, 1.2));
+  float front = mix(-0.04, 1.8, pow(ease, 1.2));
   // A small porthole wobbles in proportion to its size; the open front uses the transition's noise
   float n1 = fbm(np * 2.4 + uSeed) - 0.5;
   float n2 = fbm(np * 9.0 - uSeed + vec2(uTime * 0.12, -uTime * 0.08)) - 0.5;
@@ -347,28 +346,30 @@ vec3 intro(vec2 uv) {
   float grain = hash(floor(uv * uRes / (1.25 * uDpr)) + uSeed);
   float aIn = smoothstep(0.0, mix(0.03, 0.16, big), t + (grain - 0.5) * 0.1 * big);
 
-  vec3 col = mix(starfield(uv), inside, aIn);
-  col *= 1.0 - 0.5 * smoothstep(0.05, 0.0, t) * step(0.0, t) * (1.0 - big);
+  float wait = 1.0 - smoothstep(0.0, 0.3, p);
+  // Before the word: darkness with a few faint stars
+  vec3 col = mix(starfield(uv) * mix(1.0, 0.4, wait), inside, aIn);
 
   float fade = 1.0 - smoothstep(0.85, 1.0, p);
-  float wait = 1.0 - smoothstep(0.0, 0.3, p);
   float catchFire = smoothstep(0.3, 0.72, fbm(np * 11.0 + vec2(uTime * 0.3, -uTime * 0.2) + uSeed));
   float rim = smoothstep(0.022, 0.0, abs(t - 0.004));
   float rimCore = smoothstep(0.0045, 0.0, abs(t));
   float charSide = smoothstep(0.05, 0.0, t) * smoothstep(-0.005, 0.02, t);
   float voidSide = smoothstep(-0.07, 0.0, t) * step(t, 0.0);
-  float boost = 1.0 + 0.5 * wait;
+  float lit0 = smoothstep(0.0, 0.03, p);
   vec3 ember = vec3(1.0, 0.42, 0.12) * (rim * 0.45 + charSide * 0.18) * (0.35 + 0.65 * catchFire);
   ember += vec3(1.0, 0.86, 0.62) * rimCore * (0.25 + 0.9 * catchFire);
   ember += vec3(1.0, 0.8, 0.52) * glitter(uv, 0.1, 0.0) * voidSide * (0.5 + catchFire);
-  // Warm bloom the fire throws onto the void around the porthole
-  ember += vec3(1.0, 0.5, 0.22) * exp(min(t, 0.0) * 14.0) * step(t, 0.0) * 0.1 * wait;
-  col += ember * fade * boost;
-  col += vec3(0.88, 0.92, 1.0) * glitter(uv, 0.08, 7.7) * smoothstep(0.05, 0.0, abs(t)) * 0.8 * smoothstep(0.0, 0.05, p);
+  col += ember * fade * lit0;
+  col += vec3(0.88, 0.92, 1.0) * glitter(uv, 0.08, 7.7) * smoothstep(0.05, 0.0, abs(t)) * 0.8 * lit0;
 
-  // Embers drift toward the porthole while it gathers
-  float pull = exp(min(t, 0.0) * 7.0) * step(t, 0.0) * wait;
-  col += vec3(1.0, 0.8, 0.52) * glitter(uv, 0.01 + 0.025 * uLoad, 4.4) * pull * 0.5;
+  // Fiat lux: a point of light gathers in the gap between the fingers as the page loads
+  float breathe = 0.85 + 0.15 * sin(uTime * 1.7);
+  float core = exp(-r * r * mix(9000.0, 2600.0, uLoad));
+  float halo = exp(-r * r * mix(260.0, 70.0, uLoad));
+  float dust = glitter(uv, 0.008 + 0.022 * uLoad, 4.4) * exp(-r * r * mix(160.0, 45.0, uLoad));
+  col += (vec3(1.0, 0.95, 0.84) * core * 1.6 + vec3(1.0, 0.78, 0.5) * halo * (0.1 + 0.35 * uLoad) * breathe) * wait;
+  col += vec3(1.0, 0.85, 0.6) * dust * (0.25 + 0.45 * uLoad) * wait;
 
   float flash = exp(-r * r * 40.0) * smoothstep(0.0, 0.04, p) * smoothstep(0.24, 0.04, p);
   col += vec3(1.0, 0.92, 0.76) * flash * 2.4;

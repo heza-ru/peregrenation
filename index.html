@@ -11,7 +11,7 @@
       content="Pérégrination — Turn a Renaissance painting into a world you can walk through, and uncover its curiosities as you go."
     />
     <script>
-      // World routes have their own boot screen; the void preloader is for `/` only.
+      // World routes have their own boot screen; the preloader is for `/` only.
       ;(function () {
         if (location.pathname.indexOf('/world/') === 0) return
         document.documentElement.classList.add('has-preloader', 'is-preloading')
@@ -42,8 +42,9 @@
     <title>Pérégrination — Le Voyage des Curiosités</title>
     <style>
       /* Critical preloader styles — inline so the loader paints before the app bundle.
-         The scene canvas draws the void and the burning porthole underneath (html.gl-void);
-         this overlay is only the editorial chrome, plus a CSS stand-in without WebGL. */
+         Darkness, a cartoon of construction lines converging on the gap between the
+         fingers, and a point of light gathering there (drawn by the scene canvas under
+         html.gl-void). Fiat lux: the light breaks and the hero burns in. */
       html.is-preloading,
       html.is-preloading body {
         overflow: hidden;
@@ -64,8 +65,10 @@
         --p: 0;
         --sx: 50%;
         --sy: 42%;
-        --edge: clamp(1.25rem, 3.2vw, 2.75rem);
-        --gold: #c9a24a;
+        --fx: 38%;
+        --fy: 12vh;
+        --fw: 24%;
+        --fh: 72vh;
         --ease: cubic-bezier(0.16, 1, 0.3, 1);
         --ease-io: cubic-bezier(0.76, 0, 0.24, 1);
         position: fixed;
@@ -73,21 +76,19 @@
         z-index: 99;
         overflow: hidden;
         color: #f2eadb;
-        font-family: 'Hanken Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       }
       #preloader.is-leaving {
         pointer-events: none;
       }
 
-      /* ——— Backdrop: CSS void until the canvas takes over ——— */
+      /* CSS darkness until the canvas takes over, and the fallback without WebGL */
       .preloader__veil {
         --hole: -80px;
         position: absolute;
         inset: 0;
         background:
-          radial-gradient(ellipse 55% 42% at 32% 30%, rgba(70, 56, 140, 0.28), transparent 70%),
-          radial-gradient(ellipse 50% 46% at 72% 66%, rgba(104, 56, 128, 0.22), transparent 70%),
-          #030307;
+          radial-gradient(circle at var(--sx) var(--sy), rgba(255, 214, 150, 0.16) 0, rgba(255, 214, 150, 0) 22vmin),
+          #050407;
         transition: opacity 0.9s ease;
         -webkit-mask: radial-gradient(circle at var(--sx) var(--sy), transparent var(--hole), #000 calc(var(--hole) + 56px));
         mask: radial-gradient(circle at var(--sx) var(--sy), transparent var(--hole), #000 calc(var(--hole) + 56px));
@@ -102,219 +103,137 @@
           --hole 1.3s var(--ease-io),
           opacity 0.5s ease 0.85s;
       }
-      /* Without WebGL: an ember ring stands in for the burning porthole */
-      .preloader__ember {
+      .preloader__glow {
         position: absolute;
         left: var(--sx);
         top: var(--sy);
-        width: calc(4rem + var(--p) * 14rem);
-        aspect-ratio: 1;
-        translate: -50% -50%;
+        width: 6px;
+        height: 6px;
+        margin: -3px 0 0 -3px;
         border-radius: 50%;
-        box-shadow:
-          0 0 0 1px rgba(255, 214, 160, 0.9),
-          0 0 18px 2px rgba(255, 120, 50, 0.55),
-          0 0 60px 10px rgba(255, 110, 40, 0.18),
-          inset 0 0 26px 4px rgba(255, 120, 50, 0.35);
+        background: #fff6e2;
+        box-shadow: 0 0 14px 4px rgba(255, 226, 170, 0.8), 0 0 60px 18px rgba(255, 190, 110, 0.25);
+        scale: calc(0.6 + var(--p) * 1.4);
       }
-      html.gl-void .preloader__ember {
+      html.gl-void .preloader__glow {
         display: none;
       }
 
-      /* ——— Drafting chrome (Shopify Editions-style hairlines) ——— */
-      .preloader__rule {
+      /* The cartoon: construction lines drawn in over time, the frame traced by load progress */
+      .preloader__lines {
         position: absolute;
-        background: rgba(242, 234, 219, 0.16);
-        transition: opacity 0.5s ease;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        pointer-events: none;
       }
-      .preloader__rule--top,
-      .preloader__rule--bottom {
-        left: var(--edge);
-        right: var(--edge);
-        height: 1px;
-        transform-origin: left center;
-        scale: 0 1;
-        animation: preloaderDraw 1.4s var(--ease-io) 0.1s forwards;
+      .preloader__lines path {
+        fill: none;
+        vector-effect: non-scaling-stroke;
+        stroke-dasharray: 1;
+        stroke-linecap: round;
+        transition:
+          stroke 0.5s ease,
+          opacity 0.7s ease;
       }
-      .preloader__rule--top {
-        top: calc(var(--edge) + 1.9rem);
+      .preloader__lines .c {
+        stroke: rgba(236, 226, 206, 0.17);
+        stroke-width: 1;
+        stroke-dashoffset: 1;
+        animation: preloaderDraw 2.2s var(--ease-io) var(--d, 0s) forwards;
       }
-      .preloader__rule--bottom {
-        bottom: calc(var(--edge) + 1.9rem);
-        transform-origin: right center;
+      .preloader__lines .f {
+        stroke: rgba(246, 238, 222, 0.85);
+        stroke-width: 1.25;
+        stroke-dashoffset: calc(1 - var(--p));
       }
-      /* Crosshair arms converge on the gap between the fingertips as the load fills */
-      .preloader__arm {
-        position: absolute;
-        background: linear-gradient(var(--dir), rgba(201, 162, 74, 0), rgba(201, 162, 74, 0.55));
+      .is-complete .preloader__lines .c {
+        stroke: rgba(243, 213, 143, 0.42);
       }
-      .preloader__arm--l,
-      .preloader__arm--r {
-        top: var(--sy);
-        height: 1px;
-        width: calc(var(--sx) - var(--edge) - 7rem);
-        scale: var(--p) 1;
+      .is-complete .preloader__lines .f {
+        stroke: #f3d58f;
       }
-      .preloader__arm--l {
-        --dir: 90deg;
-        left: var(--edge);
-        transform-origin: left center;
-      }
-      .preloader__arm--r {
-        --dir: 270deg;
-        right: var(--edge);
-        transform-origin: right center;
-      }
-      .preloader__arm--t,
-      .preloader__arm--b {
-        left: var(--sx);
-        width: 1px;
-        scale: 1 var(--p);
-      }
-      .preloader__arm--t {
-        --dir: 180deg;
-        top: calc(var(--edge) + 1.9rem);
-        height: calc(var(--sy) - var(--edge) - 1.9rem - 7rem);
-        transform-origin: center top;
-      }
-      .preloader__arm--b {
-        --dir: 0deg;
-        bottom: calc(var(--edge) + 1.9rem);
-        height: calc(100% - var(--sy) - var(--edge) - 1.9rem - 7rem);
-        transform-origin: center bottom;
-      }
-      .preloader__tick {
-        position: absolute;
-        left: var(--sx);
-        top: var(--sy);
-        width: 13rem;
-        aspect-ratio: 1;
-        translate: -50% -50%;
-        border-radius: 50%;
-        border: 1px dashed rgba(201, 162, 74, 0.22);
-        rotate: calc(var(--p) * 90deg);
+      .is-leaving .preloader__lines path {
         opacity: 0;
-        animation: preloaderFade 1.6s ease 0.6s forwards;
+        transition: opacity 0.7s ease calc(var(--d, 0s) * 0.2);
       }
 
-      /* ——— Type ——— */
+      /* Type set inside the frame, like a title card on a cartoon */
       .preloader__mask {
         display: block;
         overflow: hidden;
-        padding-block: 0.1em;
-        margin-block: -0.1em;
+        padding-block: 0.12em;
+        margin-block: -0.12em;
       }
       .preloader__mask > * {
         display: block;
         translate: 0 110%;
-        animation: preloaderLineIn 1.1s var(--ease) var(--d, 0.2s) forwards;
+        animation: preloaderLineIn 1.2s var(--ease) var(--d, 0.3s) forwards;
       }
       .is-leaving .preloader__mask > * {
         translate: 0 -110%;
         transition: translate 0.8s var(--ease-io) var(--o, 0s);
         animation: none;
       }
-      .preloader__head,
-      .preloader__foot {
+      .preloader__card {
         position: absolute;
-        left: var(--edge);
-        right: var(--edge);
+        left: var(--fx);
+        top: var(--fy);
+        width: var(--fw);
+        height: var(--fh);
+        padding: clamp(0.9rem, 1.6vw, 1.25rem);
+        box-sizing: border-box;
         display: flex;
-        align-items: baseline;
+        flex-direction: column;
         justify-content: space-between;
-        gap: 1rem;
-      }
-      .preloader__head {
-        top: var(--edge);
-      }
-      .preloader__foot {
-        bottom: var(--edge);
       }
       .preloader__mark {
         font-family: 'IM Fell English SC', Georgia, serif;
-        font-size: 0.95rem;
-        letter-spacing: 0.22em;
-        color: var(--gold);
+        font-size: 0.8125rem;
+        letter-spacing: 0.24em;
+        color: #c9a24a;
       }
-      .preloader__label {
-        font-family: 'JetBrains Mono', ui-monospace, monospace;
-        font-size: 0.625rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: rgba(242, 234, 219, 0.58);
-      }
-      .preloader__label b {
-        font-weight: 500;
-        color: rgba(242, 234, 219, 0.92);
-      }
-      .preloader__verse {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: calc(var(--sy) + 8.25rem);
-        text-align: center;
+      .preloader__title {
+        margin: 0;
         font-family: 'IM Fell French Canon', Georgia, serif;
-        font-style: italic;
-        font-size: clamp(1.05rem, 1.7vw, 1.35rem);
-        color: rgba(242, 234, 219, 0.82);
-      }
-      .preloader__verse em {
-        color: #e8c886;
-      }
-      /* Big editorial counter */
-      .preloader__count {
-        position: absolute;
-        right: var(--edge);
-        bottom: calc(var(--edge) + 2.6rem);
-        display: flex;
-        align-items: flex-start;
-        font-family: 'Hanken Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-weight: 400;
-        font-size: clamp(4rem, 11vw, 8.5rem);
-        line-height: 0.8;
-        letter-spacing: -0.055em;
-        font-variant-numeric: tabular-nums;
+        font-size: clamp(1.45rem, 2.4vw, 2.1rem);
+        line-height: 1;
         color: #f7f1e4;
       }
-      .preloader__count sup {
-        margin: 0.08em 0 0 0.1em;
-        font-family: 'JetBrains Mono', ui-monospace, monospace;
-        font-size: 0.7rem;
-        letter-spacing: 0.1em;
-        color: var(--gold);
+      .preloader__title em {
+        color: #e8c886;
       }
-      .preloader__bar {
+      .preloader__title-block {
         position: absolute;
-        left: var(--edge);
-        right: var(--edge);
-        bottom: calc(var(--edge) + 1.9rem);
-        height: 1px;
-        background: linear-gradient(90deg, rgba(201, 162, 74, 0.4), #f3d58f);
-        transform-origin: left center;
-        scale: var(--p) 1;
-        box-shadow: 0 0 10px rgba(243, 213, 143, 0.6);
+        left: clamp(0.9rem, 1.6vw, 1.25rem);
+        top: calc(var(--oy, 42vh) - var(--fy) + 1.5rem);
       }
-      .is-complete .preloader__arm,
-      .is-complete .preloader__tick,
-      .is-complete .preloader__bar,
-      .is-complete .preloader__ember {
-        opacity: 0;
-        transition: opacity 0.45s ease;
+      .preloader__foot {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.75rem;
+        margin-top: auto;
       }
-      .is-leaving .preloader__rule,
-      .is-leaving .preloader__count sup {
-        opacity: 0;
-        transition: opacity 0.5s ease;
+      .preloader__verse {
+        font-family: 'IM Fell French Canon', Georgia, serif;
+        font-style: italic;
+        font-size: 1rem;
+        color: rgba(242, 234, 219, 0.72);
+      }
+      .preloader__numeral {
+        font-family: 'IM Fell English SC', Georgia, serif;
+        font-size: 1rem;
+        letter-spacing: 0.08em;
+        color: #c9a24a;
+        font-variant-numeric: lining-nums;
       }
 
       @keyframes preloaderDraw {
         to {
-          scale: 1 1;
-        }
-      }
-      @keyframes preloaderFade {
-        to {
-          opacity: 1;
+          stroke-dashoffset: 0;
         }
       }
       @keyframes preloaderLineIn {
@@ -322,23 +241,12 @@
           translate: 0 0;
         }
       }
-      @media (max-width: 640px) {
-        .preloader__label--hide-sm {
-          display: none;
-        }
-        .preloader__tick {
-          width: 10rem;
-        }
-      }
       @media (prefers-reduced-motion: reduce) {
-        .preloader__rule--top,
-        .preloader__rule--bottom,
-        .preloader__tick,
+        .preloader__lines .c,
         .preloader__mask > * {
           animation: none !important;
-          scale: 1 1;
+          stroke-dashoffset: 0;
           translate: none;
-          opacity: 1;
         }
         .is-leaving .preloader__mask > * {
           translate: none;
@@ -357,37 +265,116 @@
   <body>
     <div id="preloader" role="status" aria-live="polite" aria-busy="true" aria-label="Loading Pérégrination">
       <div class="preloader__veil" aria-hidden="true"></div>
-      <span class="preloader__ember" aria-hidden="true"></span>
-
-      <span class="preloader__rule preloader__rule--top" aria-hidden="true"></span>
-      <span class="preloader__rule preloader__rule--bottom" aria-hidden="true"></span>
-      <span class="preloader__arm preloader__arm--l" aria-hidden="true"></span>
-      <span class="preloader__arm preloader__arm--r" aria-hidden="true"></span>
-      <span class="preloader__arm preloader__arm--t" aria-hidden="true"></span>
-      <span class="preloader__arm preloader__arm--b" aria-hidden="true"></span>
-      <span class="preloader__tick" aria-hidden="true"></span>
-
-      <div class="preloader__head">
-        <span class="preloader__mask"><span class="preloader__mark" style="--d: 0.15s">Pérégrination</span></span>
-        <span class="preloader__mask preloader__label--hide-sm"><span class="preloader__label" style="--d: 0.25s; --o: 0.05s">Le Voyage des Curiosités</span></span>
-        <span class="preloader__mask"><span class="preloader__label" style="--d: 0.35s; --o: 0.1s">Ch. <b>00</b> — The Void</span></span>
-      </div>
-
-      <p class="preloader__verse">
-        <span class="preloader__mask"><span style="--d: 0.55s; --o: 0.05s">Between two hands, <em>a world</em> waits to be lit.</span></span>
-      </p>
-
-      <div class="preloader__count" aria-hidden="true">
-        <span class="preloader__mask"><span style="--d: 0.3s; --o: 0.12s" data-preloader-count>00</span></span>
-        <sup>%</sup>
-      </div>
-      <span class="preloader__bar" aria-hidden="true"></span>
-
-      <div class="preloader__foot">
-        <span class="preloader__mask"><span class="preloader__label" style="--d: 0.4s; --o: 0.1s"><b data-preloader-status>Gathering the stars</b></span></span>
-        <span class="preloader__mask preloader__label--hide-sm"><span class="preloader__label" style="--d: 0.5s; --o: 0.15s">Michelangelo · The Creation of Adam, c. 1512</span></span>
+      <span class="preloader__glow" aria-hidden="true"></span>
+      <svg class="preloader__lines" aria-hidden="true" data-preloader-lines></svg>
+      <div class="preloader__card">
+        <span class="preloader__mask"><span class="preloader__mark" style="--d: 0.5s">Pérégrination</span></span>
+        <div class="preloader__title-block">
+          <span class="preloader__mask"><span class="preloader__title" style="--d: 0.7s"><em>Le Voyage</em></span></span>
+          <span class="preloader__mask"><span class="preloader__title" style="--d: 0.82s; --o: 0.06s">des Curiosités</span></span>
+        </div>
+        <div class="preloader__foot">
+          <span class="preloader__mask"><span class="preloader__verse" style="--d: 1s; --o: 0.1s">Fiat lux</span></span>
+          <span class="preloader__mask"><span class="preloader__numeral" style="--d: 1.1s; --o: 0.12s" data-preloader-count>I</span></span>
+        </div>
       </div>
     </div>
+    <script>
+      // Construction lines for the current viewport, all converging on the fingertip gap.
+      ;(function () {
+        var root = document.getElementById('preloader')
+        var svg = root && root.querySelector('[data-preloader-lines]')
+        if (!svg || !document.documentElement.classList.contains('has-preloader')) return
+        var PHI = 1.6180339887
+
+        function spiral(x, y, w, n) {
+          var h = w / PHI
+          var d = ''
+          for (var i = 0; i < n; i++) {
+            var s
+            switch (i % 4) {
+              case 0:
+                s = h
+                d += 'M' + x + ' ' + y + 'h' + s + 'v' + s + 'h' + -s + 'z'
+                d += 'M' + x + ' ' + (y + s) + 'A' + s + ' ' + s + ' 0 0 1 ' + (x + s) + ' ' + y
+                x += s
+                w -= s
+                break
+              case 1:
+                s = w
+                d += 'M' + x + ' ' + y + 'h' + s + 'v' + s + 'h' + -s + 'z'
+                d += 'M' + x + ' ' + y + 'A' + s + ' ' + s + ' 0 0 1 ' + (x + s) + ' ' + (y + s)
+                y += s
+                h -= s
+                break
+              case 2:
+                s = h
+                d += 'M' + (x + w - s) + ' ' + y + 'h' + s + 'v' + s + 'h' + -s + 'z'
+                d += 'M' + (x + w) + ' ' + y + 'A' + s + ' ' + s + ' 0 0 1 ' + (x + w - s) + ' ' + (y + s)
+                w -= s
+                break
+              default:
+                s = w
+                d += 'M' + x + ' ' + (y + h - s) + 'h' + s + 'v' + s + 'h' + -s + 'z'
+                d += 'M' + (x + s) + ' ' + (y + h) + 'A' + s + ' ' + s + ' 0 0 1 ' + x + ' ' + (y + h - s)
+                h -= s
+            }
+          }
+          return d
+        }
+
+        function draw() {
+          if (!svg.isConnected) return window.removeEventListener('resize', draw)
+          var W = window.innerWidth
+          var H = window.innerHeight
+          var ox = W * 0.5
+          var oy = H * 0.42
+          var fh = Math.min(H * 0.72, W * 0.82 * PHI)
+          var fw = fh / PHI
+          var fx = ox - fw / 2
+          var fy = oy - fh * 0.42
+          var R = H * 0.95
+          var sw = fw * 0.78
+          var lines = [
+            'M' + ox + ' 0V' + H,
+            'M0 ' + oy + 'H' + W,
+            'M0 0L' + 2 * ox + ' ' + 2 * oy,
+            'M' + W + ' 0L' + (2 * ox - W) + ' ' + 2 * oy,
+            'M0 ' + H + 'L' + 2 * ox + ' ' + (2 * oy - H),
+            'M' + W + ' ' + H + 'L' + (2 * ox - W) + ' ' + (2 * oy - H),
+            'M' + (ox - R) + ' ' + (oy - R) + 'a' + R + ' ' + R + ' 0 1 0 ' + 2 * R + ' 0a' + R + ' ' + R + ' 0 1 0 ' + -2 * R + ' 0',
+            'M' + (ox + R) + ' ' + (oy + R) + 'a' + R + ' ' + R + ' 0 1 0 ' + -2 * R + ' 0a' + R + ' ' + R + ' 0 1 0 ' + 2 * R + ' 0',
+            'M' + fx + ' 0V' + H + 'M' + (fx + fw) + ' 0V' + H,
+            'M0 ' + fy + 'H' + W + 'M0 ' + (fy + fh) + 'H' + W,
+            spiral(fx - sw * 0.62, fy - (sw / PHI) * 0.38, sw, 7),
+          ]
+          var html = lines
+            .map(function (d, i) {
+              return '<path class="c" pathLength="1" style="--d:' + (0.15 + i * 0.11).toFixed(2) + 's" d="' + d + '"/>'
+            })
+            .join('')
+          var cx = ox
+          var cy = fy + fh / 2
+          html +=
+            '<path class="c" pathLength="1" style="--d:1.4s" transform="rotate(180 ' + cx + ' ' + cy + ')" d="' +
+            spiral(fx - sw * 0.62, fy - (sw / PHI) * 0.38, sw, 7) +
+            '"/>'
+          // Traced from the lower left edge, clockwise, as the page loads
+          html +=
+            '<path class="f" pathLength="1" d="M' + fx + ' ' + (fy + fh * 0.7) + 'V' + fy + 'H' + (fx + fw) + 'V' + (fy + fh) + 'H' + fx + 'Z"/>'
+          svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H)
+          svg.innerHTML = html
+          root.style.setProperty('--fx', fx + 'px')
+          root.style.setProperty('--fy', fy + 'px')
+          root.style.setProperty('--fw', fw + 'px')
+          root.style.setProperty('--fh', fh + 'px')
+          root.style.setProperty('--oy', oy + 'px')
+        }
+
+        draw()
+        window.addEventListener('resize', draw)
+      })()
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
