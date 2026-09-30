@@ -1,0 +1,91 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "A finger points across a counting house",
+      "body": "Caravaggio’s Calling of Saint Matthew (c. 1600) drops the Gospel into a dim Roman tavern of tax collectors — grace arriving as a shaft of light.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.sanluigidifrancesi.it/"
+      ]
+    },
+    {
+      "id": "christ",
+      "title": "Christ almost at the door",
+      "body": "Christ stands at the right edge, hand echoing Michelangelo’s Adam in reverse — a summoning gesture rather than a gift of life.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "christ",
+      "sources": [
+        "https://www.sanluigidifrancesi.it/"
+      ]
+    },
+    {
+      "id": "peter",
+      "title": "Peter as escort",
+      "body": "Peter leans in beside Christ, repeating the pointing hand — the Church guiding the call.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "peter",
+      "sources": [
+        "https://www.sanluigidifrancesi.it/"
+      ]
+    },
+    {
+      "id": "matthew",
+      "title": "Who, me?",
+      "body": "Matthew (or the bearded man at the table, depending on reading) reacts to the light — surprise caught mid-count.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "matthew",
+      "sources": [
+        "https://www.sanluigidifrancesi.it/"
+      ]
+    },
+    {
+      "id": "beam",
+      "title": "Light as theology",
+      "body": "A hard diagonal beam cuts the darkness — Caravaggio’s tenebrism making revelation physical.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "beam",
+      "sources": [
+        "https://www.sanluigidifrancesi.it/"
+      ]
+    },
+    {
+      "id": "coins",
+      "title": "Money on the table",
+      "body": "Coins and ledgers mark Matthew’s old life as a tax collector — the world he is asked to leave.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "coins",
+      "sources": [
+        "https://www.sanluigidifrancesi.it/"
+      ]
+    },
+    {
+      "id": "window",
+      "title": "A shuttered square",
+      "body": "The window above is closed; light does not come from glass but from an unseen divine source.",
+      "category": "architecture",
+      "confidence": "scholarly_interpretation",
+      "entityId": "window",
+      "sources": [
+        "https://www.sanluigidifrancesi.it/"
+      ]
+    },
+    {
+      "id": "youths",
+      "title": "Velvet and swords",
+      "body": "Young men in fashionable dress lean over the table — contemporary Rome dressed into scripture.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "youths",
+      "sources": [
+        "https://www.sanluigidifrancesi.it/"
+      ]
+    }
+  ]
+}

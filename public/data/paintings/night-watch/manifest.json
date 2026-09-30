@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "night-watch",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "The Night Watch",
+    "artist": "Rembrandt van Rijn",
+    "date": "1642",
+    "medium": "Oil on canvas",
+    "source": "Rijksmuseum, Amsterdam"
+  },
+  "composition": {
+    "aspectRatio": 1.193,
+    "horizon": 0.45,
+    "vanishingPoint": [
+      0.5,
+      0.45
+    ],
+    "cameraFov": 46,
+    "planeWidth": 16,
+    "planeHeight": 13.41
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "cocq",
+      "type": "figure",
+      "label": "Frans Banninck Cocq",
+      "promptPoint": [
+        0.4,
+        0.48
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "ruitenburgh",
+      "type": "figure",
+      "label": "Willem van Ruytenburch",
+      "promptPoint": [
+        0.52,
+        0.46
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "girl",
+      "type": "figure",
+      "label": "The glowing girl",
+      "promptPoint": [
+        0.3,
+        0.52
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "drum",
+      "type": "figure",
+      "label": "Drummer",
+      "promptPoint": [
+        0.92,
+        0.68
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "musket",
+      "type": "object",
+      "label": "Musket drill",
+      "promptPoint": [
+        0.7,
+        0.52
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "flag",
+      "type": "object",
+      "label": "Company flag",
+      "promptPoint": [
+        0.56,
+        0.18
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "archway",
+      "type": "architecture",
+      "label": "Triumphal arch",
+      "promptPoint": [
+        0.48,
+        0.12
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "dog",
+      "type": "animal",
+      "label": "Barking dog",
+      "promptPoint": [
+        0.8,
+        0.84
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "spotlight",
+      "type": "object",
+      "label": "Rembrandt’s spotlight",
+      "promptPoint": [
+        0.42,
+        0.48
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.42,
+    "directional": [
+      0.6,
+      0.7,
+      0.25
+    ],
+    "directionalIntensity": 1.05,
+    "color": "#e6d2b0"
+  },
+  "palette": [
+    "#1a1410",
+    "#c9a24a",
+    "#8b2e1f",
+    "#efe6d6"
+  ]
+}

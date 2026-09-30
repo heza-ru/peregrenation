@@ -1,0 +1,32 @@
+{
+  "paintingId": "last-supper",
+  "image": {
+    "file": "painting.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg",
+    "retrievalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg?width=1920",
+    "license": "Public domain",
+    "credit": "Online Taken on 23 July 2013",
+    "retrievedAt": "2026-03-30",
+    "licenseShortName": "Public domain",
+    "commonsLicense": "pd",
+    "copyrighted": false,
+    "commonsTitle": "File:The Last Supper - Leonardo Da Vinci - High Resolution 32x16.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg",
+    "rights": {
+      "status": "public_domain",
+      "verifiedVia": "Wikimedia Commons extmetadata",
+      "verifiedAt": "2026-03-30",
+      "artistDeathYear": 1519,
+      "workPublicDomainReason": "Leonardo da Vinci died in 1519; the mural is in the public domain worldwide.",
+      "reproductionNote": "Wikimedia Commons marks this photographic reproduction Public domain (copyrighted=False)."
+    }
+  },
+  "references": [
+    {
+      "id": "santa-maria-grazie",
+      "title": "The Last Supper",
+      "publisher": "Museo del Cenacolo Vinciano",
+      "url": "https://cenacolovinciano.org/en/"
+    }
+  ]
+}

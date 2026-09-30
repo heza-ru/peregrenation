@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "liberty-leading-the-people",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "Liberty Leading the People",
+    "artist": "Eugène Delacroix",
+    "date": "1830",
+    "medium": "Oil on canvas",
+    "source": "Louvre Museum, Paris"
+  },
+  "composition": {
+    "aspectRatio": 1.246,
+    "horizon": 0.42,
+    "vanishingPoint": [
+      0.5,
+      0.42
+    ],
+    "cameraFov": 46,
+    "planeWidth": 16,
+    "planeHeight": 12.84
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "liberty",
+      "type": "figure",
+      "label": "Liberty",
+      "promptPoint": [
+        0.5,
+        0.36
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "flag",
+      "type": "object",
+      "label": "Tricolour flag",
+      "promptPoint": [
+        0.52,
+        0.14
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "boy-pistol",
+      "type": "figure",
+      "label": "Boy with pistols",
+      "promptPoint": [
+        0.68,
+        0.42
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "top-hat",
+      "type": "figure",
+      "label": "Man in top hat",
+      "promptPoint": [
+        0.34,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "fallen",
+      "type": "figure",
+      "label": "Fallen fighters",
+      "promptPoint": [
+        0.42,
+        0.84
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "notre-dame",
+      "type": "architecture",
+      "label": "Notre-Dame towers",
+      "promptPoint": [
+        0.82,
+        0.28
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "smoke",
+      "type": "landscape",
+      "label": "Smoke of revolt",
+      "promptPoint": [
+        0.72,
+        0.32
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "bayonet",
+      "type": "object",
+      "label": "Bayonet and musket",
+      "promptPoint": [
+        0.28,
+        0.52
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.5,
+    "directional": [
+      0.2,
+      0.85,
+      0.35
+    ],
+    "directionalIntensity": 0.9,
+    "color": "#efe2c8"
+  },
+  "palette": [
+    "#c0392b",
+    "#1a2744",
+    "#c9a24a",
+    "#3a2a1c"
+  ]
+}

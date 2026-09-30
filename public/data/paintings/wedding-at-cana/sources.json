@@ -1,0 +1,32 @@
+{
+  "paintingId": "wedding-at-cana",
+  "image": {
+    "file": "painting.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paolo_Veronese_008.jpg",
+    "retrievalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Paolo_Veronese_008.jpg?width=1920",
+    "license": "Public domain",
+    "credit": "This image has an extracted file : Paolo Veronese 008 - selfportrait.jpg .",
+    "retrievedAt": "2026-03-30",
+    "licenseShortName": "Public domain",
+    "commonsLicense": "pd",
+    "copyrighted": false,
+    "commonsTitle": "File:Paolo Veronese 008.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Paolo_Veronese_008.jpg",
+    "rights": {
+      "status": "public_domain",
+      "verifiedVia": "Wikimedia Commons extmetadata",
+      "verifiedAt": "2026-03-30",
+      "artistDeathYear": 1588,
+      "workPublicDomainReason": "Paolo Veronese died in 1588; the painting is in the public domain worldwide.",
+      "reproductionNote": "Wikimedia Commons marks this photographic reproduction Public domain (copyrighted=False)."
+    }
+  },
+  "references": [
+    {
+      "id": "louvre-cana",
+      "title": "The Wedding Feast at Cana",
+      "publisher": "Musée du Louvre",
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+    }
+  ]
+}

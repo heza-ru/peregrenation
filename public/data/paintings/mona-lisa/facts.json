@@ -1,0 +1,102 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "The world’s most watched portrait",
+      "body": "Leonardo’s Mona Lisa (begun c. 1503) is almost certainly Lisa Gherardini, wife of Francesco del Giocondo. The Louvre’s panel is famous for sfumato, an invented landscape, and a smile that refuses to settle.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana"
+      ]
+    },
+    {
+      "id": "lisa",
+      "title": "Lisa Gherardini",
+      "body": "Documentary and stylistic evidence identify the sitter as Lisa Gherardini. Leonardo kept the panel with him for years, refining it beyond a simple commission.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "lisa",
+      "sources": [
+        "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana"
+      ]
+    },
+    {
+      "id": "smile",
+      "title": "A smile that moves",
+      "body": "Peripheral vision softens the mouth; direct stare hardens it. Leonardo engineered ambiguity into the face itself.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "smile",
+      "sources": [
+        "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana"
+      ]
+    },
+    {
+      "id": "hands",
+      "title": "Hands as quiet architecture",
+      "body": "The folded hands close the lower pyramid of the composition — calm, deliberate, unfinished by jewelry.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "hands",
+      "sources": [
+        "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana"
+      ]
+    },
+    {
+      "id": "veil",
+      "title": "Veil like mist",
+      "body": "A translucent veil over hair and bodice continues Leonardo’s obsession with light through thin matter.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "entityId": "veil",
+      "sources": [
+        "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana"
+      ]
+    },
+    {
+      "id": "landscape",
+      "title": "A world behind her",
+      "body": "The background is not a real Tuscan view but an aerial fantasy of roads, water, and rock — weather and geology as mood.",
+      "category": "landscape",
+      "confidence": "documented",
+      "entityId": "landscape",
+      "sources": [
+        "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana"
+      ]
+    },
+    {
+      "id": "bridge",
+      "title": "A bridge at mid-distance",
+      "body": "A small arched bridge pins the right middle ground, giving scale to an otherwise dreamlike terrain.",
+      "category": "architecture",
+      "confidence": "documented",
+      "entityId": "bridge",
+      "sources": [
+        "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana"
+      ]
+    },
+    {
+      "id": "chair-arm",
+      "title": "The chair’s edge",
+      "body": "A chair arm at left reminds us she sits in a room — then the room dissolves into landscape.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "chair-arm",
+      "sources": [
+        "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana"
+      ]
+    },
+    {
+      "id": "sfumato",
+      "title": "Sfumato — smoke without lines",
+      "body": "Leonardo dissolves contours into tone. Eyes, lips, and jaw live in soft transitions rather than hard outlines.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "sfumato",
+      "sources": [
+        "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana"
+      ]
+    }
+  ]
+}

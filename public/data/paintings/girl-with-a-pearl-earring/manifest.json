@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "girl-with-a-pearl-earring",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "Girl with a Pearl Earring",
+    "artist": "Johannes Vermeer",
+    "date": "c. 1665",
+    "medium": "Oil on canvas",
+    "source": "Mauritshuis, The Hague"
+  },
+  "composition": {
+    "aspectRatio": 0.846,
+    "horizon": 0.45,
+    "vanishingPoint": [
+      0.5,
+      0.45
+    ],
+    "cameraFov": 36,
+    "planeWidth": 13.531,
+    "planeHeight": 16
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "girl",
+      "type": "figure",
+      "label": "The girl",
+      "promptPoint": [
+        0.52,
+        0.45
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "pearl",
+      "type": "object",
+      "label": "Pearl earring",
+      "promptPoint": [
+        0.63,
+        0.54
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "turban",
+      "type": "object",
+      "label": "Blue and yellow turban",
+      "promptPoint": [
+        0.5,
+        0.22
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "gaze",
+      "type": "figure",
+      "label": "Over-the-shoulder gaze",
+      "promptPoint": [
+        0.5,
+        0.4
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "lips",
+      "type": "figure",
+      "label": "Parted lips",
+      "promptPoint": [
+        0.47,
+        0.51
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "dark-ground",
+      "type": "object",
+      "label": "Dark ground",
+      "promptPoint": [
+        0.88,
+        0.35
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "jacket",
+      "type": "object",
+      "label": "Yellow jacket",
+      "promptPoint": [
+        0.42,
+        0.78
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.45,
+    "directional": [
+      0.65,
+      0.6,
+      0.3
+    ],
+    "directionalIntensity": 0.95,
+    "color": "#f0e2cc"
+  },
+  "palette": [
+    "#0d1a24",
+    "#c9a24a",
+    "#8b3a2a",
+    "#efe6d6"
+  ]
+}

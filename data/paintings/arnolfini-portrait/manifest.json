@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "arnolfini-portrait",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v2",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "The Arnolfini Portrait",
+    "artist": "Jan van Eyck",
+    "date": "1434",
+    "medium": "Oil on oak",
+    "source": "The National Gallery, London"
+  },
+  "composition": {
+    "aspectRatio": 0.731,
+    "horizon": 0.55,
+    "vanishingPoint": [
+      0.5,
+      0.52
+    ],
+    "cameraFov": 40,
+    "planeWidth": 11.694,
+    "planeHeight": 16.0
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "giovanni",
+      "type": "figure",
+      "label": "Giovanni Arnolfini",
+      "promptPoint": [
+        0.3,
+        0.42
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "bride",
+      "type": "figure",
+      "label": "The woman in green",
+      "promptPoint": [
+        0.58,
+        0.45
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "joined-hands",
+      "type": "gesture",
+      "label": "Joined hands",
+      "promptPoint": [
+        0.42,
+        0.5
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "mirror",
+      "type": "object",
+      "label": "Convex mirror",
+      "promptPoint": [
+        0.5,
+        0.52
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "signature",
+      "type": "inscription",
+      "label": "Van Eyck was here",
+      "promptPoint": [
+        0.5,
+        0.4
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "chandelier",
+      "type": "object",
+      "label": "Brass chandelier",
+      "promptPoint": [
+        0.48,
+        0.14
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "dog",
+      "type": "animal",
+      "label": "The dog",
+      "promptPoint": [
+        0.48,
+        0.88
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "clogs",
+      "type": "object",
+      "label": "Discarded clogs",
+      "promptPoint": [
+        0.22,
+        0.82
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "oranges",
+      "type": "object",
+      "label": "Oranges on the sill",
+      "promptPoint": [
+        0.16,
+        0.55
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "bed",
+      "type": "object",
+      "label": "The red bed",
+      "promptPoint": [
+        0.8,
+        0.55
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "rosary",
+      "type": "object",
+      "label": "Crystal rosary",
+      "promptPoint": [
+        0.5,
+        0.48
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "brush",
+      "type": "object",
+      "label": "Bedside brush",
+      "promptPoint": [
+        0.72,
+        0.48
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "window",
+      "type": "architecture",
+      "label": "Leadlight window",
+      "promptPoint": [
+        0.12,
+        0.35
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "carpet",
+      "type": "object",
+      "label": "Oriental carpet",
+      "promptPoint": [
+        0.55,
+        0.72
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "fur-robe",
+      "type": "object",
+      "label": "Fur-lined robe",
+      "promptPoint": [
+        0.28,
+        0.55
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [
+    {
+      "id": "floor",
+      "type": "plane",
+      "position": [
+        0,
+        -2.2,
+        -1.5
+      ],
+      "rotation": [
+        -1.35,
+        0,
+        0
+      ],
+      "size": [
+        18,
+        12
+      ],
+      "opacity": 0.08
+    }
+  ],
+  "lighting": {
+    "ambient": 0.5,
+    "directional": [
+      0.6,
+      0.7,
+      0.3
+    ],
+    "directionalIntensity": 0.85,
+    "color": "#f4ead8"
+  },
+  "palette": [
+    "#1a1510",
+    "#c9a24a",
+    "#6b3a2a",
+    "#d8c8a8"
+  ]
+}

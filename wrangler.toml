@@ -1,0 +1,4 @@
+# Cloudflare Pages — set build output directory to `dist`
+name = "peregrenation"
+compatibility_date = "2026-03-01"
+pages_build_output_dir = "dist"

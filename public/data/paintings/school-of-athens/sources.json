@@ -1,0 +1,32 @@
+{
+  "paintingId": "school-of-athens",
+  "image": {
+    "file": "painting.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_School_of_Athens_by_Raffaello_Sanzio_da_Urbino.jpg",
+    "retrievalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The_School_of_Athens_by_Raffaello_Sanzio_da_Urbino.jpg?width=1920",
+    "license": "Public domain",
+    "credit": "Own work",
+    "retrievedAt": "2026-03-30",
+    "licenseShortName": "Public domain",
+    "commonsLicense": "pd",
+    "copyrighted": false,
+    "commonsTitle": "File:The School of Athens by Raffaello Sanzio da Urbino.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:The_School_of_Athens_by_Raffaello_Sanzio_da_Urbino.jpg",
+    "rights": {
+      "status": "public_domain",
+      "verifiedVia": "Wikimedia Commons extmetadata",
+      "verifiedAt": "2026-03-30",
+      "artistDeathYear": 1520,
+      "workPublicDomainReason": "Raphael died in 1520; the fresco is in the public domain worldwide.",
+      "reproductionNote": "Wikimedia Commons marks this photographic reproduction Public domain (copyrighted=False)."
+    }
+  },
+  "references": [
+    {
+      "id": "vatican-segnatura",
+      "title": "Raphael's Rooms — Stanza della Segnatura",
+      "publisher": "Vatican Museums",
+      "url": "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+    }
+  ]
+}

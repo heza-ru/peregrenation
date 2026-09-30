@@ -1,0 +1,32 @@
+{
+  "paintingId": "sunday-on-la-grande-jatte",
+  "image": {
+    "file": "painting.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg",
+    "retrievalUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg/1920px-Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "credit": "Georges Seurat",
+    "retrievedAt": "2026-09-30",
+    "licenseShortName": "Public domain",
+    "commonsLicense": "pd",
+    "copyrighted": false,
+    "commonsTitle": "File:Georges Seurat - A Sunday on La Grande Jatte -- 1884 - Google Art Project.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg",
+    "rights": {
+      "status": "public_domain",
+      "verifiedVia": "Wikimedia Commons",
+      "verifiedAt": "2026-09-30",
+      "artistDeathYear": 1891,
+      "workPublicDomainReason": "Georges Seurat died in 1891; the painting is in the public domain worldwide.",
+      "reproductionNote": "Wikimedia Commons reproduction used for the curated 2D world pack."
+    }
+  },
+  "references": [
+    {
+      "id": "sunday-on-la-grande-jatte-museum",
+      "title": "A Sunday on La Grande Jatte",
+      "publisher": "Art Institute of Chicago",
+      "url": "https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884"
+    }
+  ]
+}

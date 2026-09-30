@@ -1,0 +1,91 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "A tronie that became an icon",
+      "body": "Vermeer’s Girl with a Pearl Earring (c. 1665) is a tronie — a character study, not a named portrait. The Mauritshuis panel is famous for its turban, moist glance, and a pearl that may be glass or invention.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/670-girl-with-a-pearl-earring/"
+      ]
+    },
+    {
+      "id": "girl",
+      "title": "An unknown sitter",
+      "body": "No document names her. She exists as light on cheek and wetness in the eye — presence without biography.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "girl",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/670-girl-with-a-pearl-earring/"
+      ]
+    },
+    {
+      "id": "pearl",
+      "title": "A pearl too large to be real",
+      "body": "The earring’s scale suggests glass, tin, or pure painterly invention. Vermeer builds it from a few bright strokes.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "entityId": "pearl",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/670-girl-with-a-pearl-earring/"
+      ]
+    },
+    {
+      "id": "turban",
+      "title": "Exotic cloth, Dutch light",
+      "body": "The blue-and-yellow turban was fashionable orientalizing costume in Dutch tronies — foreign fabric under northern window light.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "turban",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/670-girl-with-a-pearl-earring/"
+      ]
+    },
+    {
+      "id": "gaze",
+      "title": "Caught turning",
+      "body": "She turns as if we just spoke. The glance invents a relationship in a single instant.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "gaze",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/670-girl-with-a-pearl-earring/"
+      ]
+    },
+    {
+      "id": "lips",
+      "title": "A mouth about to answer",
+      "body": "Slightly parted lips catch a highlight — breath made visible.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "lips",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/670-girl-with-a-pearl-earring/"
+      ]
+    },
+    {
+      "id": "dark-ground",
+      "title": "Black that was green",
+      "body": "The background was once a warm green glaze over black; age darkened it into the void we know.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "dark-ground",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/670-girl-with-a-pearl-earring/"
+      ]
+    },
+    {
+      "id": "jacket",
+      "title": "A yellow wrap",
+      "body": "The jacket’s ochre folds ground the floating head in cloth and weight.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "jacket",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/670-girl-with-a-pearl-earring/"
+      ]
+    }
+  ]
+}

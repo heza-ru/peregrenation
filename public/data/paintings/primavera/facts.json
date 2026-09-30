@@ -1,0 +1,113 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "An orchard of allegory",
+      "body": "Primavera (c. 1482) gathers Venus, the Graces, Mercury, Flora, Chloris, and Zephyrus in an orange grove. It is one of the most dense mythological programs of the Florentine Renaissance.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/botticelli-spring"
+      ]
+    },
+    {
+      "id": "venus-center",
+      "title": "Venus as quiet ruler",
+      "body": "Venus stands slightly raised at center, hand raised in a gesture of welcome. Around her the garden becomes a court of love.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "venus-center",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/botticelli-spring"
+      ]
+    },
+    {
+      "id": "mercury",
+      "title": "Mercury clearing the air",
+      "body": "At far left Mercury lifts his caduceus toward the clouds — often read as clearing winter so spring can enter.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "mercury",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/botticelli-spring"
+      ]
+    },
+    {
+      "id": "three-graces",
+      "title": "The Three Graces dancing",
+      "body": "Beauty, Joy, and Charm interlace translucent dresses in a circle. Their dance is the painting’s soft metronome.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "three-graces",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/botticelli-spring"
+      ]
+    },
+    {
+      "id": "flora",
+      "title": "Flora scattering blooms",
+      "body": "Flora, dressed in blossom, strews flowers forward — spring made person.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "flora",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/botticelli-spring"
+      ]
+    },
+    {
+      "id": "chloris",
+      "title": "Chloris becoming Flora",
+      "body": "Chloris is seized by Zephyrus as flowers spill from her mouth — the metamorphosis that turns nymph into goddess of flowers.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "chloris",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/botticelli-spring"
+      ]
+    },
+    {
+      "id": "zephyrus",
+      "title": "Zephyrus lunging in",
+      "body": "The blue-winged west wind breaks into the grove from the right edge, the only violent motion in an otherwise measured pageant.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "zephyrus",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/botticelli-spring"
+      ]
+    },
+    {
+      "id": "cupid",
+      "title": "Cupid above Venus",
+      "body": "Blindfolded Cupid aims an arrow above Venus — desire that does not look where it strikes.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "cupid",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/botticelli-spring"
+      ]
+    },
+    {
+      "id": "orange-grove",
+      "title": "Medici oranges",
+      "body": "Orange trees (malus medica) may pun on the Medici name. The grove is both paradise and patronage.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "entityId": "orange-grove",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/botticelli-spring"
+      ]
+    },
+    {
+      "id": "flowered-meadow",
+      "title": "A botanist’s carpet",
+      "body": "Hundreds of identifiable flower species carpet the ground — a painted herbal beneath the myth.",
+      "category": "landscape",
+      "confidence": "documented",
+      "entityId": "flowered-meadow",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/botticelli-spring"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "Two envoys and a distorted death",
+      "body": "Holbein painted The Ambassadors in 1533. The National Gallery identifies Jean de Dinteville, French ambassador to England, and Georges de Selve, bishop and envoy. Between them stretches a shelf of worldly learning — and a skull you can only read from the side.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ]
+    },
+    {
+      "id": "dinteville",
+      "title": "Dinteville in silk and dagger",
+      "body": "Jean de Dinteville, left, wears the luxurious stillness of a court diplomat. Holbein catalogs status through fabrics and a sheathed dagger while the man’s gaze holds you at interview distance.",
+      "category": "figure",
+      "confidence": "documented",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "dinteville"
+    },
+    {
+      "id": "selve",
+      "title": "Selve in clerical gravity",
+      "body": "Georges de Selve, right, balances secular pomp with episcopal restraint. Together the pair embody church and state negotiating a fractured Europe — Reformation politics folded into friendship.",
+      "category": "figure",
+      "confidence": "documented",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "selve"
+    },
+    {
+      "id": "skull",
+      "title": "Death, stretched across the floor",
+      "body": "The famous anamorphic skull only resolves when viewed from an extreme angle. Holbein plants memento mori inside diplomatic display: approach knowledge, then remember you are temporary.",
+      "category": "object",
+      "confidence": "documented",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "skull"
+    },
+    {
+      "id": "celestial-globe",
+      "title": "Stars on the upper shelf",
+      "body": "A celestial globe sits among the upper instruments — the heavens made portable. Ambassadors claim not only countries, but the sky’s measurable order.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "celestial-globe"
+    },
+    {
+      "id": "sundial",
+      "title": "Time caught in brass",
+      "body": "Dials and sundials advertise precision timekeeping. In 1533, mastering hours was political power as much as science.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "sundial"
+    },
+    {
+      "id": "quadrant",
+      "title": "A quadrant for the heavens",
+      "body": "The quadrant belongs to the toolkit of astronomy and navigation. Holbein paints expertise as still life — knowledge you could almost adjust.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "quadrant"
+    },
+    {
+      "id": "terrestrial-globe",
+      "title": "A world you can spin",
+      "body": "The terrestrial globe advertises geographic mastery — the ambassadors’ century inventing itself as a measurable planet. Empire and curiosity share the same polished sphere.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "terrestrial-globe"
+    },
+    {
+      "id": "lute",
+      "title": "A string that will not play",
+      "body": "A lute with a broken string sits among the instruments — often read as discord in the Church or the limits of earthly harmony. Music, like diplomacy, can go out of tune.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "lute"
+    },
+    {
+      "id": "flute-case",
+      "title": "Flutes in their case",
+      "body": "A case of flutes continues the musical theme. Harmony is collected, catalogued — and still vulnerable to a single broken course on the lute beside it.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "flute-case"
+    },
+    {
+      "id": "hymnal",
+      "title": "Open pages of Reform",
+      "body": "An open hymnal has been linked to Lutheran music — doctrine entering through song. Even the still life argues about Europe’s religious fracture.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "hymnal"
+    },
+    {
+      "id": "arithmetic-book",
+      "title": "Numbers for merchants and minds",
+      "body": "A book of arithmetic grounds the lower shelf in practical calculation. Diplomacy runs on ledgers as much as on Latin.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "arithmetic-book"
+    },
+    {
+      "id": "crucifix",
+      "title": "Christ half hidden by the curtain",
+      "body": "A silver crucifix peeks from behind the green curtain at upper left. Faith remains in the room, but edged to the margin — a quiet counterweight to instruments and skull.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "crucifix"
+    },
+    {
+      "id": "green-curtain",
+      "title": "The curtain of state",
+      "body": "The rich green drape stages the envoys like a court backdrop. Holbein’s theater of diplomacy needs fabric as much as faces.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "green-curtain"
+    },
+    {
+      "id": "dagger",
+      "title": "Steel at the hip",
+      "body": "Dinteville’s dagger is ornament and threat in one sheath. Soft power still keeps a blade within reach.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "dagger"
+    },
+    {
+      "id": "mosaic-floor",
+      "title": "Cosmati geometry underfoot",
+      "body": "The pavement echoes Cosmati work associated with Westminster Abbey. Sacred geometry grounds the envoys — England’s great church literally under diplomatic feet.",
+      "category": "architecture",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "mosaic-floor"
+    },
+    {
+      "id": "instruments",
+      "title": "Shelf of the sciences",
+      "body": "Upper and lower shelves stack into a curriculum of astronomy, geometry, music, and measurement. Holbein paints the Renaissance mind as furniture between two living men.",
+      "category": "object",
+      "confidence": "documented",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
+      ],
+      "entityId": "instruments"
+    }
+  ]
+}

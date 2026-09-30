@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "las-meninas",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "Las Meninas",
+    "artist": "Diego Velázquez",
+    "date": "1656",
+    "medium": "Oil on canvas",
+    "source": "Museo del Prado, Madrid"
+  },
+  "composition": {
+    "aspectRatio": 0.869,
+    "horizon": 0.48,
+    "vanishingPoint": [
+      0.5,
+      0.48
+    ],
+    "cameraFov": 42,
+    "planeWidth": 13.898,
+    "planeHeight": 16
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "margarita",
+      "type": "figure",
+      "label": "Infanta Margarita",
+      "promptPoint": [
+        0.48,
+        0.5
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "velazquez",
+      "type": "figure",
+      "label": "Velázquez painting",
+      "promptPoint": [
+        0.22,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "menina-left",
+      "type": "figure",
+      "label": "Menina María Agustina",
+      "promptPoint": [
+        0.38,
+        0.52
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "menina-right",
+      "type": "figure",
+      "label": "Menina Isabel",
+      "promptPoint": [
+        0.6,
+        0.52
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "mirror",
+      "type": "object",
+      "label": "Mirror with the king and queen",
+      "promptPoint": [
+        0.5,
+        0.26
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "canvas",
+      "type": "object",
+      "label": "The huge canvas",
+      "promptPoint": [
+        0.1,
+        0.4
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "nieto",
+      "type": "figure",
+      "label": "José Nieto in the doorway",
+      "promptPoint": [
+        0.62,
+        0.3
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "dog",
+      "type": "animal",
+      "label": "Mastiff",
+      "promptPoint": [
+        0.64,
+        0.82
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "dwarf",
+      "type": "figure",
+      "label": "Court dwarfs",
+      "promptPoint": [
+        0.72,
+        0.58
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.46,
+    "directional": [
+      0.3,
+      0.75,
+      0.4
+    ],
+    "directionalIntensity": 0.95,
+    "color": "#e8dcc8"
+  },
+  "palette": [
+    "#2a241c",
+    "#c9b89a",
+    "#5a6a7a",
+    "#efe6d6"
+  ]
+}

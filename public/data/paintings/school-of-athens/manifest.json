@@ -1,0 +1,1072 @@
+{
+  "schemaVersion": 2,
+  "paintingId": "school-of-athens",
+  "pipelineVersion": "0.2.0",
+  "sceneAnalysisVersion": "opus-5-5-v1",
+  "segmentationVersion": "sam-vit-base-gpu-v1",
+  "depthVersion": "depth-anything-v2-small-hf",
+  "painting": {
+    "title": "The School of Athens",
+    "artist": "Raphael",
+    "date": "1509–1511",
+    "medium": "Fresco",
+    "source": "Stanza della Segnatura, Vatican Museums"
+  },
+  "composition": {
+    "aspectRatio": 1.434,
+    "horizon": 0.568,
+    "vanishingPoint": [
+      0.53,
+      0.568
+    ],
+    "cameraFov": 45,
+    "planeWidth": 16,
+    "planeHeight": 11.16
+  },
+  "layers": [
+    {
+      "id": "sky-arch-far",
+      "label": "Sky through the far arch and drum windows",
+      "depthBand": 5,
+      "texture": "layers/sky-arch-far.webp",
+      "z": -5.2,
+      "parallax": 0.1,
+      "opacity": 1,
+      "mask": "masks/band-5.png"
+    },
+    {
+      "id": "vault-coffers",
+      "label": "Coffered barrel vaults and crossing",
+      "depthBand": 4,
+      "texture": "layers/vault-coffers.webp",
+      "z": -4.0,
+      "parallax": 0.2,
+      "opacity": 1,
+      "mask": "masks/band-4.png"
+    },
+    {
+      "id": "hall-mid",
+      "label": "Hall piers, niches, Apollo and Athena",
+      "depthBand": 3,
+      "texture": "layers/hall-mid.webp",
+      "z": -2.8,
+      "parallax": 0.32,
+      "opacity": 1,
+      "mask": "masks/band-3.png"
+    },
+    {
+      "id": "figures-rear",
+      "label": "Upper platform rear ranks",
+      "depthBand": 2,
+      "texture": "layers/figures-rear.webp",
+      "z": -1.8,
+      "parallax": 0.45,
+      "opacity": 1,
+      "mask": "masks/band-2.png"
+    },
+    {
+      "id": "figures-near",
+      "label": "Plato, Aristotle and the front rank on the platform and steps",
+      "depthBand": 1,
+      "texture": "layers/figures-near.webp",
+      "z": -0.9,
+      "parallax": 0.65,
+      "opacity": 1,
+      "mask": "masks/band-1.png"
+    },
+    {
+      "id": "hero-painting",
+      "label": "Hero match frame",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "plato",
+      "type": "figure",
+      "label": "Plato",
+      "promptPoint": [
+        0.504,
+        0.662
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.95,
+      "evidence": "observed",
+      "mask": "masks/entity-plato.png",
+      "cutoutWidth": 0.9,
+      "cutoutHeight": 2.1
+    },
+    {
+      "id": "aristotle",
+      "type": "figure",
+      "label": "Aristotle",
+      "promptPoint": [
+        0.552,
+        0.662
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.95,
+      "evidence": "observed",
+      "mask": "masks/entity-aristotle.png",
+      "cutoutWidth": 1.0,
+      "cutoutHeight": 2.1
+    },
+    {
+      "id": "timaeus-book",
+      "type": "object",
+      "label": "Timaeus",
+      "promptPoint": [
+        0.51,
+        0.675
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.8,
+      "evidence": "observed",
+      "mask": "masks/entity-timaeus-book.png",
+      "cutoutWidth": 0.3,
+      "cutoutHeight": 0.45
+    },
+    {
+      "id": "ethics-book",
+      "type": "object",
+      "label": "Ethics",
+      "promptPoint": [
+        0.562,
+        0.675
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.8,
+      "evidence": "observed",
+      "mask": "masks/entity-ethics-book.png",
+      "cutoutWidth": 0.4,
+      "cutoutHeight": 0.35
+    },
+    {
+      "id": "socrates",
+      "type": "figure",
+      "label": "Socrates",
+      "promptPoint": [
+        0.388,
+        0.657
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.85,
+      "evidence": "strongly_inferred",
+      "mask": "masks/entity-socrates.png",
+      "cutoutWidth": 0.8,
+      "cutoutHeight": 2.0
+    },
+    {
+      "id": "pythagoras",
+      "type": "figure",
+      "label": "Pythagoras",
+      "promptPoint": [
+        0.272,
+        0.855
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.85,
+      "evidence": "strongly_inferred",
+      "mask": "masks/entity-pythagoras.png",
+      "cutoutWidth": 1.4,
+      "cutoutHeight": 1.9
+    },
+    {
+      "id": "averroes",
+      "type": "figure",
+      "label": "Averroes",
+      "promptPoint": [
+        0.228,
+        0.815
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.75,
+      "evidence": "strongly_inferred",
+      "mask": "masks/entity-averroes.png",
+      "cutoutWidth": 0.8,
+      "cutoutHeight": 1.2
+    },
+    {
+      "id": "hypatia",
+      "type": "figure",
+      "label": "Hypatia",
+      "promptPoint": [
+        0.327,
+        0.744
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.5,
+      "evidence": "weakly_inferred",
+      "mask": "masks/entity-hypatia.png",
+      "cutoutWidth": 0.7,
+      "cutoutHeight": 1.8
+    },
+    {
+      "id": "epicurus",
+      "type": "figure",
+      "label": "Epicurus",
+      "promptPoint": [
+        0.183,
+        0.735
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 5,
+      "interactive": true,
+      "confidence": 0.5,
+      "evidence": "weakly_inferred",
+      "mask": "masks/entity-epicurus.png",
+      "cutoutWidth": 0.9,
+      "cutoutHeight": 1.4
+    },
+    {
+      "id": "heraclitus",
+      "type": "figure",
+      "label": "Heraclitus",
+      "promptPoint": [
+        0.464,
+        0.867
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.85,
+      "evidence": "strongly_inferred",
+      "mask": "masks/entity-heraclitus.png",
+      "cutoutWidth": 1.5,
+      "cutoutHeight": 2.2
+    },
+    {
+      "id": "diogenes",
+      "type": "figure",
+      "label": "Diogenes",
+      "promptPoint": [
+        0.604,
+        0.797
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.9,
+      "evidence": "strongly_inferred",
+      "mask": "masks/entity-diogenes.png",
+      "cutoutWidth": 2.1,
+      "cutoutHeight": 1.1
+    },
+    {
+      "id": "euclid",
+      "type": "figure",
+      "label": "Euclid",
+      "promptPoint": [
+        0.823,
+        0.866
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.85,
+      "evidence": "strongly_inferred",
+      "mask": "masks/entity-euclid.png",
+      "cutoutWidth": 1.4,
+      "cutoutHeight": 1.4
+    },
+    {
+      "id": "euclid-slate",
+      "type": "object",
+      "label": "Euclid's slate",
+      "promptPoint": [
+        0.8,
+        0.952
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 4,
+      "interactive": true,
+      "confidence": 0.8,
+      "evidence": "observed",
+      "mask": "masks/entity-euclid-slate.png",
+      "cutoutWidth": 0.7,
+      "cutoutHeight": 0.4
+    },
+    {
+      "id": "ptolemy",
+      "type": "figure",
+      "label": "Ptolemy",
+      "promptPoint": [
+        0.883,
+        0.825
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.8,
+      "evidence": "strongly_inferred",
+      "mask": "masks/entity-ptolemy.png",
+      "cutoutWidth": 1.0,
+      "cutoutHeight": 2.7
+    },
+    {
+      "id": "zoroaster",
+      "type": "figure",
+      "label": "Zoroaster",
+      "promptPoint": [
+        0.876,
+        0.715
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.7,
+      "evidence": "strongly_inferred",
+      "mask": "masks/entity-zoroaster.png",
+      "cutoutWidth": 0.8,
+      "cutoutHeight": 2.0
+    },
+    {
+      "id": "raphael-self",
+      "type": "figure",
+      "label": "Raphael",
+      "promptPoint": [
+        0.915,
+        0.69
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.8,
+      "evidence": "strongly_inferred",
+      "mask": "masks/entity-raphael-self.png",
+      "cutoutWidth": 0.5,
+      "cutoutHeight": 0.8
+    },
+    {
+      "id": "apollo-statue",
+      "type": "architecture",
+      "label": "Apollo",
+      "promptPoint": [
+        0.25,
+        0.368
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 3,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.9,
+      "evidence": "strongly_inferred",
+      "mask": "masks/entity-apollo-statue.png",
+      "cutoutWidth": 1.1,
+      "cutoutHeight": 2.6
+    },
+    {
+      "id": "athena-statue",
+      "type": "architecture",
+      "label": "Athena",
+      "promptPoint": [
+        0.796,
+        0.389
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 3,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.9,
+      "evidence": "strongly_inferred",
+      "mask": "masks/entity-athena-statue.png",
+      "cutoutWidth": 1.0,
+      "cutoutHeight": 2.5
+    },
+    {
+      "id": "vault-perspective",
+      "type": "architecture",
+      "label": "The vault",
+      "promptPoint": [
+        0.525,
+        0.21
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 4,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.95,
+      "evidence": "observed",
+      "mask": "masks/entity-vault-perspective.png"
+    },
+    {
+      "id": "far-arch",
+      "type": "architecture",
+      "label": "The far arch",
+      "promptPoint": [
+        0.527,
+        0.534
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 5,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.9,
+      "evidence": "observed",
+      "mask": "masks/entity-far-arch.png"
+    },
+    {
+      "id": "marble-steps",
+      "type": "architecture",
+      "label": "The steps",
+      "promptPoint": [
+        0.525,
+        0.82
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 5,
+      "interactive": true,
+      "confidence": 0.95,
+      "evidence": "observed",
+      "mask": "masks/entity-marble-steps.png"
+    }
+  ],
+  "architecture": [
+    {
+      "id": "floor-lower",
+      "type": "plane",
+      "position": [
+        0.45,
+        -5.58,
+        -2.1
+      ],
+      "rotation": [
+        -1.5708,
+        0,
+        0
+      ],
+      "size": [
+        26,
+        6.2
+      ],
+      "opacity": 0.12
+    },
+    {
+      "id": "block-heraclitus",
+      "type": "box",
+      "position": [
+        -0.63,
+        -5.17,
+        -3.18
+      ],
+      "size": [
+        1.05,
+        0.82,
+        1.0
+      ],
+      "opacity": 0.1
+    },
+    {
+      "id": "plinth-left",
+      "type": "box",
+      "position": [
+        -8.48,
+        -4.635,
+        -7.2
+      ],
+      "size": [
+        2.18,
+        1.89,
+        1.4
+      ],
+      "opacity": 0.1
+    },
+    {
+      "id": "step-1",
+      "type": "box",
+      "position": [
+        0.45,
+        -5.359,
+        -6.29
+      ],
+      "size": [
+        16,
+        0.443,
+        2.58
+      ],
+      "opacity": 0.1
+    },
+    {
+      "id": "step-2",
+      "type": "box",
+      "position": [
+        0.45,
+        -5.138,
+        -6.613
+      ],
+      "size": [
+        16,
+        0.885,
+        1.935
+      ],
+      "opacity": 0.1
+    },
+    {
+      "id": "step-3",
+      "type": "box",
+      "position": [
+        0.45,
+        -4.916,
+        -6.935
+      ],
+      "size": [
+        16,
+        1.328,
+        1.29
+      ],
+      "opacity": 0.1
+    },
+    {
+      "id": "step-4",
+      "type": "box",
+      "position": [
+        0.45,
+        -4.695,
+        -7.258
+      ],
+      "size": [
+        16,
+        1.77,
+        0.645
+      ],
+      "opacity": 0.1
+    },
+    {
+      "id": "platform-front",
+      "type": "plane",
+      "position": [
+        0.45,
+        -3.81,
+        -9.05
+      ],
+      "rotation": [
+        -1.5708,
+        0,
+        0
+      ],
+      "size": [
+        30,
+        3.0
+      ],
+      "opacity": 0.12
+    },
+    {
+      "id": "nave-floor",
+      "type": "plane",
+      "position": [
+        0.45,
+        -3.81,
+        -29.65
+      ],
+      "rotation": [
+        -1.5708,
+        0,
+        0
+      ],
+      "size": [
+        9.2,
+        38.3
+      ],
+      "opacity": 0.12
+    },
+    {
+      "id": "pier-l",
+      "type": "box",
+      "position": [
+        -8.05,
+        1.32,
+        -12.0
+      ],
+      "size": [
+        7.8,
+        10.26,
+        3.0
+      ],
+      "opacity": 0.1
+    },
+    {
+      "id": "pier-r",
+      "type": "box",
+      "position": [
+        8.95,
+        1.32,
+        -12.0
+      ],
+      "size": [
+        7.8,
+        10.26,
+        3.0
+      ],
+      "opacity": 0.1
+    },
+    {
+      "id": "pilaster-l",
+      "type": "box",
+      "position": [
+        -5.2,
+        1.32,
+        -10.3
+      ],
+      "size": [
+        2.0,
+        10.26,
+        0.4
+      ],
+      "opacity": 0.12
+    },
+    {
+      "id": "pilaster-r",
+      "type": "box",
+      "position": [
+        6.1,
+        1.32,
+        -10.3
+      ],
+      "size": [
+        2.0,
+        10.26,
+        0.4
+      ],
+      "opacity": 0.12
+    },
+    {
+      "id": "nave-wall-l-1",
+      "type": "box",
+      "position": [
+        -4.45,
+        0.27,
+        -18.3
+      ],
+      "size": [
+        0.6,
+        8.16,
+        15.6
+      ],
+      "opacity": 0.08
+    },
+    {
+      "id": "nave-wall-r-1",
+      "type": "box",
+      "position": [
+        5.35,
+        0.27,
+        -18.3
+      ],
+      "size": [
+        0.6,
+        8.16,
+        15.6
+      ],
+      "opacity": 0.08
+    },
+    {
+      "id": "vault-bay-1",
+      "type": "box",
+      "position": [
+        0.45,
+        6.65,
+        -18.3
+      ],
+      "size": [
+        9.2,
+        4.6,
+        15.6
+      ],
+      "opacity": 0.06
+    },
+    {
+      "id": "crossing-pier-fl",
+      "type": "box",
+      "position": [
+        -4.75,
+        0.27,
+        -26.7
+      ],
+      "size": [
+        1.2,
+        8.16,
+        1.2
+      ],
+      "opacity": 0.1
+    },
+    {
+      "id": "crossing-pier-fr",
+      "type": "box",
+      "position": [
+        5.65,
+        0.27,
+        -26.7
+      ],
+      "size": [
+        1.2,
+        8.16,
+        1.2
+      ],
+      "opacity": 0.1
+    },
+    {
+      "id": "crossing-pier-bl",
+      "type": "box",
+      "position": [
+        -4.75,
+        0.27,
+        -35.8
+      ],
+      "size": [
+        1.2,
+        8.16,
+        1.2
+      ],
+      "opacity": 0.1
+    },
+    {
+      "id": "crossing-pier-br",
+      "type": "box",
+      "position": [
+        5.65,
+        0.27,
+        -35.8
+      ],
+      "size": [
+        1.2,
+        8.16,
+        1.2
+      ],
+      "opacity": 0.1
+    },
+    {
+      "id": "crossing-drum",
+      "type": "cylinder",
+      "position": [
+        0.45,
+        11.45,
+        -31.25
+      ],
+      "radius": 4.6,
+      "height": 5.0,
+      "opacity": 0.05
+    },
+    {
+      "id": "nave-wall-l-2",
+      "type": "box",
+      "position": [
+        -4.45,
+        0.27,
+        -42.2
+      ],
+      "size": [
+        0.6,
+        8.16,
+        11.6
+      ],
+      "opacity": 0.08
+    },
+    {
+      "id": "nave-wall-r-2",
+      "type": "box",
+      "position": [
+        5.35,
+        0.27,
+        -42.2
+      ],
+      "size": [
+        0.6,
+        8.16,
+        11.6
+      ],
+      "opacity": 0.08
+    },
+    {
+      "id": "vault-bay-2",
+      "type": "box",
+      "position": [
+        0.45,
+        6.65,
+        -42.2
+      ],
+      "size": [
+        9.2,
+        4.6,
+        11.6
+      ],
+      "opacity": 0.06
+    },
+    {
+      "id": "portal-jamb-l",
+      "type": "box",
+      "position": [
+        -3.525,
+        2.57,
+        -48.4
+      ],
+      "size": [
+        1.25,
+        12.76,
+        0.8
+      ],
+      "opacity": 0.08
+    },
+    {
+      "id": "portal-jamb-r",
+      "type": "box",
+      "position": [
+        4.425,
+        2.57,
+        -48.4
+      ],
+      "size": [
+        1.25,
+        12.76,
+        0.8
+      ],
+      "opacity": 0.08
+    }
+  ],
+  "assets": [],
+  "lighting": {
+    "ambient": 0.55,
+    "directional": [
+      0.35,
+      0.85,
+      0.25
+    ],
+    "directionalIntensity": 0.75,
+    "color": "#f3e7cf"
+  },
+  "palette": [
+    "#2a2218",
+    "#c9a24a",
+    "#efe6d6",
+    "#b8482c",
+    "#4f6f9a",
+    "#7d7a3e",
+    "#a9c3dc"
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "wedding-at-cana",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v2",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "The Wedding at Cana",
+    "artist": "Paolo Veronese",
+    "date": "1563",
+    "medium": "Oil on canvas",
+    "source": "Musée du Louvre, Paris"
+  },
+  "composition": {
+    "aspectRatio": 1.472,
+    "horizon": 0.42,
+    "vanishingPoint": [
+      0.5,
+      0.4
+    ],
+    "cameraFov": 48,
+    "planeWidth": 16,
+    "planeHeight": 10.867
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "jesus",
+      "type": "figure",
+      "label": "Jesus",
+      "promptPoint": [
+        0.5,
+        0.43
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "mary",
+      "type": "figure",
+      "label": "Mary",
+      "promptPoint": [
+        0.45,
+        0.43
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "bride-groom",
+      "type": "figure",
+      "label": "Bride and groom",
+      "promptPoint": [
+        0.22,
+        0.42
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "musicians",
+      "type": "figure",
+      "label": "The musicians",
+      "promptPoint": [
+        0.5,
+        0.68
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "stone-jars",
+      "type": "object",
+      "label": "Stone water jars",
+      "promptPoint": [
+        0.82,
+        0.84
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "feast-table",
+      "type": "object",
+      "label": "Banquet table",
+      "promptPoint": [
+        0.5,
+        0.48
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "classic-architecture",
+      "type": "architecture",
+      "label": "Classical loggia",
+      "promptPoint": [
+        0.62,
+        0.1
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 4,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "servants",
+      "type": "figure",
+      "label": "Servants pouring",
+      "promptPoint": [
+        0.88,
+        0.7
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "steward",
+      "type": "figure",
+      "label": "The steward",
+      "promptPoint": [
+        0.65,
+        0.52
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "balcony-guests",
+      "type": "figure",
+      "label": "Guests on the balustrade",
+      "promptPoint": [
+        0.55,
+        0.2
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 3,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "silver-vessels",
+      "type": "object",
+      "label": "Silver and glassware",
+      "promptPoint": [
+        0.58,
+        0.48
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "dogs",
+      "type": "animal",
+      "label": "Dogs under the table",
+      "promptPoint": [
+        0.48,
+        0.88
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 5,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "columns",
+      "type": "architecture",
+      "label": "Paired columns",
+      "promptPoint": [
+        0.1,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 3,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "hourglass-time",
+      "type": "object",
+      "label": "Still-life of time",
+      "promptPoint": [
+        0.55,
+        0.7
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "veronese-self",
+      "type": "figure",
+      "label": "Painter among players",
+      "promptPoint": [
+        0.48,
+        0.66
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [
+    {
+      "id": "floor",
+      "type": "plane",
+      "position": [
+        0,
+        -2.2,
+        -1.5
+      ],
+      "rotation": [
+        -1.35,
+        0,
+        0
+      ],
+      "size": [
+        18,
+        12
+      ],
+      "opacity": 0.08
+    }
+  ],
+  "lighting": {
+    "ambient": 0.58,
+    "directional": [
+      0.3,
+      0.9,
+      0.2
+    ],
+    "directionalIntensity": 0.75,
+    "color": "#f2e8d6"
+  },
+  "palette": [
+    "#1c1812",
+    "#c9a24a",
+    "#8a2f2f",
+    "#d6c4a0"
+  ]
+}

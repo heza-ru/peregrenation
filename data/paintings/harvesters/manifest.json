@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "harvesters",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v2",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "The Harvesters",
+    "artist": "Pieter Bruegel the Elder",
+    "date": "1565",
+    "medium": "Oil on wood",
+    "source": "The Metropolitan Museum of Art, New York"
+  },
+  "composition": {
+    "aspectRatio": 0.743,
+    "horizon": 0.42,
+    "vanishingPoint": [
+      0.65,
+      0.4
+    ],
+    "cameraFov": 46,
+    "planeWidth": 11.893,
+    "planeHeight": 16.0
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "resting-group",
+      "type": "figure",
+      "label": "Harvesters at rest",
+      "promptPoint": [
+        0.52,
+        0.58
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "sleeper",
+      "type": "figure",
+      "label": "The sleeper",
+      "promptPoint": [
+        0.55,
+        0.62
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "eaters",
+      "type": "figure",
+      "label": "The noon meal",
+      "promptPoint": [
+        0.48,
+        0.6
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "pear-tree",
+      "type": "landscape",
+      "label": "The pear tree",
+      "promptPoint": [
+        0.48,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "wheat-field",
+      "type": "landscape",
+      "label": "Cut wheat field",
+      "promptPoint": [
+        0.72,
+        0.42
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "standing-wheat",
+      "type": "landscape",
+      "label": "Standing grain",
+      "promptPoint": [
+        0.35,
+        0.45
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "scythes",
+      "type": "object",
+      "label": "Scythes and sheaves",
+      "promptPoint": [
+        0.6,
+        0.55
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "path",
+      "type": "landscape",
+      "label": "Village path",
+      "promptPoint": [
+        0.28,
+        0.7
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "distant-workers",
+      "type": "figure",
+      "label": "Figures still working",
+      "promptPoint": [
+        0.22,
+        0.55
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "distant-bay",
+      "type": "landscape",
+      "label": "Distant water",
+      "promptPoint": [
+        0.78,
+        0.28
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 4,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "church-steeple",
+      "type": "architecture",
+      "label": "Church in the valley",
+      "promptPoint": [
+        0.84,
+        0.32
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 4,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "haystacks",
+      "type": "landscape",
+      "label": "Haystacks and ricks",
+      "promptPoint": [
+        0.65,
+        0.35
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 3,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "birds",
+      "type": "animal",
+      "label": "Birds in the air",
+      "promptPoint": [
+        0.6,
+        0.2
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 4,
+      "importance": 5,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "lunch",
+      "type": "object",
+      "label": "Bread and bowls",
+      "promptPoint": [
+        0.5,
+        0.64
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "wagon-track",
+      "type": "landscape",
+      "label": "Cart tracks in dust",
+      "promptPoint": [
+        0.4,
+        0.75
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 5,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [
+    {
+      "id": "floor",
+      "type": "plane",
+      "position": [
+        0,
+        -2.2,
+        -1.5
+      ],
+      "rotation": [
+        -1.35,
+        0,
+        0
+      ],
+      "size": [
+        18,
+        12
+      ],
+      "opacity": 0.08
+    }
+  ],
+  "lighting": {
+    "ambient": 0.62,
+    "directional": [
+      0.5,
+      0.85,
+      0.15
+    ],
+    "directionalIntensity": 0.8,
+    "color": "#f0e2c4"
+  },
+  "palette": [
+    "#c9a24a",
+    "#6b7a3a",
+    "#d8c090",
+    "#2a2218"
+  ]
+}

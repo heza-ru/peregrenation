@@ -1,0 +1,91 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "Fuji framed by a claw of water",
+      "body": "Hokusai’s Great Wave (c. 1831), from Thirty-six Views of Mount Fuji, uses Prussian blue to make a cresting wave tower over boats — and over sacred Fuji itself.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/45434"
+      ]
+    },
+    {
+      "id": "wave",
+      "title": "A wall of water",
+      "body": "The wave fills the left and center like a living mountain, dwarfing everything human beneath it.",
+      "category": "landscape",
+      "confidence": "documented",
+      "entityId": "wave",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/45434"
+      ]
+    },
+    {
+      "id": "fuji",
+      "title": "Fuji as a small white cone",
+      "body": "Mount Fuji sits low and quiet in the hollow of the wave — sacred and almost overlooked until you find it.",
+      "category": "landscape",
+      "confidence": "documented",
+      "entityId": "fuji",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/45434"
+      ]
+    },
+    {
+      "id": "foam-claws",
+      "title": "Foam becoming talons",
+      "body": "The breaking edge turns into claw-like droplets — nature given a predator’s silhouette.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "entityId": "foam-claws",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/45434"
+      ]
+    },
+    {
+      "id": "boats",
+      "title": "Boats under the crest",
+      "body": "Three fast cargo boats (oshiokuri-bune) slide through the trough, tiny against the water’s architecture.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "boats",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/45434"
+      ]
+    },
+    {
+      "id": "rowers",
+      "title": "Bodies braced for the smash",
+      "body": "Rowers huddle low, clinging to the moment before the wave’s weight arrives.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "rowers",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/45434"
+      ]
+    },
+    {
+      "id": "sky",
+      "title": "A emptied sky",
+      "body": "The upper right sky is almost blank — calm against the print’s violent foreground.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "entityId": "sky",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/45434"
+      ]
+    },
+    {
+      "id": "deep-blue",
+      "title": "Imported blue, Japanese sea",
+      "body": "Hokusai’s deep Prussian blue was a newly popular imported pigment — modernity dyed into an iconic Japan.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "deep-blue",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/45434"
+      ]
+    }
+  ]
+}

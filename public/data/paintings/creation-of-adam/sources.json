@@ -1,0 +1,32 @@
+{
+  "paintingId": "creation-of-adam",
+  "image": {
+    "file": "painting.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Creaci%C3%B3n_de_Ad%C3%A1n.jpg",
+    "retrievalUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Creaci%C3%B3n_de_Ad%C3%A1n.jpg/1920px-Creaci%C3%B3n_de_Ad%C3%A1n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "credit": "Michelangelo",
+    "retrievedAt": "2026-09-30",
+    "licenseShortName": "Public domain",
+    "commonsLicense": "pd",
+    "copyrighted": false,
+    "commonsTitle": "File:Michelangelo - Creation of Adam.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Creaci%C3%B3n_de_Ad%C3%A1n.jpg",
+    "rights": {
+      "status": "public_domain",
+      "verifiedVia": "Wikimedia Commons",
+      "verifiedAt": "2026-09-30",
+      "artistDeathYear": 1564,
+      "workPublicDomainReason": "Michelangelo died in 1564; the painting is in the public domain worldwide.",
+      "reproductionNote": "Wikimedia Commons reproduction used for the curated 2D world pack."
+    }
+  },
+  "references": [
+    {
+      "id": "creation-of-adam-museum",
+      "title": "The Creation of Adam",
+      "publisher": "Sistine Chapel, Vatican",
+      "url": "https://www.museivaticani.va/"
+    }
+  ]
+}

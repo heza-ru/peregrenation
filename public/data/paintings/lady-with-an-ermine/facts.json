@@ -1,0 +1,91 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "A mistress and a living emblem",
+      "body": "Leonardo painted Cecilia Gallerani, mistress of Ludovico Sforza, around 1489–91. The ermine in her arms is both pet and heraldic pun on purity and on Ludovico’s Order of the Ermine.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://mnk.pl/branch/mnk-the-princes-czartoryski-museum"
+      ]
+    },
+    {
+      "id": "cecilia",
+      "title": "Cecilia Gallerani",
+      "body": "Young, alert, and turning — Cecilia is caught mid-attention. Leonardo invents a living portrait, not a static court mask.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "cecilia",
+      "sources": [
+        "https://mnk.pl/branch/mnk-the-princes-czartoryski-museum"
+      ]
+    },
+    {
+      "id": "ermine",
+      "title": "The ermine as double meaning",
+      "body": "The animal’s white coat signaled purity; its presence also nods to Ludovico il Moro’s chivalric order. Form and politics share one fur.",
+      "category": "animal",
+      "confidence": "documented",
+      "entityId": "ermine",
+      "sources": [
+        "https://mnk.pl/branch/mnk-the-princes-czartoryski-museum"
+      ]
+    },
+    {
+      "id": "gaze",
+      "title": "A glance offstage",
+      "body": "Cecilia looks toward something we cannot see — a conversation entering the frame from outside.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "gaze",
+      "sources": [
+        "https://mnk.pl/branch/mnk-the-princes-czartoryski-museum"
+      ]
+    },
+    {
+      "id": "hand",
+      "title": "A precise hand",
+      "body": "Her right hand rests on the ermine with anatomical care. Leonardo’s study of tendons shows even in a court portrait.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "hand",
+      "sources": [
+        "https://mnk.pl/branch/mnk-the-princes-czartoryski-museum"
+      ]
+    },
+    {
+      "id": "necklace",
+      "title": "Black beads against skin",
+      "body": "A simple black necklace draws a dark line across the throat, sharpening the face against the void behind her.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "necklace",
+      "sources": [
+        "https://mnk.pl/branch/mnk-the-princes-czartoryski-museum"
+      ]
+    },
+    {
+      "id": "sleeve",
+      "title": "Blue sleeve, gold trim",
+      "body": "The sleeve’s volume and trim advertise Milanese fashion while giving Leonardo folds to model in light.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "entityId": "sleeve",
+      "sources": [
+        "https://mnk.pl/branch/mnk-the-princes-czartoryski-museum"
+      ]
+    },
+    {
+      "id": "dark-ground",
+      "title": "A ground like night",
+      "body": "The dark background isolates figure and animal — a theatrical void rather than a room.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "entityId": "dark-ground",
+      "sources": [
+        "https://mnk.pl/branch/mnk-the-princes-czartoryski-museum"
+      ]
+    }
+  ]
+}

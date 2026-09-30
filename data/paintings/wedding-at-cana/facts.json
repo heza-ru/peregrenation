@@ -1,0 +1,179 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "A miracle the size of a wall",
+      "body": "Veronese painted The Wedding Feast at Cana for the refectory of San Giorgio Maggiore in Venice (1563). Now in the Louvre, the canvas is immense — a Venetian banquet dressed as the Gospel miracle where water becomes wine.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ]
+    },
+    {
+      "id": "jesus",
+      "title": "Christ among the guests",
+      "body": "Jesus sits near the center of the long table, marked more by composure than theatrical glow. The miracle unfolds as social theater: divinity visiting a wedding at festival pitch.",
+      "category": "figure",
+      "confidence": "documented",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ],
+      "entityId": "jesus"
+    },
+    {
+      "id": "mary",
+      "title": "Mary prompts the miracle",
+      "body": "Mary, seated near Christ, is the quiet catalyst — she notices the wine has failed. Veronese keeps her dignified inside a crowd that otherwise threatens to swallow the narrative.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ],
+      "entityId": "mary"
+    },
+    {
+      "id": "bride-groom",
+      "title": "The bridal pair",
+      "body": "Bride and groom occupy places of honor along the feast. Their celebration is the pretext for the first public sign in John’s Gospel — hospitality stretched until heaven intervenes.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ],
+      "entityId": "bride-groom"
+    },
+    {
+      "id": "musicians",
+      "title": "A foreground orchestra",
+      "body": "Musicians play at the lower center of the canvas. The banquet becomes audition and feast at once — Venice hearing itself celebrate.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ],
+      "entityId": "musicians"
+    },
+    {
+      "id": "veronese-self",
+      "title": "Veronese in the band",
+      "body": "Tradition identifies Veronese himself among the string players, with fellow Venetian painters as companions. The miracle scene doubles as a self-portrait of art’s city.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ],
+      "entityId": "veronese-self"
+    },
+    {
+      "id": "stone-jars",
+      "title": "Jars of new wine",
+      "body": "Large stone jars recall vessels of Jewish purification rites that Christ orders filled with water. Servants tip and pour at the lower edge — the miracle made tangible as logistics.",
+      "category": "object",
+      "confidence": "documented",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ],
+      "entityId": "stone-jars"
+    },
+    {
+      "id": "feast-table",
+      "title": "Silver, glass, and appetite",
+      "body": "The table groans with vessels, fruit, and ruffled linen. Veronese turns Eucharistic overtones into sensory overload — tasting, seeing, and hearing all at once.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ],
+      "entityId": "feast-table"
+    },
+    {
+      "id": "classic-architecture",
+      "title": "A stage of columns",
+      "body": "Classical colonnades and balustrades lift the feast into fantasy antique grandeur filtered through Venetian taste. Architecture here is pageantry — depth as spectacle.",
+      "category": "architecture",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ],
+      "entityId": "classic-architecture"
+    },
+    {
+      "id": "servants",
+      "title": "Hands that make the miracle work",
+      "body": "Servants crouch and pour in the foreground, bridging sacred narrative and kitchen reality. Veronese insists wonders still need people willing to fill jars.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ],
+      "entityId": "servants"
+    },
+    {
+      "id": "steward",
+      "title": "The steward tastes the wine",
+      "body": "The steward who tastes the transformed wine stands for astonished hospitality staff — bureaucracy meeting miracle. John’s Gospel needs this witness to declare the wine better than before.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ],
+      "entityId": "steward"
+    },
+    {
+      "id": "balcony-guests",
+      "title": "Spectators above the feast",
+      "body": "Figures lean from balustrades and terraces, turning the wedding into a public Venetian event. Looking becomes part of the composition’s social physics.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ],
+      "entityId": "balcony-guests"
+    },
+    {
+      "id": "silver-vessels",
+      "title": "Plate that flashes wealth",
+      "body": "Silver and glass catch Veronese’s light like jewelry. Luxury is not background — it is the worldly stage on which a sacred surplus of wine arrives.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ],
+      "entityId": "silver-vessels"
+    },
+    {
+      "id": "dogs",
+      "title": "Animals under the banquet",
+      "body": "Dogs nosing under the table keep the feast grounded in messy life. Even miracles happen in rooms that still smell like kitchens.",
+      "category": "animal",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ],
+      "entityId": "dogs"
+    },
+    {
+      "id": "columns",
+      "title": "Stone order behind revelry",
+      "body": "Paired columns and cornices impose classical order on the chaos of guests. Veronese’s architecture frames appetite without scolding it.",
+      "category": "architecture",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ],
+      "entityId": "columns"
+    },
+    {
+      "id": "hourglass-time",
+      "title": "Timekeeping on the table",
+      "body": "Still-life details — including timepieces in related banquet traditions — remind viewers that feasts end. Here abundance is urgent: drink while the miracle lasts.",
+      "category": "object",
+      "confidence": "ai_inference",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010066872"
+      ],
+      "entityId": "hourglass-time"
+    }
+  ]
+}

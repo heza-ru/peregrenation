@@ -1,0 +1,179 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "A room full of witnesses",
+      "body": "Jan van Eyck signed and dated this panel 1434. The National Gallery identifies the man as a member of the Arnolfini merchant family; the woman’s exact identity is debated. What is certain is the denseness of the chamber: every surface seems ready to testify.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ]
+    },
+    {
+      "id": "giovanni",
+      "title": "The merchant in black",
+      "body": "The man raises his right hand in greeting or oath while his left takes the woman’s hand. Tall hat, fur-lined robe, and calm stare mark wealth and civic standing in Bruges’s Italian trading community.",
+      "category": "figure",
+      "confidence": "documented",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "entityId": "giovanni"
+    },
+    {
+      "id": "bride",
+      "title": "Green gown, gathered fabric",
+      "body": "She wears a lush green dress with fashionably gathered folds at the belly — a style of the period, not proof of pregnancy. Her gaze meets you while her free hand lifts the heavy cloth.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "entityId": "bride"
+    },
+    {
+      "id": "joined-hands",
+      "title": "Hands as contract",
+      "body": "Their joined hands sit at the painting’s rhetorical center. Scholars have read the gesture as marriage, betrothal, or legal pledge — van Eyck leaves the ceremony ambiguous while making the bond unmistakable.",
+      "category": "gesture",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "entityId": "joined-hands"
+    },
+    {
+      "id": "mirror",
+      "title": "The convex witness",
+      "body": "The round mirror reflects the couple from behind and two additional figures in the doorway — one likely the painter. Around its frame, tiny Passion scenes turn furniture into theology.",
+      "category": "object",
+      "confidence": "documented",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "entityId": "mirror"
+    },
+    {
+      "id": "signature",
+      "title": "Johannes de eyck fuit hic",
+      "body": "Above the mirror van Eyck wrote that he “was here,” 1434 — less a quiet signature than a notarized presence. The painter becomes another witness inside the room you are stepping into.",
+      "category": "inscription",
+      "confidence": "documented",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "entityId": "signature"
+    },
+    {
+      "id": "chandelier",
+      "title": "One candle lit",
+      "body": "A brass chandelier hangs with a single burning candle. Interpreters link it to the eye of God, marital fidelity, or the costly lighting of a prosperous house — van Eyck invites several readings at once.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "entityId": "chandelier"
+    },
+    {
+      "id": "dog",
+      "title": "Fidelity at their feet",
+      "body": "The small dog between the couple is often read as loyalty (fides). Van Eyck paints its fur with the same microscopic care as the chandelier’s metal — domestic life elevated to spectacle.",
+      "category": "animal",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "entityId": "dog"
+    },
+    {
+      "id": "clogs",
+      "title": "Shoes left at the threshold",
+      "body": "Wooden pattens lie discarded in the foreground. Removing outdoor shoes could signal sacred ground, intimacy, or fine-interior etiquette — another object that behaves like a clue.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "entityId": "clogs"
+    },
+    {
+      "id": "oranges",
+      "title": "Costly fruit by the window",
+      "body": "Oranges rest near the window — luxury imports in northern Europe. They perfume the room with wealth and, for some viewers, with hints of paradise or fertility.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "entityId": "oranges"
+    },
+    {
+      "id": "bed",
+      "title": "The red marriage bed",
+      "body": "A richly draped bed dominates the right side. In fifteenth-century portraits the bed could mark household status as much as private life — furniture as biography.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "entityId": "bed"
+    },
+    {
+      "id": "rosary",
+      "title": "Crystal beads on the wall",
+      "body": "A crystal prayer bead string hangs beside the mirror. Devotion is not background noise here — piety is hung where you can count it.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "entityId": "rosary"
+    },
+    {
+      "id": "brush",
+      "title": "A brush by the bed",
+      "body": "A whisk broom hangs near the bed — domestic order as virtue. Van Eyck’s symbolism often hides inside housekeeping.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "entityId": "brush"
+    },
+    {
+      "id": "window",
+      "title": "Daylight through leaded glass",
+      "body": "The leadlight window pours cool daylight across oranges and fabric. Van Eyck’s oil technique turns glass and air into characters of their own.",
+      "category": "architecture",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "entityId": "window"
+    },
+    {
+      "id": "carpet",
+      "title": "Pattern underfoot",
+      "body": "An oriental carpet softens the floor near the bed — another imported luxury. Pattern becomes proof of trade routes ending in this quiet room.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "entityId": "carpet"
+    },
+    {
+      "id": "fur-robe",
+      "title": "Fur as status",
+      "body": "The man’s fur-lined robes advertise merchant wealth without shouting. Texture is van Eyck’s rhetoric: you believe the social rank because you can almost feel the nap.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "entityId": "fur-robe"
+    }
+  ]
+}

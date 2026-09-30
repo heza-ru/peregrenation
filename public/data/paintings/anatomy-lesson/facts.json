@@ -1,0 +1,91 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "Science as a group portrait",
+      "body": "Rembrandt’s Anatomy Lesson (1632) turns a public dissection into drama — Tulp teaches, the surgeons lean in, and the dead man becomes the lesson’s center.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/146-the-anatomy-lesson-of-dr-nicolaes-tulp/"
+      ]
+    },
+    {
+      "id": "tulp",
+      "title": "The praelector with forceps",
+      "body": "Dr. Tulp demonstrates the flexor tendons of the arm — authority dressed in black and calm gesture.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "tulp",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/146-the-anatomy-lesson-of-dr-nicolaes-tulp/"
+      ]
+    },
+    {
+      "id": "corpse",
+      "title": "Adriaen lit like marble",
+      "body": "The body of the executed criminal Adriaen Adriaenszoon is pale against dark cloth — mortality made sculptural.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "corpse",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/146-the-anatomy-lesson-of-dr-nicolaes-tulp/"
+      ]
+    },
+    {
+      "id": "surgeons",
+      "title": "Seven faces, seven attentions",
+      "body": "Each surgeon looks differently — at the arm, the book, or us — a chorus of curiosity.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "surgeons",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/146-the-anatomy-lesson-of-dr-nicolaes-tulp/"
+      ]
+    },
+    {
+      "id": "book",
+      "title": "Open knowledge at the foot",
+      "body": "An anatomy folio lies open — text beside flesh, theory beside demonstration.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "book",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/146-the-anatomy-lesson-of-dr-nicolaes-tulp/"
+      ]
+    },
+    {
+      "id": "forearm",
+      "title": "Where the lesson happens",
+      "body": "The opened forearm is the painting’s brightest argument — Rembrandt’s early mastery of detail and light.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "forearm",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/146-the-anatomy-lesson-of-dr-nicolaes-tulp/"
+      ]
+    },
+    {
+      "id": "ruff",
+      "title": "Lace against black",
+      "body": "White ruffs ring the dark coats — civic pride framing scientific spectacle.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "ruff",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/146-the-anatomy-lesson-of-dr-nicolaes-tulp/"
+      ]
+    },
+    {
+      "id": "dark-ground",
+      "title": "A theatre of shadow",
+      "body": "The surrounding dark pushes every face and the pale body forward — anatomy as stagecraft.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "entityId": "dark-ground",
+      "sources": [
+        "https://www.mauritshuis.nl/en/our-collection/artworks/146-the-anatomy-lesson-of-dr-nicolaes-tulp/"
+      ]
+    }
+  ]
+}

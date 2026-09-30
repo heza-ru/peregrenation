@@ -1,0 +1,32 @@
+{
+  "paintingId": "wanderer-above-the-sea-of-fog",
+  "image": {
+    "file": "painting.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg",
+    "retrievalUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg/1920px-Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "credit": "Caspar David Friedrich",
+    "retrievedAt": "2026-09-30",
+    "licenseShortName": "Public domain",
+    "commonsLicense": "pd",
+    "copyrighted": false,
+    "commonsTitle": "File:Caspar David Friedrich - Wanderer above the sea of fog.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg",
+    "rights": {
+      "status": "public_domain",
+      "verifiedVia": "Wikimedia Commons",
+      "verifiedAt": "2026-09-30",
+      "artistDeathYear": 1840,
+      "workPublicDomainReason": "Caspar David Friedrich died in 1840; the painting is in the public domain worldwide.",
+      "reproductionNote": "Wikimedia Commons reproduction used for the curated 2D world pack."
+    }
+  },
+  "references": [
+    {
+      "id": "wanderer-above-the-sea-of-fog-museum",
+      "title": "Wanderer above the Sea of Fog",
+      "publisher": "Hamburger Kunsthalle, Hamburg",
+      "url": "https://www.hamburger-kunsthalle.de/"
+    }
+  ]
+}

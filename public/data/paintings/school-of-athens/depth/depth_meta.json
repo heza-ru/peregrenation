@@ -1,0 +1,8 @@
+{
+  "width": 1920,
+  "height": 1339,
+  "model": "depth-anything/Depth-Anything-V2-Small-hf",
+  "modelTag": "depth-anything-v2-small-hf",
+  "device": "cpu",
+  "units": "relative"
+}

@@ -1,0 +1,2 @@
+# Cloudflare Pages SPA — all routes serve index.html (assets still take precedence)
+/*    /index.html   200

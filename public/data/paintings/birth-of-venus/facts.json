@@ -1,0 +1,102 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "Love steps ashore on a shell",
+      "body": "Botticelli’s Birth of Venus (c. 1485) stages the goddess arriving on a scallop shell, blown by Zephyr toward a waiting Hora. Painted for the Medici circle, it turns classical myth into a Florentine dream of beauty.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/birth-of-venus"
+      ]
+    },
+    {
+      "id": "venus",
+      "title": "Venus — modest and monumental",
+      "body": "Venus stands at the center in a pose echoing classical statues, hair and hands arranging a graceful modesty. Botticelli elongates her form so she seems both fragile and inevitable.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "venus",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/birth-of-venus"
+      ]
+    },
+    {
+      "id": "zephyr",
+      "title": "Zephyr and Aura — the breath that carries her",
+      "body": "On the left, the wind god Zephyr clasps Aura; their breath fills the roses and drives Venus toward land. Motion is drawn as air itself.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "zephyr",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/birth-of-venus"
+      ]
+    },
+    {
+      "id": "hora",
+      "title": "Hora of Spring — ready with a cloak",
+      "body": "A Hora (season) waits on the right with a flowered mantle to cover Venus. The shore becomes a ritual of arrival and welcome.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "hora",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/birth-of-venus"
+      ]
+    },
+    {
+      "id": "shell",
+      "title": "The scallop as stage",
+      "body": "Venus rides a giant scallop — a classical and Christian emblem of birth, pilgrimage, and rebirth. Botticelli makes the shell a floating pedestal.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "shell",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/birth-of-venus"
+      ]
+    },
+    {
+      "id": "roses",
+      "title": "Roses riding the wind",
+      "body": "Pink roses tumble through Zephyr’s breath. In Medici symbolism, roses bind Venus to spring, love, and Florence’s own garden myth.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "entityId": "roses",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/birth-of-venus"
+      ]
+    },
+    {
+      "id": "shore",
+      "title": "A painted Cyprus",
+      "body": "The right shore stands in for Cyprus, Venus’s sacred island. Laurel and myrtle edge a world that is half myth, half Tuscan coast.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "entityId": "shore",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/birth-of-venus"
+      ]
+    },
+    {
+      "id": "myrtle",
+      "title": "Myrtle for the goddess",
+      "body": "Myrtle, sacred to Venus, frames the waiting Hora. Botany becomes devotion.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "entityId": "myrtle",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/birth-of-venus"
+      ]
+    },
+    {
+      "id": "sea",
+      "title": "Water drawn as pattern",
+      "body": "Botticelli’s sea is rhythmic V-shaped ripples more than observed waves — a decorative ocean fit for allegory.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "entityId": "sea",
+      "sources": [
+        "https://www.uffizi.it/en/artworks/birth-of-venus"
+      ]
+    }
+  ]
+}

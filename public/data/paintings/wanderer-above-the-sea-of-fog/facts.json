@@ -1,0 +1,91 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "A back turned to the infinite",
+      "body": "Friedrich’s Wanderer above the Sea of Fog (c. 1818) places a solitary Rückenfigur on a rock — we see what he sees, and we do not see his face.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.hamburger-kunsthalle.de/"
+      ]
+    },
+    {
+      "id": "wanderer",
+      "title": "The anonymous witness",
+      "body": "Seen from behind, the wanderer becomes a stand-in for the viewer — Romantic contemplation as a shared stance.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "wanderer",
+      "sources": [
+        "https://www.hamburger-kunsthalle.de/"
+      ]
+    },
+    {
+      "id": "fog",
+      "title": "A sea that is not water",
+      "body": "Fog fills the valleys like a pale ocean — landscape as weather of the soul.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "entityId": "fog",
+      "sources": [
+        "https://www.hamburger-kunsthalle.de/"
+      ]
+    },
+    {
+      "id": "rocks",
+      "title": "A precarious perch",
+      "body": "Sharp rock underfoot makes the sublime feel unstable — beauty with an edge.",
+      "category": "landscape",
+      "confidence": "documented",
+      "entityId": "rocks",
+      "sources": [
+        "https://www.hamburger-kunsthalle.de/"
+      ]
+    },
+    {
+      "id": "peaks",
+      "title": "Islands in the mist",
+      "body": "Distant ridges pierce the fog like islands — depth measured in vanishing greens and greys.",
+      "category": "landscape",
+      "confidence": "documented",
+      "entityId": "peaks",
+      "sources": [
+        "https://www.hamburger-kunsthalle.de/"
+      ]
+    },
+    {
+      "id": "coat",
+      "title": "Dark against the pale",
+      "body": "The dark coat silhouettes the figure cleanly against mist — a single human ink blot on vast air.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "entityId": "coat",
+      "sources": [
+        "https://www.hamburger-kunsthalle.de/"
+      ]
+    },
+    {
+      "id": "cane",
+      "title": "A stick for the climb",
+      "body": "The walking stick hints at a journey already made — arrival, not departure.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "entityId": "cane",
+      "sources": [
+        "https://www.hamburger-kunsthalle.de/"
+      ]
+    },
+    {
+      "id": "sky",
+      "title": "Light without sun",
+      "body": "The sky is bright yet sourceless — illumination as atmosphere rather than ray.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "entityId": "sky",
+      "sources": [
+        "https://www.hamburger-kunsthalle.de/"
+      ]
+    }
+  ]
+}

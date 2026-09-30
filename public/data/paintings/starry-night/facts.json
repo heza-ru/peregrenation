@@ -1,0 +1,91 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "Night painted like weather of the mind",
+      "body": "Van Gogh’s Starry Night (1889), painted in Saint-Rémy, turns the Provençal sky into a living current of paint — cypress, village, and stars locked in one pulse.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.moma.org/collection/works/79802"
+      ]
+    },
+    {
+      "id": "cypress",
+      "title": "A dark flame to the sky",
+      "body": "The cypress rises like a black flame, bridging earth and the swirling heavens — a traditional emblem of mourning and eternity.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "entityId": "cypress",
+      "sources": [
+        "https://www.moma.org/collection/works/79802"
+      ]
+    },
+    {
+      "id": "moon",
+      "title": "Moon as a yellow sun",
+      "body": "The crescent moon burns with concentric rings of yellow — night lit as if from within.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "moon",
+      "sources": [
+        "https://www.moma.org/collection/works/79802"
+      ]
+    },
+    {
+      "id": "venus-star",
+      "title": "Venus before dawn",
+      "body": "The brightest “star” is often identified as Venus, the morning star Van Gogh watched from the asylum window.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "entityId": "venus-star",
+      "sources": [
+        "https://www.moma.org/collection/works/79802"
+      ]
+    },
+    {
+      "id": "swirls",
+      "title": "Impasto as wind",
+      "body": "Thick, curling strokes make the sky feel audible — turbulence you can almost hear.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "entityId": "swirls",
+      "sources": [
+        "https://www.moma.org/collection/works/79802"
+      ]
+    },
+    {
+      "id": "village",
+      "title": "A quiet town below",
+      "body": "The village lies calm under the storm of sky — ordinary roofs against cosmic weather.",
+      "category": "architecture",
+      "confidence": "documented",
+      "entityId": "village",
+      "sources": [
+        "https://www.moma.org/collection/works/79802"
+      ]
+    },
+    {
+      "id": "church",
+      "title": "A steeple from the north",
+      "body": "The church spire recalls Dutch architecture more than Provençal — memory layered onto place.",
+      "category": "architecture",
+      "confidence": "scholarly_interpretation",
+      "entityId": "church",
+      "sources": [
+        "https://www.moma.org/collection/works/79802"
+      ]
+    },
+    {
+      "id": "hills",
+      "title": "The Alpilles rolling east",
+      "body": "Blue-green hills of the Alpilles roll under the night, anchoring the dream to geography.",
+      "category": "landscape",
+      "confidence": "documented",
+      "entityId": "hills",
+      "sources": [
+        "https://www.moma.org/collection/works/79802"
+      ]
+    }
+  ]
+}

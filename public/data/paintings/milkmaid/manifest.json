@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "milkmaid",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "The Milkmaid",
+    "artist": "Johannes Vermeer",
+    "date": "c. 1658–1661",
+    "medium": "Oil on canvas",
+    "source": "Rijksmuseum, Amsterdam"
+  },
+  "composition": {
+    "aspectRatio": 0.892,
+    "horizon": 0.55,
+    "vanishingPoint": [
+      0.5,
+      0.55
+    ],
+    "cameraFov": 40,
+    "planeWidth": 14.27,
+    "planeHeight": 16
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "maid",
+      "type": "figure",
+      "label": "The milkmaid",
+      "promptPoint": [
+        0.48,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "milk",
+      "type": "object",
+      "label": "Pouring milk",
+      "promptPoint": [
+        0.52,
+        0.55
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "bread",
+      "type": "object",
+      "label": "Bread on the table",
+      "promptPoint": [
+        0.58,
+        0.62
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "window",
+      "type": "architecture",
+      "label": "Left window light",
+      "promptPoint": [
+        0.12,
+        0.32
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "wall",
+      "type": "architecture",
+      "label": "Whitewashed wall",
+      "promptPoint": [
+        0.78,
+        0.28
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "foot-warmer",
+      "type": "object",
+      "label": "Foot warmer",
+      "promptPoint": [
+        0.7,
+        0.88
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "tiles",
+      "type": "object",
+      "label": "Delft tiles",
+      "promptPoint": [
+        0.78,
+        0.93
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 5,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.5,
+    "directional": [
+      0.85,
+      0.55,
+      0.2
+    ],
+    "directionalIntensity": 0.95,
+    "color": "#f3e6d0"
+  },
+  "palette": [
+    "#c9a24a",
+    "#1f4e79",
+    "#efe6d6",
+    "#7a3a22"
+  ]
+}

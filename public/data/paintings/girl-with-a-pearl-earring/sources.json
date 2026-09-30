@@ -1,0 +1,32 @@
+{
+  "paintingId": "girl-with-a-pearl-earring",
+  "image": {
+    "file": "painting.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Girl_with_a_Pearl_Earring.jpg",
+    "retrievalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Girl_with_a_Pearl_Earring.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "license": "Public domain",
+    "credit": "Johannes Vermeer",
+    "retrievedAt": "2026-09-30",
+    "licenseShortName": "Public domain",
+    "commonsLicense": "pd",
+    "copyrighted": false,
+    "commonsTitle": "File:Girl with a Pearl Earring.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Girl_with_a_Pearl_Earring.jpg",
+    "rights": {
+      "status": "public_domain",
+      "verifiedVia": "Wikimedia Commons",
+      "verifiedAt": "2026-09-30",
+      "artistDeathYear": 1675,
+      "workPublicDomainReason": "Johannes Vermeer died in 1675; the painting is in the public domain worldwide.",
+      "reproductionNote": "Wikimedia Commons reproduction used for the curated 2D world pack."
+    }
+  },
+  "references": [
+    {
+      "id": "girl-with-a-pearl-earring-museum",
+      "title": "Girl with a Pearl Earring",
+      "publisher": "Mauritshuis, The Hague",
+      "url": "https://www.mauritshuis.nl/en/our-collection/artworks/670-girl-with-a-pearl-earring/"
+    }
+  ]
+}

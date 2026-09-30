@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "great-wave",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "The Great Wave off Kanagawa",
+    "artist": "Katsushika Hokusai",
+    "date": "c. 1831",
+    "medium": "Woodblock print",
+    "source": "Various collections (ukiyo-e series)"
+  },
+  "composition": {
+    "aspectRatio": 1.449,
+    "horizon": 0.48,
+    "vanishingPoint": [
+      0.5,
+      0.48
+    ],
+    "cameraFov": 40,
+    "planeWidth": 16,
+    "planeHeight": 11.04
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "wave",
+      "type": "landscape",
+      "label": "The great wave",
+      "promptPoint": [
+        0.32,
+        0.42
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "fuji",
+      "type": "landscape",
+      "label": "Mount Fuji",
+      "promptPoint": [
+        0.68,
+        0.68
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "foam-claws",
+      "type": "object",
+      "label": "Foam like claws",
+      "promptPoint": [
+        0.48,
+        0.22
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "boats",
+      "type": "object",
+      "label": "Oshiokuri-bune boats",
+      "promptPoint": [
+        0.52,
+        0.7
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "rowers",
+      "type": "figure",
+      "label": "Crouched rowers",
+      "promptPoint": [
+        0.45,
+        0.66
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "sky",
+      "type": "landscape",
+      "label": "Pale sky",
+      "promptPoint": [
+        0.78,
+        0.18
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 5,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "deep-blue",
+      "type": "object",
+      "label": "Prussian blue water",
+      "promptPoint": [
+        0.22,
+        0.52
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.55,
+    "directional": [
+      0.4,
+      0.6,
+      0.4
+    ],
+    "directionalIntensity": 0.8,
+    "color": "#dce6f0"
+  },
+  "palette": [
+    "#1f4e79",
+    "#c9d6e2",
+    "#f2f0e8",
+    "#2a2a2a"
+  ]
+}

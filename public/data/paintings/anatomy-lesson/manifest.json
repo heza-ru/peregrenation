@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "anatomy-lesson",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "The Anatomy Lesson of Dr. Nicolaes Tulp",
+    "artist": "Rembrandt van Rijn",
+    "date": "1632",
+    "medium": "Oil on canvas",
+    "source": "Mauritshuis, The Hague"
+  },
+  "composition": {
+    "aspectRatio": 1.328,
+    "horizon": 0.45,
+    "vanishingPoint": [
+      0.5,
+      0.45
+    ],
+    "cameraFov": 44,
+    "planeWidth": 16,
+    "planeHeight": 12.05
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "tulp",
+      "type": "figure",
+      "label": "Dr. Nicolaes Tulp",
+      "promptPoint": [
+        0.74,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "corpse",
+      "type": "figure",
+      "label": "The cadaver",
+      "promptPoint": [
+        0.48,
+        0.52
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "surgeons",
+      "type": "figure",
+      "label": "Watching surgeons",
+      "promptPoint": [
+        0.42,
+        0.28
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "book",
+      "type": "object",
+      "label": "Anatomy book",
+      "promptPoint": [
+        0.82,
+        0.82
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "forearm",
+      "type": "object",
+      "label": "Dissected forearm",
+      "promptPoint": [
+        0.58,
+        0.58
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "ruff",
+      "type": "object",
+      "label": "White ruffs",
+      "promptPoint": [
+        0.62,
+        0.32
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 5,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "dark-ground",
+      "type": "object",
+      "label": "Dark chamber",
+      "promptPoint": [
+        0.12,
+        0.18
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 5,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.4,
+    "directional": [
+      0.25,
+      0.75,
+      0.4
+    ],
+    "directionalIntensity": 0.95,
+    "color": "#f0e2c4"
+  },
+  "palette": [
+    "#1a1612",
+    "#c9a06a",
+    "#efe6d6",
+    "#3a2a1c"
+  ]
+}

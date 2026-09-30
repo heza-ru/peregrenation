@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "last-supper",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v2",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "The Last Supper",
+    "artist": "Leonardo da Vinci",
+    "date": "1495–1498",
+    "medium": "Tempera and oil on plaster",
+    "source": "Santa Maria delle Grazie, Milan"
+  },
+  "composition": {
+    "aspectRatio": 2,
+    "horizon": 0.38,
+    "vanishingPoint": [
+      0.5,
+      0.38
+    ],
+    "cameraFov": 42,
+    "planeWidth": 16,
+    "planeHeight": 8
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "bartholomew",
+      "type": "figure",
+      "label": "Bartholomew",
+      "promptPoint": [
+        0.065,
+        0.36
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "james-minor",
+      "type": "figure",
+      "label": "James the Less",
+      "promptPoint": [
+        0.125,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "andrew",
+      "type": "figure",
+      "label": "Andrew",
+      "promptPoint": [
+        0.185,
+        0.36
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "judas",
+      "type": "figure",
+      "label": "Judas Iscariot",
+      "promptPoint": [
+        0.295,
+        0.48
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "peter",
+      "type": "figure",
+      "label": "Peter",
+      "promptPoint": [
+        0.345,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "john",
+      "type": "figure",
+      "label": "John",
+      "promptPoint": [
+        0.405,
+        0.4
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "jesus",
+      "type": "figure",
+      "label": "Jesus",
+      "promptPoint": [
+        0.5,
+        0.355
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "thomas",
+      "type": "figure",
+      "label": "Thomas",
+      "promptPoint": [
+        0.555,
+        0.33
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "james-major",
+      "type": "figure",
+      "label": "James the Greater",
+      "promptPoint": [
+        0.605,
+        0.36
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "philip",
+      "type": "figure",
+      "label": "Philip",
+      "promptPoint": [
+        0.665,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "matthew",
+      "type": "figure",
+      "label": "Matthew",
+      "promptPoint": [
+        0.78,
+        0.39
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "thaddeus",
+      "type": "figure",
+      "label": "Jude Thaddeus",
+      "promptPoint": [
+        0.86,
+        0.4
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "simon",
+      "type": "figure",
+      "label": "Simon",
+      "promptPoint": [
+        0.925,
+        0.385
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "table",
+      "type": "object",
+      "label": "The table",
+      "promptPoint": [
+        0.5,
+        0.6
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "trinity-window",
+      "type": "architecture",
+      "label": "Central window",
+      "promptPoint": [
+        0.5,
+        0.24
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 3,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "spilled-salt",
+      "type": "object",
+      "label": "Overturned salt",
+      "promptPoint": [
+        0.315,
+        0.545
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "coffered-ceiling",
+      "type": "architecture",
+      "label": "Coffered ceiling",
+      "promptPoint": [
+        0.5,
+        0.08
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 4,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [
+    {
+      "id": "floor",
+      "type": "plane",
+      "position": [
+        0,
+        -2.2,
+        -1.5
+      ],
+      "rotation": [
+        -1.35,
+        0,
+        0
+      ],
+      "size": [
+        18,
+        12
+      ],
+      "opacity": 0.08
+    }
+  ],
+  "lighting": {
+    "ambient": 0.55,
+    "directional": [
+      0.2,
+      0.8,
+      0.4
+    ],
+    "directionalIntensity": 0.7,
+    "color": "#f0e6d2"
+  },
+  "palette": [
+    "#2a2218",
+    "#c9a24a",
+    "#efe6d6",
+    "#5a4a34"
+  ]
+}

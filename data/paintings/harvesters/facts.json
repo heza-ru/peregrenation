@@ -1,0 +1,179 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "August under a pear tree",
+      "body": "Bruegel’s Harvesters (1565), now at the Met, belongs to a series of months/seasons panels. Labor, rest, and landscape share equal dignity: the year turns through peasant work rather than court allegory.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ]
+    },
+    {
+      "id": "resting-group",
+      "title": "Bodies finally allowed to stop",
+      "body": "Under the tree, harvesters sprawl, eat, and doze. Bruegel refuses heroic posing — exhaustion is the subject, and the field itself seems to breathe around them.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ],
+      "entityId": "resting-group"
+    },
+    {
+      "id": "sleeper",
+      "title": "Sleep as honest labor’s wage",
+      "body": "One figure has simply given up to sleep mid-break. Bruegel treats rest without satire or shame — work has a circadian truth.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ],
+      "entityId": "sleeper"
+    },
+    {
+      "id": "eaters",
+      "title": "Sharing the noon meal",
+      "body": "Companions eat together in the shade. Community is built as much by bowls passed around as by grain cut in rows.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ],
+      "entityId": "eaters"
+    },
+    {
+      "id": "pear-tree",
+      "title": "Shade as architecture",
+      "body": "The pear tree is the painting’s vertical mast — a green canopy that organizes rest against the gold of cut grain. Landscape becomes a room you can enter.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ],
+      "entityId": "pear-tree"
+    },
+    {
+      "id": "wheat-field",
+      "title": "A sea of stubble",
+      "body": "Cut wheat rolls toward the distance in overlapping planes. Bruegel’s high viewpoint turns agriculture into topography — work measured in acres of light.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ],
+      "entityId": "wheat-field"
+    },
+    {
+      "id": "standing-wheat",
+      "title": "Grain still waiting",
+      "body": "Uncut grain stands as a warm wall of yellow-green. The harvest is unfinished — time is visible as a boundary between done and not-yet.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ],
+      "entityId": "standing-wheat"
+    },
+    {
+      "id": "scythes",
+      "title": "Tools of the month",
+      "body": "Scythes, sheaves, and stacked grain mark August’s labor. Instruments are observed as carefully as faces — craft without romance.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ],
+      "entityId": "scythes"
+    },
+    {
+      "id": "path",
+      "title": "A path into village life",
+      "body": "A track leads left and down toward houses and figures still at work. Bruegel nests many small stories inside one climate of heat.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ],
+      "entityId": "path"
+    },
+    {
+      "id": "distant-workers",
+      "title": "Labor continues beyond the shade",
+      "body": "Smaller figures keep harvesting farther off. Rest is local; the season’s work is collective and unfinished.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ],
+      "entityId": "distant-workers"
+    },
+    {
+      "id": "distant-bay",
+      "title": "Cool water far away",
+      "body": "Beyond the fields, a pale bay and cliffs open the world. The harvest is local; the horizon reminds you Flanders sits inside a larger geography.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ],
+      "entityId": "distant-bay"
+    },
+    {
+      "id": "church-steeple",
+      "title": "A steeple in the haze",
+      "body": "A church punctuates the valley — sacred time keeping pace with agricultural time. Bruegel’s peasants live under both calendars at once.",
+      "category": "architecture",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ],
+      "entityId": "church-steeple"
+    },
+    {
+      "id": "haystacks",
+      "title": "Ricks of stored summer",
+      "body": "Haystacks and ricks punctuate the middle distance — wealth counted in dried grass. Survival architecture, built outdoors.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ],
+      "entityId": "haystacks"
+    },
+    {
+      "id": "birds",
+      "title": "Life above the stubble",
+      "body": "Birds cut the pale sky. Bruegel’s world is ecological: human harvest shares air with other hungry creatures.",
+      "category": "animal",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ],
+      "entityId": "birds"
+    },
+    {
+      "id": "lunch",
+      "title": "Noon meal in the field",
+      "body": "Bread, bowls, and simple fare sit among the resting figures. The sacred calendar of seasons is tasted as much as observed.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ],
+      "entityId": "lunch"
+    },
+    {
+      "id": "wagon-track",
+      "title": "Dust roads of August",
+      "body": "Cart tracks score the foreground dust. Even empty paths record how grain and people move through the month.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/435809"
+      ],
+      "entityId": "wagon-track"
+    }
+  ]
+}

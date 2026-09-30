@@ -1,0 +1,32 @@
+{
+  "paintingId": "mona-lisa",
+  "image": {
+    "file": "painting.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg",
+    "retrievalUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1920px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "credit": "Leonardo da Vinci",
+    "retrievedAt": "2026-09-30",
+    "licenseShortName": "Public domain",
+    "commonsLicense": "pd",
+    "copyrighted": false,
+    "commonsTitle": "File:Mona Lisa, by Leonardo da Vinci, from C2RMF retouched.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg",
+    "rights": {
+      "status": "public_domain",
+      "verifiedVia": "Wikimedia Commons",
+      "verifiedAt": "2026-09-30",
+      "artistDeathYear": 1519,
+      "workPublicDomainReason": "Leonardo da Vinci died in 1519; the painting is in the public domain worldwide.",
+      "reproductionNote": "Wikimedia Commons reproduction used for the curated 2D world pack."
+    }
+  },
+  "references": [
+    {
+      "id": "mona-lisa-museum",
+      "title": "Mona Lisa",
+      "publisher": "Musée du Louvre, Paris",
+      "url": "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana"
+    }
+  ]
+}

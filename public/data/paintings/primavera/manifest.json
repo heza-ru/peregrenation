@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "primavera",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "Primavera",
+    "artist": "Sandro Botticelli",
+    "date": "c. 1482",
+    "medium": "Tempera on panel",
+    "source": "Uffizi Gallery, Florence"
+  },
+  "composition": {
+    "aspectRatio": 1.522,
+    "horizon": 0.45,
+    "vanishingPoint": [
+      0.5,
+      0.45
+    ],
+    "cameraFov": 44,
+    "planeWidth": 16,
+    "planeHeight": 10.51
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "venus-center",
+      "type": "figure",
+      "label": "Venus",
+      "promptPoint": [
+        0.5,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "mercury",
+      "type": "figure",
+      "label": "Mercury",
+      "promptPoint": [
+        0.08,
+        0.4
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "three-graces",
+      "type": "figure",
+      "label": "The Three Graces",
+      "promptPoint": [
+        0.28,
+        0.4
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "flora",
+      "type": "figure",
+      "label": "Flora",
+      "promptPoint": [
+        0.7,
+        0.42
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "chloris",
+      "type": "figure",
+      "label": "Chloris",
+      "promptPoint": [
+        0.82,
+        0.48
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "zephyrus",
+      "type": "figure",
+      "label": "Zephyrus",
+      "promptPoint": [
+        0.93,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "cupid",
+      "type": "figure",
+      "label": "Blindfolded Cupid",
+      "promptPoint": [
+        0.5,
+        0.14
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "orange-grove",
+      "type": "landscape",
+      "label": "Orange grove",
+      "promptPoint": [
+        0.55,
+        0.1
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "flowered-meadow",
+      "type": "landscape",
+      "label": "Flowered meadow",
+      "promptPoint": [
+        0.5,
+        0.88
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.52,
+    "directional": [
+      0.15,
+      0.85,
+      0.35
+    ],
+    "directionalIntensity": 0.88,
+    "color": "#efe6d4"
+  },
+  "palette": [
+    "#2f5c3a",
+    "#d4b48a",
+    "#c44b5a",
+    "#efe6d6"
+  ]
+}

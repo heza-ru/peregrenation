@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "garden-of-earthly-delights",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "The Garden of Earthly Delights",
+    "artist": "Hieronymus Bosch",
+    "date": "c. 1490–1500",
+    "medium": "Oil on oak panels",
+    "source": "Museo del Prado, Madrid"
+  },
+  "composition": {
+    "aspectRatio": 1.876,
+    "horizon": 0.4,
+    "vanishingPoint": [
+      0.5,
+      0.4
+    ],
+    "cameraFov": 48,
+    "planeWidth": 16,
+    "planeHeight": 8.53
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "eden",
+      "type": "landscape",
+      "label": "Eden (left panel)",
+      "promptPoint": [
+        0.08,
+        0.48
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "garden",
+      "type": "landscape",
+      "label": "The central garden",
+      "promptPoint": [
+        0.5,
+        0.48
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "hell",
+      "type": "landscape",
+      "label": "Musical hell (right)",
+      "promptPoint": [
+        0.86,
+        0.42
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "fountain",
+      "type": "architecture",
+      "label": "Pink fountain",
+      "promptPoint": [
+        0.5,
+        0.22
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "pool",
+      "type": "landscape",
+      "label": "Pool of bathers",
+      "promptPoint": [
+        0.5,
+        0.58
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "strawberry",
+      "type": "object",
+      "label": "Giant fruits",
+      "promptPoint": [
+        0.38,
+        0.7
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "owl",
+      "type": "animal",
+      "label": "Owl in Eden",
+      "promptPoint": [
+        0.17,
+        0.36
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "ears-knife",
+      "type": "object",
+      "label": "Ears and knife",
+      "promptPoint": [
+        0.88,
+        0.72
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "adam-eve",
+      "type": "figure",
+      "label": "Adam and Eve",
+      "promptPoint": [
+        0.12,
+        0.78
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.55,
+    "directional": [
+      0.2,
+      0.85,
+      0.35
+    ],
+    "directionalIntensity": 0.8,
+    "color": "#e8f0d8"
+  },
+  "palette": [
+    "#6a8f4e",
+    "#c44b5a",
+    "#2a4a6e",
+    "#efe6d6"
+  ]
+}

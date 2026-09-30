@@ -1,0 +1,113 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "A militia caught mid-action",
+      "body": "Rembrandt’s 1642 civic-guard portrait — wrongly nicknamed Night Watch — shows Captain Frans Banninck Cocq’s company stepping into motion under a stone arch. It is drama disguised as group portraiture.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-C-5"
+      ]
+    },
+    {
+      "id": "cocq",
+      "title": "Captain Cocq in black",
+      "body": "Frans Banninck Cocq, center-left in black with a red sash, extends a hand that casts a shadow on his lieutenant — command made visible.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "cocq",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-C-5"
+      ]
+    },
+    {
+      "id": "ruitenburgh",
+      "title": "Lieutenant in gold",
+      "body": "Willem van Ruytenburch’s pale gold costume catches Rembrandt’s spotlight. Hierarchy is written in cloth and light.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "ruitenburgh",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-C-5"
+      ]
+    },
+    {
+      "id": "girl",
+      "title": "The company mascot girl",
+      "body": "A brightly lit girl with a chicken at her belt may personify the Kloveniers (the bird was their emblem). She is allegory walking through a muster.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "girl",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-C-5"
+      ]
+    },
+    {
+      "id": "drum",
+      "title": "The drummer at the edge",
+      "body": "At right a drummer starts the march. Sound enters a silent painting.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "drum",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-C-5"
+      ]
+    },
+    {
+      "id": "musket",
+      "title": "Muskets in three stages",
+      "body": "Rembrandt shows loading, firing, and blowing powder — a mini-manual of arms woven into the crowd.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "musket",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-C-5"
+      ]
+    },
+    {
+      "id": "flag",
+      "title": "The company’s colors",
+      "body": "The standard rises behind the officers, anchoring civic identity above the swirl of bodies.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "flag",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-C-5"
+      ]
+    },
+    {
+      "id": "archway",
+      "title": "An arch like a stage",
+      "body": "The architectural arch frames the company as if they are exiting a gate into Amsterdam’s streets.",
+      "category": "architecture",
+      "confidence": "scholarly_interpretation",
+      "entityId": "archway",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-C-5"
+      ]
+    },
+    {
+      "id": "dog",
+      "title": "A dog startled by the drum",
+      "body": "A small dog recoils near the drummer — comic noise in a solemn commission.",
+      "category": "animal",
+      "confidence": "documented",
+      "entityId": "dog",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-C-5"
+      ]
+    },
+    {
+      "id": "spotlight",
+      "title": "Chiaroscuro as spotlight",
+      "body": "Rembrandt picks faces and fabrics out of brown shadow like a theatre lamp. “Night” was varnish and dirt; the drama was always daylight theatre.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "spotlight",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-C-5"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "A room that looks back",
+      "body": "Las Meninas (1656) places Infanta Margarita among attendants while Velázquez paints a vast canvas we cannot see. A mirror on the far wall reflects the king and queen — or the viewer standing where they stand.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/las-meninas/9fdc7800-9ade-48b0-ab8b-edee94ea877f"
+      ]
+    },
+    {
+      "id": "margarita",
+      "title": "Infanta Margarita at center",
+      "body": "The five-year-old infanta is the bright focus of the group, yet she may be only a secondary subject next to the hidden royal sitters.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "margarita",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/las-meninas/9fdc7800-9ade-48b0-ab8b-edee94ea877f"
+      ]
+    },
+    {
+      "id": "velazquez",
+      "title": "The painter inside the picture",
+      "body": "Velázquez includes himself with brush and palette, claiming the dignity of painting as a liberal art at the Spanish court.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "velazquez",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/las-meninas/9fdc7800-9ade-48b0-ab8b-edee94ea877f"
+      ]
+    },
+    {
+      "id": "menina-left",
+      "title": "A menina kneeling",
+      "body": "María Agustina Sarmiento offers the infanta a tray — court etiquette turned into gentle geometry.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "menina-left",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/las-meninas/9fdc7800-9ade-48b0-ab8b-edee94ea877f"
+      ]
+    },
+    {
+      "id": "menina-right",
+      "title": "A menina curtsying",
+      "body": "Isabel de Velasco bends toward Margarita, framing her with ceremony.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "menina-right",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/las-meninas/9fdc7800-9ade-48b0-ab8b-edee94ea877f"
+      ]
+    },
+    {
+      "id": "mirror",
+      "title": "The mirror’s double portrait",
+      "body": "King Philip IV and Queen Mariana appear in the rear mirror. Whether reflection or painting-within-painting, it folds the royal gaze into the room.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "mirror",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/las-meninas/9fdc7800-9ade-48b0-ab8b-edee94ea877f"
+      ]
+    },
+    {
+      "id": "canvas",
+      "title": "What we cannot see",
+      "body": "The huge canvas’s face is turned away. The painting withholds its own subject — a riddle at the heart of the masterpiece.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "entityId": "canvas",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/las-meninas/9fdc7800-9ade-48b0-ab8b-edee94ea877f"
+      ]
+    },
+    {
+      "id": "nieto",
+      "title": "Silhouette in the doorway",
+      "body": "José Nieto, the queen’s aposentador, pauses on the back stairs, catching light like a second author of the scene.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "nieto",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/las-meninas/9fdc7800-9ade-48b0-ab8b-edee94ea877f"
+      ]
+    },
+    {
+      "id": "dog",
+      "title": "A sleeping mastiff",
+      "body": "A large dog rests in the foreground, unimpressed by empire — Velázquez’s dry humor.",
+      "category": "animal",
+      "confidence": "documented",
+      "entityId": "dog",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/las-meninas/9fdc7800-9ade-48b0-ab8b-edee94ea877f"
+      ]
+    },
+    {
+      "id": "dwarf",
+      "title": "Maribarbola and Nicolasito",
+      "body": "Court dwarfs stand at right, part of the Habsburg household’s everyday theatre and another measure of the room’s social scale.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "dwarf",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/las-meninas/9fdc7800-9ade-48b0-ab8b-edee94ea877f"
+      ]
+    }
+  ]
+}

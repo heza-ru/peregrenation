@@ -1,0 +1,32 @@
+{
+  "paintingId": "harvesters",
+  "image": {
+    "file": "painting.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg",
+    "retrievalUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg/1920px-Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg",
+    "license": "Public domain",
+    "credit": "Google Art Project / Wikimedia Commons — Pieter Bruegel the Elder, The Harvesters (1565), The Metropolitan Museum of Art.",
+    "retrievedAt": "2026-09-30",
+    "licenseShortName": "Public domain",
+    "commonsLicense": "pd",
+    "copyrighted": false,
+    "commonsTitle": "File:Pieter Bruegel the Elder- The Harvesters - Google Art Project.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg",
+    "rights": {
+      "status": "public_domain",
+      "verifiedVia": "Wikimedia Commons",
+      "verifiedAt": "2026-09-30",
+      "artistDeathYear": 1569,
+      "workPublicDomainReason": "Pieter Bruegel the Elder died in 1569; the painting is in the public domain worldwide.",
+      "reproductionNote": "Wikimedia Commons / Google Art Project reproduction of The Harvesters."
+    }
+  },
+  "references": [
+    {
+      "id": "met-harvesters",
+      "title": "The Harvesters",
+      "publisher": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/435809"
+    }
+  ]
+}

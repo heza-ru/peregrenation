@@ -1,0 +1,32 @@
+{
+  "paintingId": "primavera",
+  "image": {
+    "file": "painting.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Botticelli-primavera.jpg",
+    "retrievalUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Botticelli-primavera.jpg/1920px-Botticelli-primavera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "credit": "Sandro Botticelli",
+    "retrievedAt": "2026-09-30",
+    "licenseShortName": "Public domain",
+    "commonsLicense": "pd",
+    "copyrighted": false,
+    "commonsTitle": "File:Botticelli-primavera.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Botticelli-primavera.jpg",
+    "rights": {
+      "status": "public_domain",
+      "verifiedVia": "Wikimedia Commons",
+      "verifiedAt": "2026-09-30",
+      "artistDeathYear": 1510,
+      "workPublicDomainReason": "Sandro Botticelli died in 1510; the painting is in the public domain worldwide.",
+      "reproductionNote": "Wikimedia Commons reproduction used for the curated 2D world pack."
+    }
+  },
+  "references": [
+    {
+      "id": "primavera-museum",
+      "title": "Primavera",
+      "publisher": "Uffizi Gallery, Florence",
+      "url": "https://www.uffizi.it/en/artworks/botticelli-spring"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "A supper frozen mid-shock",
+      "body": "Leonardo painted The Last Supper on the north wall of the Dominican refectory of Santa Maria delle Grazie in Milan (c. 1495–1498). Christ has just said that one of the Twelve will betray him; the apostles erupt in four groups of three while every architectural line converges on his calm center.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ]
+    },
+    {
+      "id": "bartholomew",
+      "title": "Bartholomew — rising in alarm",
+      "body": "At the far left, Bartholomew rises from his seat, hands on the table as if ready to stand. Leonardo turns the leftmost cluster into a wave of physical shock traveling toward Christ.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "bartholomew"
+    },
+    {
+      "id": "james-minor",
+      "title": "James the Less — hand on Peter’s shoulder",
+      "body": "James the Less reaches toward Peter, knitting the left trio together. His gesture is pastoral concern — trying to steady the group before the news fully lands.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "james-minor"
+    },
+    {
+      "id": "andrew",
+      "title": "Andrew — palms open",
+      "body": "Andrew lifts both hands, palms outward: a startled refusal. Leonardo uses open hands across the mural as a grammar of disbelief.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "andrew"
+    },
+    {
+      "id": "judas",
+      "title": "Judas — purse, shadow, spilled omen",
+      "body": "Judas Iscariot (the betrayer) recoils into silhouette, clutching a small purse and reaching toward the same dish as Christ. Near him salt appears overturned — Leonardo tells treachery through light and clutter, not a painted label.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "judas"
+    },
+    {
+      "id": "peter",
+      "title": "Peter — knife already drawn",
+      "body": "Simon Peter leans in aggressively, a knife already in hand — foreshadowing Gethsemane. Impulsive loyalty compressed into one diagonal thrust toward the quiet center.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "peter"
+    },
+    {
+      "id": "john",
+      "title": "John — the beloved disciple",
+      "body": "The youthful figure leaning away from Christ is traditionally John. Leonardo softens him into almost feminine gentleness — a foil to Peter’s force and Judas’s isolation.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "john"
+    },
+    {
+      "id": "jesus",
+      "title": "Christ as vanishing point",
+      "body": "Jesus sits alone at the table’s center, head framed by the brightest window. Arms open toward bread and wine, face resigned rather than theatrical. Orthogonals of the room converge near him — the mural’s calm keystone.",
+      "category": "figure",
+      "confidence": "documented",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "jesus"
+    },
+    {
+      "id": "thomas",
+      "title": "Thomas — the upward finger",
+      "body": "Thomas raises a finger as if demanding proof — a gesture later readers link to his doubt after the Resurrection. Leonardo seeds the next chapter inside this single meal.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "thomas"
+    },
+    {
+      "id": "james-major",
+      "title": "James the Greater — arms flung wide",
+      "body": "James opens both arms in disbelief, a wide counter-rhythm to Christ’s quieter gesture. Shock made monumental.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "james-major"
+    },
+    {
+      "id": "philip",
+      "title": "Philip — leaning in to ask",
+      "body": "Philip presses forward, almost pleading for clarification. Leonardo’s apostles do not pose; they argue with their bodies.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "philip"
+    },
+    {
+      "id": "matthew",
+      "title": "Matthew — turning to the end of the table",
+      "body": "Matthew turns outward toward Jude and Simon, spreading the news along the right-hand group. Conversation becomes composition.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "matthew"
+    },
+    {
+      "id": "thaddeus",
+      "title": "Jude Thaddeus — mid-debate",
+      "body": "Jude Thaddeus gestures toward Simon, continuing the chain of reaction. The rightmost trio closes the mural’s wave of response.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "thaddeus"
+    },
+    {
+      "id": "simon",
+      "title": "Simon — the far-right anchor",
+      "body": "Simon sits at the far right, hands raised in talk. He brackets the scene with Bartholomew on the opposite end — two anchors of a human storm.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "simon"
+    },
+    {
+      "id": "table",
+      "title": "A refectory table as stage",
+      "body": "White cloth, plates, and glasses sit at dining height inside a real monastery dining hall. Monks eating beneath the mural faced this painted meal daily — Eucharist mirrored at supper time.",
+      "category": "object",
+      "confidence": "documented",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "table"
+    },
+    {
+      "id": "trinity-window",
+      "title": "Three windows, one light",
+      "body": "Behind Christ, three openings pour daylight into the hall. The center window doubles as a natural halo while the coffered ceiling and tapestries deepen the illusion of a room beyond the wall.",
+      "category": "architecture",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "trinity-window"
+    },
+    {
+      "id": "spilled-salt",
+      "title": "Salt tipped toward treachery",
+      "body": "Near Judas, salt appears overturned — long read as a bad omen. Whether folklore or still-life accident, the cluttered table turns betrayal into something nearly touchable.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "spilled-salt"
+    },
+    {
+      "id": "coffered-ceiling",
+      "title": "Perspective as theology",
+      "body": "The coffered ceiling rushes toward Christ. Leonardo’s perspective is not decoration — it is devotion engineered in geometry, pulling every eye to the same calm face.",
+      "category": "architecture",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://cenacolovinciano.org/en/"
+      ],
+      "entityId": "coffered-ceiling"
+    }
+  ]
+}

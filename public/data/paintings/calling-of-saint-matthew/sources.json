@@ -1,0 +1,32 @@
+{
+  "paintingId": "calling-of-saint-matthew",
+  "image": {
+    "file": "painting.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Calling_of_Saint_Matthew-Caravaggo_(1599-1600).jpg",
+    "retrievalUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/The_Calling_of_Saint_Matthew-Caravaggo_%281599-1600%29.jpg/1920px-The_Calling_of_Saint_Matthew-Caravaggo_%281599-1600%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "credit": "Caravaggio",
+    "retrievedAt": "2026-09-30",
+    "licenseShortName": "Public domain",
+    "commonsLicense": "pd",
+    "copyrighted": false,
+    "commonsTitle": "File:The Calling of Saint Matthew-Caravaggo (1599-1600).jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:The_Calling_of_Saint_Matthew-Caravaggo_(1599-1600).jpg",
+    "rights": {
+      "status": "public_domain",
+      "verifiedVia": "Wikimedia Commons",
+      "verifiedAt": "2026-09-30",
+      "artistDeathYear": 1610,
+      "workPublicDomainReason": "Caravaggio died in 1610; the painting is in the public domain worldwide.",
+      "reproductionNote": "Wikimedia Commons reproduction used for the curated 2D world pack."
+    }
+  },
+  "references": [
+    {
+      "id": "calling-of-saint-matthew-museum",
+      "title": "The Calling of Saint Matthew",
+      "publisher": "San Luigi dei Francesi, Rome",
+      "url": "https://www.sanluigidifrancesi.it/"
+    }
+  ]
+}

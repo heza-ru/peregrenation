@@ -1,0 +1,32 @@
+{
+  "paintingId": "lady-with-an-ermine",
+  "image": {
+    "file": "painting.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg",
+    "retrievalUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg/1920px-Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "credit": "Leonardo da Vinci",
+    "retrievedAt": "2026-09-30",
+    "licenseShortName": "Public domain",
+    "commonsLicense": "pd",
+    "copyrighted": false,
+    "commonsTitle": "File:Lady with an Ermine - Leonardo da Vinci - Google Art Project.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg",
+    "rights": {
+      "status": "public_domain",
+      "verifiedVia": "Wikimedia Commons",
+      "verifiedAt": "2026-09-30",
+      "artistDeathYear": 1519,
+      "workPublicDomainReason": "Leonardo da Vinci died in 1519; the painting is in the public domain worldwide.",
+      "reproductionNote": "Wikimedia Commons reproduction used for the curated 2D world pack."
+    }
+  },
+  "references": [
+    {
+      "id": "lady-with-an-ermine-museum",
+      "title": "Lady with an Ermine",
+      "publisher": "Czartoryski Museum, Kraków",
+      "url": "https://mnk.pl/branch/mnk-the-princes-czartoryski-museum"
+    }
+  ]
+}

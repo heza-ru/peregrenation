@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "mona-lisa",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "Mona Lisa",
+    "artist": "Leonardo da Vinci",
+    "date": "c. 1503–1506",
+    "medium": "Oil on poplar",
+    "source": "Musée du Louvre, Paris"
+  },
+  "composition": {
+    "aspectRatio": 0.671,
+    "horizon": 0.42,
+    "vanishingPoint": [
+      0.5,
+      0.42
+    ],
+    "cameraFov": 38,
+    "planeWidth": 10.738,
+    "planeHeight": 16
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "lisa",
+      "type": "figure",
+      "label": "Lisa Gherardini",
+      "promptPoint": [
+        0.48,
+        0.27
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "smile",
+      "type": "figure",
+      "label": "The smile",
+      "promptPoint": [
+        0.48,
+        0.345
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "hands",
+      "type": "figure",
+      "label": "Folded hands",
+      "promptPoint": [
+        0.48,
+        0.84
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "veil",
+      "type": "object",
+      "label": "Sheer veil",
+      "promptPoint": [
+        0.5,
+        0.16
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "landscape",
+      "type": "landscape",
+      "label": "Aerial landscape",
+      "promptPoint": [
+        0.14,
+        0.3
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "bridge",
+      "type": "architecture",
+      "label": "Distant bridge",
+      "promptPoint": [
+        0.86,
+        0.42
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "chair-arm",
+      "type": "object",
+      "label": "Chair arm",
+      "promptPoint": [
+        0.18,
+        0.72
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 5,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "sfumato",
+      "type": "object",
+      "label": "Sfumato edges",
+      "promptPoint": [
+        0.34,
+        0.32
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.5,
+    "directional": [
+      0.35,
+      0.7,
+      0.4
+    ],
+    "directionalIntensity": 0.8,
+    "color": "#e8dcc8"
+  },
+  "palette": [
+    "#5a6a4a",
+    "#1f2a24",
+    "#c4a574",
+    "#efe6d6"
+  ]
+}

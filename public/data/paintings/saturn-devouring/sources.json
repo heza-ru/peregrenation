@@ -1,0 +1,32 @@
+{
+  "paintingId": "saturn-devouring",
+  "image": {
+    "file": "painting.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).jpg",
+    "retrievalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Francisco_de_Goya%2C_Saturno_devorando_a_su_hijo_%281819-1823%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "license": "Public domain",
+    "credit": "Francisco Goya",
+    "retrievedAt": "2026-09-30",
+    "licenseShortName": "Public domain",
+    "commonsLicense": "pd",
+    "copyrighted": false,
+    "commonsTitle": "File:Francisco de Goya, Saturno devorando a su hijo (1819-1823).jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).jpg",
+    "rights": {
+      "status": "public_domain",
+      "verifiedVia": "Wikimedia Commons",
+      "verifiedAt": "2026-09-30",
+      "artistDeathYear": 1828,
+      "workPublicDomainReason": "Francisco Goya died in 1828; the painting is in the public domain worldwide.",
+      "reproductionNote": "Wikimedia Commons reproduction used for the curated 2D world pack."
+    }
+  },
+  "references": [
+    {
+      "id": "saturn-devouring-museum",
+      "title": "Saturn Devouring His Son",
+      "publisher": "Museo del Prado, Madrid",
+      "url": "https://www.museodelprado.es/en/the-collection/art-work/saturn/18110a75-b0e7-430c-8969-6efc4d5d0b4a"
+    }
+  ]
+}

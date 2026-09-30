@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "lady-with-an-ermine",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "Lady with an Ermine",
+    "artist": "Leonardo da Vinci",
+    "date": "c. 1489–1491",
+    "medium": "Oil on panel",
+    "source": "Czartoryski Museum, Kraków"
+  },
+  "composition": {
+    "aspectRatio": 0.743,
+    "horizon": 0.4,
+    "vanishingPoint": [
+      0.5,
+      0.4
+    ],
+    "cameraFov": 38,
+    "planeWidth": 11.896,
+    "planeHeight": 16
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "cecilia",
+      "type": "figure",
+      "label": "Cecilia Gallerani",
+      "promptPoint": [
+        0.48,
+        0.28
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "ermine",
+      "type": "animal",
+      "label": "The ermine",
+      "promptPoint": [
+        0.58,
+        0.58
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "gaze",
+      "type": "figure",
+      "label": "Turning gaze",
+      "promptPoint": [
+        0.52,
+        0.26
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "hand",
+      "type": "figure",
+      "label": "Hand on the ermine",
+      "promptPoint": [
+        0.4,
+        0.58
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "necklace",
+      "type": "object",
+      "label": "Black beads",
+      "promptPoint": [
+        0.48,
+        0.46
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "sleeve",
+      "type": "object",
+      "label": "Blue sleeve",
+      "promptPoint": [
+        0.28,
+        0.48
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "dark-ground",
+      "type": "object",
+      "label": "Dark ground",
+      "promptPoint": [
+        0.86,
+        0.28
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 5,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.48,
+    "directional": [
+      0.55,
+      0.65,
+      0.3
+    ],
+    "directionalIntensity": 0.9,
+    "color": "#efe0cc"
+  },
+  "palette": [
+    "#1a1a1a",
+    "#c9a07a",
+    "#5a6e52",
+    "#efe6d6"
+  ]
+}

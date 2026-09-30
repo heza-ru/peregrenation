@@ -1,0 +1,113 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "A triptych of paradise, pleasure, and punishment",
+      "body": "Bosch’s Garden of Earthly Delights (c. 1490–1500) opens from a gray Creation into Eden, a teeming garden of desire, and a dark musical hell. Few paintings invent a denser private cosmology.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/the-garden-of-earthly-delights-triptych/02388242-6d6a-4e9e-a992-e1311eab7b2b"
+      ]
+    },
+    {
+      "id": "eden",
+      "title": "Eden before the fall’s full cost",
+      "body": "On the left God presents Eve to Adam in a landscape already seeded with odd creatures — innocence with a warning.",
+      "category": "landscape",
+      "confidence": "documented",
+      "entityId": "eden",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/the-garden-of-earthly-delights-triptych/02388242-6d6a-4e9e-a992-e1311eab7b2b"
+      ]
+    },
+    {
+      "id": "garden",
+      "title": "The garden of myriad nudes",
+      "body": "The center panel swarms with naked figures, birds, and fruit. Readings range from moral satire to utopian fantasy; Bosch never captions his dream.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "entityId": "garden",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/the-garden-of-earthly-delights-triptych/02388242-6d6a-4e9e-a992-e1311eab7b2b"
+      ]
+    },
+    {
+      "id": "hell",
+      "title": "Hell as broken instrument",
+      "body": "The right panel invents punishments from music, ice, and machinery — a night city of consequence.",
+      "category": "landscape",
+      "confidence": "documented",
+      "entityId": "hell",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/the-garden-of-earthly-delights-triptych/02388242-6d6a-4e9e-a992-e1311eab7b2b"
+      ]
+    },
+    {
+      "id": "fountain",
+      "title": "The pink fountain of life",
+      "body": "A fantastical pink structure rises at the garden’s axis — architecture that grows like a plant.",
+      "category": "architecture",
+      "confidence": "scholarly_interpretation",
+      "entityId": "fountain",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/the-garden-of-earthly-delights-triptych/02388242-6d6a-4e9e-a992-e1311eab7b2b"
+      ]
+    },
+    {
+      "id": "pool",
+      "title": "The circular pool",
+      "body": "Figures bathe and ride beasts around a central pool — ritual or revel, depending on the viewer.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "entityId": "pool",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/the-garden-of-earthly-delights-triptych/02388242-6d6a-4e9e-a992-e1311eab7b2b"
+      ]
+    },
+    {
+      "id": "strawberry",
+      "title": "Fruit larger than people",
+      "body": "Oversized berries and cherries dwarf the nudes. Desire is scaled until it becomes absurd.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "entityId": "strawberry",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/the-garden-of-earthly-delights-triptych/02388242-6d6a-4e9e-a992-e1311eab7b2b"
+      ]
+    },
+    {
+      "id": "owl",
+      "title": "An owl in paradise",
+      "body": "Owls haunt Bosch’s Eden — vigilance, folly, or night watching day.",
+      "category": "animal",
+      "confidence": "scholarly_interpretation",
+      "entityId": "owl",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/the-garden-of-earthly-delights-triptych/02388242-6d6a-4e9e-a992-e1311eab7b2b"
+      ]
+    },
+    {
+      "id": "ears-knife",
+      "title": "Ears pierced by a knife",
+      "body": "In hell, a knife stands between severed ears — gossip and violence fused into one emblem.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "ears-knife",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/the-garden-of-earthly-delights-triptych/02388242-6d6a-4e9e-a992-e1311eab7b2b"
+      ]
+    },
+    {
+      "id": "adam-eve",
+      "title": "Adam and Eve in Eden",
+      "body": "In the left panel God presents Eve to Adam in a verdant Paradise filled with strange animals and a pink fountain — Bosch’s vision of creation before the Fall.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "adam-eve",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/the-garden-of-earthly-delights-triptych/02388242-6d6a-4e9e-a992-e1311eab7b2b"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "July painted as a charge",
+      "body": "Delacroix’s Liberty Leading the People (1830) commemorates the July Revolution — Liberty herself strides over barricades with the tricolour.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010065856"
+      ]
+    },
+    {
+      "id": "liberty",
+      "title": "Marianne with a Phrygian cap",
+      "body": "Liberty, bare-breasted and purposeful, wears the Phrygian cap of freed slaves and leads mixed classes into the smoke.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "liberty",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010065856"
+      ]
+    },
+    {
+      "id": "flag",
+      "title": "The tricolour raised",
+      "body": "Blue, white, and red snap above the charge — the republic’s colors made into motion.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "flag",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010065856"
+      ]
+    },
+    {
+      "id": "boy-pistol",
+      "title": "A child of the barricade",
+      "body": "A street boy with pistols — often linked to Hugo’s later Gavroche — embodies youthful fury in the revolt.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "boy-pistol",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010065856"
+      ]
+    },
+    {
+      "id": "top-hat",
+      "title": "Bourgeois beside the worker",
+      "body": "A top-hatted man with a hunting shotgun fights beside laborers — Delacroix paints class alliance for a day.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "top-hat",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010065856"
+      ]
+    },
+    {
+      "id": "fallen",
+      "title": "Bodies underfoot",
+      "body": "The dead and wounded carpet the foreground — victory bought in flesh.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "fallen",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010065856"
+      ]
+    },
+    {
+      "id": "notre-dame",
+      "title": "Paris on the skyline",
+      "body": "Notre-Dame’s towers pin the scene to Paris even as smoke blurs the city.",
+      "category": "architecture",
+      "confidence": "documented",
+      "entityId": "notre-dame",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010065856"
+      ]
+    },
+    {
+      "id": "smoke",
+      "title": "Powder and cloud",
+      "body": "Gun smoke softens the distance — history seen through a haze of combat.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "entityId": "smoke",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010065856"
+      ]
+    },
+    {
+      "id": "bayonet",
+      "title": "Steel at the ready",
+      "body": "Muskets and bayonets angle toward Liberty’s stride — the tools of the uprising.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "bayonet",
+      "sources": [
+        "https://collections.louvre.fr/en/ark:/53355/cl010065856"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "A Sunday built from dots",
+      "body": "Seurat’s Grande Jatte (1884–86) freezes a Parisian island afternoon into pointillist stillness — leisure as a carefully composed science of color.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884"
+      ]
+    },
+    {
+      "id": "couple",
+      "title": "Fashion at the right edge",
+      "body": "A woman with a bustle and a man in a top hat stand like statues of the bourgeoisie — modern types on parade.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "couple",
+      "sources": [
+        "https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884"
+      ]
+    },
+    {
+      "id": "monkey",
+      "title": "A pet with a leash",
+      "body": "A small monkey on a leash was a chic accessory — and a sly wink at “aping” social manners.",
+      "category": "animal",
+      "confidence": "scholarly_interpretation",
+      "entityId": "monkey",
+      "sources": [
+        "https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884"
+      ]
+    },
+    {
+      "id": "parasol",
+      "title": "Circles of shade",
+      "body": "Parasols punctuate the lawn like floating discs — fashion against the sun.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "parasol",
+      "sources": [
+        "https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884"
+      ]
+    },
+    {
+      "id": "river",
+      "title": "The Seine as mirror",
+      "body": "Water beyond the bank holds boats and sky in cool fragments of color.",
+      "category": "landscape",
+      "confidence": "documented",
+      "entityId": "river",
+      "sources": [
+        "https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884"
+      ]
+    },
+    {
+      "id": "sailboats",
+      "title": "Leisure on the water",
+      "body": "Sailboats and rowers echo the island’s Sunday ease — Paris at play.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "sailboats",
+      "sources": [
+        "https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884"
+      ]
+    },
+    {
+      "id": "girl-white",
+      "title": "A child in white",
+      "body": "A young girl in a white dress holds flowers — innocence placed among rigid adults.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "girl-white",
+      "sources": [
+        "https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884"
+      ]
+    },
+    {
+      "id": "shadows",
+      "title": "Cool bands of shade",
+      "body": "Tree shadows stripe the grass — structure for Seurat’s dotted light.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "entityId": "shadows",
+      "sources": [
+        "https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884"
+      ]
+    },
+    {
+      "id": "dots",
+      "title": "Color mixed in the eye",
+      "body": "Tiny strokes of pure color blend optically at a distance — pointillism’s wager on the viewer’s vision.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "dots",
+      "sources": [
+        "https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884"
+      ]
+    }
+  ]
+}

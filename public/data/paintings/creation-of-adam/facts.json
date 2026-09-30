@@ -1,0 +1,91 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "A spark between two fingers",
+      "body": "Michelangelo’s Creation of Adam (c. 1512) on the Sistine ceiling freezes the instant before life jumps the gap — God and Adam almost touch.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.museivaticani.va/"
+      ]
+    },
+    {
+      "id": "adam",
+      "title": "Adam waiting to wake",
+      "body": "Adam reclines on bare ground, body already classical and complete, waiting for the charge that will make him live.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "adam",
+      "sources": [
+        "https://www.museivaticani.va/"
+      ]
+    },
+    {
+      "id": "god",
+      "title": "God in a rush of angels",
+      "body": "God surges forward wrapped in a wind-blown mantle, carried by angels — energy against Adam’s stillness.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "god",
+      "sources": [
+        "https://www.museivaticani.va/"
+      ]
+    },
+    {
+      "id": "hands",
+      "title": "The most famous nearly-touch",
+      "body": "The gap between the two index fingers is the painting’s voltage — creation as a held breath.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "hands",
+      "sources": [
+        "https://www.museivaticani.va/"
+      ]
+    },
+    {
+      "id": "eve-under-arm",
+      "title": "A face under the arm",
+      "body": "A feminine face looks out from under God’s arm — often read as Eve waiting her turn, or the yet-unborn human soul.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "eve-under-arm",
+      "sources": [
+        "https://www.museivaticani.va/"
+      ]
+    },
+    {
+      "id": "angels",
+      "title": "A cluster of spirits",
+      "body": "Wingless putti brace and lean inside the mantle, turning God’s arrival into a living cloud.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "angels",
+      "sources": [
+        "https://www.museivaticani.va/"
+      ]
+    },
+    {
+      "id": "earth",
+      "title": "Unfinished ground",
+      "body": "Adam’s side of the fresco is spare rock and slope — a world not yet green.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "entityId": "earth",
+      "sources": [
+        "https://www.museivaticani.va/"
+      ]
+    },
+    {
+      "id": "cloak",
+      "title": "A mantle like a brain — or a sail",
+      "body": "God’s cloak billows into a shape some viewers compare to a human brain; others see pure storm and motion.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "entityId": "cloak",
+      "sources": [
+        "https://www.museivaticani.va/"
+      ]
+    }
+  ]
+}

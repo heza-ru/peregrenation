@@ -1,0 +1,69 @@
+[
+  {
+    "id": "school-of-athens",
+    "title": "The School of Athens",
+    "artist": "Raphael",
+    "period": "High Renaissance",
+    "worldType": "architectural",
+    "spatialStrength": 10,
+    "objectDensity": 8,
+    "figureDensity": 10,
+    "historicalDepth": 10,
+    "recommendedForMvp": true
+  },
+  {
+    "id": "last-supper",
+    "title": "The Last Supper",
+    "artist": "Leonardo da Vinci",
+    "period": "High Renaissance",
+    "worldType": "interior",
+    "spatialStrength": 10,
+    "objectDensity": 7,
+    "figureDensity": 10,
+    "historicalDepth": 10
+  },
+  {
+    "id": "arnolfini-portrait",
+    "title": "The Arnolfini Portrait",
+    "artist": "Jan van Eyck",
+    "period": "Northern Renaissance",
+    "worldType": "interior",
+    "spatialStrength": 8,
+    "objectDensity": 10,
+    "figureDensity": 5,
+    "historicalDepth": 10
+  },
+  {
+    "id": "wedding-at-cana",
+    "title": "The Wedding at Cana",
+    "artist": "Paolo Veronese",
+    "period": "Late Renaissance",
+    "worldType": "architectural",
+    "spatialStrength": 10,
+    "objectDensity": 10,
+    "figureDensity": 10,
+    "historicalDepth": 9
+  },
+  {
+    "id": "harvesters",
+    "title": "The Harvesters",
+    "artist": "Pieter Bruegel the Elder",
+    "period": "Northern Renaissance",
+    "worldType": "landscape",
+    "spatialStrength": 9,
+    "objectDensity": 8,
+    "figureDensity": 8,
+    "historicalDepth": 9
+  },
+  {
+    "id": "ambassadors",
+    "title": "The Ambassadors",
+    "artist": "Hans Holbein the Younger",
+    "period": "Northern Renaissance",
+    "worldType": "interior",
+    "spatialStrength": 7,
+    "objectDensity": 10,
+    "figureDensity": 4,
+    "historicalDepth": 10
+  }
+]

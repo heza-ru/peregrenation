@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "wanderer-above-the-sea-of-fog",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "Wanderer above the Sea of Fog",
+    "artist": "Caspar David Friedrich",
+    "date": "c. 1818",
+    "medium": "Oil on canvas",
+    "source": "Hamburger Kunsthalle, Hamburg"
+  },
+  "composition": {
+    "aspectRatio": 0.781,
+    "horizon": 0.45,
+    "vanishingPoint": [
+      0.5,
+      0.45
+    ],
+    "cameraFov": 40,
+    "planeWidth": 12.494,
+    "planeHeight": 16
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "wanderer",
+      "type": "figure",
+      "label": "The wanderer",
+      "promptPoint": [
+        0.5,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "fog",
+      "type": "landscape",
+      "label": "Sea of fog",
+      "promptPoint": [
+        0.62,
+        0.52
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "rocks",
+      "type": "landscape",
+      "label": "Jagged outcrop",
+      "promptPoint": [
+        0.5,
+        0.78
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "peaks",
+      "type": "landscape",
+      "label": "Distant peaks",
+      "promptPoint": [
+        0.72,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "coat",
+      "type": "object",
+      "label": "Dark frock coat",
+      "promptPoint": [
+        0.5,
+        0.48
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "cane",
+      "type": "object",
+      "label": "Walking stick",
+      "promptPoint": [
+        0.44,
+        0.62
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 5,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "sky",
+      "type": "landscape",
+      "label": "Pale sky",
+      "promptPoint": [
+        0.5,
+        0.12
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 5,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.55,
+    "directional": [
+      0.15,
+      0.8,
+      0.45
+    ],
+    "directionalIntensity": 0.85,
+    "color": "#e8eef2"
+  },
+  "palette": [
+    "#6a7a88",
+    "#c5cdd4",
+    "#2a2e32",
+    "#a8b4a0"
+  ]
+}

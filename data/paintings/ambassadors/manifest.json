@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "ambassadors",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v2",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "The Ambassadors",
+    "artist": "Hans Holbein the Younger",
+    "date": "1533",
+    "medium": "Oil on oak",
+    "source": "The National Gallery, London"
+  },
+  "composition": {
+    "aspectRatio": 1.015,
+    "horizon": 0.48,
+    "vanishingPoint": [
+      0.5,
+      0.45
+    ],
+    "cameraFov": 40,
+    "planeWidth": 16.0,
+    "planeHeight": 15.767
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "dinteville",
+      "type": "figure",
+      "label": "Jean de Dinteville",
+      "promptPoint": [
+        0.28,
+        0.4
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "selve",
+      "type": "figure",
+      "label": "Georges de Selve",
+      "promptPoint": [
+        0.72,
+        0.4
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "skull",
+      "type": "object",
+      "label": "Anamorphic skull",
+      "promptPoint": [
+        0.5,
+        0.82
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "celestial-globe",
+      "type": "object",
+      "label": "Celestial globe",
+      "promptPoint": [
+        0.45,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "sundial",
+      "type": "object",
+      "label": "Sundial / dials",
+      "promptPoint": [
+        0.5,
+        0.4
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "quadrant",
+      "type": "object",
+      "label": "Quadrant",
+      "promptPoint": [
+        0.55,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "terrestrial-globe",
+      "type": "object",
+      "label": "Terrestrial globe",
+      "promptPoint": [
+        0.58,
+        0.52
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "lute",
+      "type": "object",
+      "label": "Lute with broken string",
+      "promptPoint": [
+        0.6,
+        0.58
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "flute-case",
+      "type": "object",
+      "label": "Case of flutes",
+      "promptPoint": [
+        0.52,
+        0.6
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "hymnal",
+      "type": "object",
+      "label": "Open hymnal",
+      "promptPoint": [
+        0.55,
+        0.6
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "arithmetic-book",
+      "type": "object",
+      "label": "Book of arithmetic",
+      "promptPoint": [
+        0.48,
+        0.58
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "crucifix",
+      "type": "object",
+      "label": "Half-hidden crucifix",
+      "promptPoint": [
+        0.9,
+        0.18
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "green-curtain",
+      "type": "object",
+      "label": "Green curtain",
+      "promptPoint": [
+        0.85,
+        0.3
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "dagger",
+      "type": "object",
+      "label": "Dinteville’s dagger",
+      "promptPoint": [
+        0.3,
+        0.55
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "mosaic-floor",
+      "type": "architecture",
+      "label": "Cosmati floor",
+      "promptPoint": [
+        0.5,
+        0.88
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 0,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "instruments",
+      "type": "object",
+      "label": "Shelf of instruments",
+      "promptPoint": [
+        0.48,
+        0.45
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [
+    {
+      "id": "floor",
+      "type": "plane",
+      "position": [
+        0,
+        -2.2,
+        -1.5
+      ],
+      "rotation": [
+        -1.35,
+        0,
+        0
+      ],
+      "size": [
+        18,
+        12
+      ],
+      "opacity": 0.08
+    }
+  ],
+  "lighting": {
+    "ambient": 0.48,
+    "directional": [
+      0.4,
+      0.75,
+      0.35
+    ],
+    "directionalIntensity": 0.9,
+    "color": "#efe4d0"
+  },
+  "palette": [
+    "#1a1510",
+    "#c9a24a",
+    "#2e4a6a",
+    "#d2c2a4"
+  ]
+}

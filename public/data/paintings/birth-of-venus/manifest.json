@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "birth-of-venus",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "The Birth of Venus",
+    "artist": "Sandro Botticelli",
+    "date": "c. 1485",
+    "medium": "Tempera on canvas",
+    "source": "Uffizi Gallery, Florence"
+  },
+  "composition": {
+    "aspectRatio": 1.592,
+    "horizon": 0.55,
+    "vanishingPoint": [
+      0.5,
+      0.55
+    ],
+    "cameraFov": 42,
+    "planeWidth": 16,
+    "planeHeight": 10.05
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "venus",
+      "type": "figure",
+      "label": "Venus",
+      "promptPoint": [
+        0.52,
+        0.36
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "zephyr",
+      "type": "figure",
+      "label": "Zephyr and Aura",
+      "promptPoint": [
+        0.14,
+        0.36
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "hora",
+      "type": "figure",
+      "label": "Hora of Spring",
+      "promptPoint": [
+        0.84,
+        0.42
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "shell",
+      "type": "object",
+      "label": "Scallop shell",
+      "promptPoint": [
+        0.52,
+        0.78
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "roses",
+      "type": "object",
+      "label": "Roses in the wind",
+      "promptPoint": [
+        0.34,
+        0.26
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "shore",
+      "type": "landscape",
+      "label": "Cyprus shore",
+      "promptPoint": [
+        0.78,
+        0.78
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "myrtle",
+      "type": "landscape",
+      "label": "Myrtle grove",
+      "promptPoint": [
+        0.92,
+        0.38
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "sea",
+      "type": "landscape",
+      "label": "Rippled sea",
+      "promptPoint": [
+        0.28,
+        0.62
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.55,
+    "directional": [
+      0.2,
+      0.8,
+      0.4
+    ],
+    "directionalIntensity": 0.85,
+    "color": "#f3e6d2"
+  },
+  "palette": [
+    "#c9d8ea",
+    "#e8c9a0",
+    "#2a4a6e",
+    "#efe6d6"
+  ]
+}

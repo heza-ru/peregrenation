@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "saturn-devouring",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "Saturn Devouring His Son",
+    "artist": "Francisco Goya",
+    "date": "c. 1820–1823",
+    "medium": "Oil mural (transferred to canvas)",
+    "source": "Museo del Prado, Madrid"
+  },
+  "composition": {
+    "aspectRatio": 0.544,
+    "horizon": 0.5,
+    "vanishingPoint": [
+      0.5,
+      0.5
+    ],
+    "cameraFov": 40,
+    "planeWidth": 8.71,
+    "planeHeight": 16
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "saturn",
+      "type": "figure",
+      "label": "Saturn",
+      "promptPoint": [
+        0.52,
+        0.24
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "body",
+      "type": "figure",
+      "label": "The consumed body",
+      "promptPoint": [
+        0.52,
+        0.55
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "eyes",
+      "type": "figure",
+      "label": "Wide staring eyes",
+      "promptPoint": [
+        0.5,
+        0.16
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "hands",
+      "type": "figure",
+      "label": "Clutching hands",
+      "promptPoint": [
+        0.48,
+        0.48
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "void",
+      "type": "landscape",
+      "label": "Black void",
+      "promptPoint": [
+        0.86,
+        0.22
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "blood",
+      "type": "object",
+      "label": "Blood and flesh",
+      "promptPoint": [
+        0.52,
+        0.34
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.3,
+    "directional": [
+      0.4,
+      0.6,
+      0.5
+    ],
+    "directionalIntensity": 0.7,
+    "color": "#d4c4a8"
+  },
+  "palette": [
+    "#1a1612",
+    "#c4a484",
+    "#5a2a1a",
+    "#2a2a2a"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "paintingId": "night-watch",
+  "image": {
+    "file": "painting.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Night_Watch_-_HD.jpg",
+    "retrievalUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/The_Night_Watch_-_HD.jpg/1920px-The_Night_Watch_-_HD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "credit": "Rembrandt",
+    "retrievedAt": "2026-09-30",
+    "licenseShortName": "Public domain",
+    "commonsLicense": "pd",
+    "copyrighted": false,
+    "commonsTitle": "File:The Night Watch - HD.jpg",
+    "commonsUrl": "https://commons.wikimedia.org/wiki/File:The_Night_Watch_-_HD.jpg",
+    "rights": {
+      "status": "public_domain",
+      "verifiedVia": "Wikimedia Commons",
+      "verifiedAt": "2026-09-30",
+      "artistDeathYear": 1669,
+      "workPublicDomainReason": "Rembrandt van Rijn died in 1669; the painting is in the public domain worldwide.",
+      "reproductionNote": "Wikimedia Commons reproduction used for the curated 2D world pack."
+    }
+  },
+  "references": [
+    {
+      "id": "night-watch-museum",
+      "title": "The Night Watch",
+      "publisher": "Rijksmuseum, Amsterdam",
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-5"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "Domestic work made monumental",
+      "body": "Vermeer’s Milkmaid (c. 1660) raises a kitchen task to quiet grandeur — light, bread, and a steady pour.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-A-2344"
+      ]
+    },
+    {
+      "id": "maid",
+      "title": "Concentration as virtue",
+      "body": "The maid’s downcast focus turns labor into dignity; Vermeer refuses satire and chooses respect.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "maid",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-A-2344"
+      ]
+    },
+    {
+      "id": "milk",
+      "title": "A ribbon of white",
+      "body": "Milk streams in a careful arc — time slowed to the thickness of paint.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "milk",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-A-2344"
+      ]
+    },
+    {
+      "id": "bread",
+      "title": "Crusts catching light",
+      "body": "Broken bread on the table gleams with tiny pointillés of highlight — still life inside a genre scene.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "bread",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-A-2344"
+      ]
+    },
+    {
+      "id": "window",
+      "title": "Daylight from the left",
+      "body": "Cool window light models every fold of cloth and every plaster nick on the wall.",
+      "category": "architecture",
+      "confidence": "documented",
+      "entityId": "window",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-A-2344"
+      ]
+    },
+    {
+      "id": "wall",
+      "title": "A wall that breathes",
+      "body": "Nail holes and stains on the plaster make the kitchen feel lived-in — perfection without polish.",
+      "category": "architecture",
+      "confidence": "scholarly_interpretation",
+      "entityId": "wall",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-A-2344"
+      ]
+    },
+    {
+      "id": "foot-warmer",
+      "title": "Warmth on the floor",
+      "body": "A foot warmer rests below — comfort and, in Dutch emblem books, a possible hint of desire kept near the kitchen.",
+      "category": "object",
+      "confidence": "scholarly_interpretation",
+      "entityId": "foot-warmer",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-A-2344"
+      ]
+    },
+    {
+      "id": "tiles",
+      "title": "Delft along the skirting",
+      "body": "Blue-and-white tiles run the baseboard — a humble frieze of domestic Delftware.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "tiles",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/collection/SK-A-2344"
+      ]
+    }
+  ]
+}

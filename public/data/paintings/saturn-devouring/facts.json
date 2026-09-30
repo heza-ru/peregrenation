@@ -1,0 +1,80 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "Myth as private horror",
+      "body": "Goya’s Saturn Devouring His Son, one of the Black Paintings from his Quinta del Sordo house, remakes the Cronus myth as raw panic on a dark wall.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/saturn/18110a75-b0e7-430c-8969-6efc4d5d0b4a"
+      ]
+    },
+    {
+      "id": "saturn",
+      "title": "A god without majesty",
+      "body": "Saturn is gaunt, naked, and frantic — divinity stripped to appetite and fear.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "saturn",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/saturn/18110a75-b0e7-430c-8969-6efc4d5d0b4a"
+      ]
+    },
+    {
+      "id": "body",
+      "title": "A child already half-gone",
+      "body": "The pale body hangs limp in his grip — time devouring what it fears will replace it.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "body",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/saturn/18110a75-b0e7-430c-8969-6efc4d5d0b4a"
+      ]
+    },
+    {
+      "id": "eyes",
+      "title": "Eyes that cannot look away",
+      "body": "Saturn’s bulging eyes stare past us — terror mid-bite.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "entityId": "eyes",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/saturn/18110a75-b0e7-430c-8969-6efc4d5d0b4a"
+      ]
+    },
+    {
+      "id": "hands",
+      "title": "Fingers like claws",
+      "body": "Hands dig into flesh with desperate force — not ceremony, but hunger.",
+      "category": "figure",
+      "confidence": "documented",
+      "entityId": "hands",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/saturn/18110a75-b0e7-430c-8969-6efc4d5d0b4a"
+      ]
+    },
+    {
+      "id": "void",
+      "title": "No room, no sky",
+      "body": "The background is near-black emptiness — myth without a stage.",
+      "category": "landscape",
+      "confidence": "scholarly_interpretation",
+      "entityId": "void",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/saturn/18110a75-b0e7-430c-8969-6efc4d5d0b4a"
+      ]
+    },
+    {
+      "id": "blood",
+      "title": "Paint as wound",
+      "body": "Reds and raw flesh tones flare against the dark — the mural’s violence made intimate.",
+      "category": "object",
+      "confidence": "documented",
+      "entityId": "blood",
+      "sources": [
+        "https://www.museodelprado.es/en/the-collection/art-work/saturn/18110a75-b0e7-430c-8969-6efc4d5d0b4a"
+      ]
+    }
+  ]
+}

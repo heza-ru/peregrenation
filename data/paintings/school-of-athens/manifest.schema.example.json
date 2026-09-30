@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 2,
+  "paintingId": "school-of-athens",
+  "pipelineVersion": "0.2.0",
+  "sceneAnalysisVersion": "opus-5-5-v1",
+  "segmentationVersion": "sam-vit-base-gpu-v1",
+  "depthVersion": "depth-anything-v2-small-hf",
+  "painting": {
+    "title": "The School of Athens",
+    "artist": "Raphael",
+    "date": "1509–1511",
+    "medium": "Fresco",
+    "source": "Stanza della Segnatura, Vatican Museums"
+  },
+  "composition": {
+    "aspectRatio": 1.434,
+    "horizon": 0.48,
+    "vanishingPoint": [0.5, 0.47],
+    "cameraFov": 45,
+    "planeWidth": 16,
+    "planeHeight": 11.16
+  },
+  "layers": [
+    {
+      "id": "sky-arch-far",
+      "label": "Distant architecture",
+      "depthBand": 5,
+      "texture": "layers/sky-arch-far.webp",
+      "z": -4.2,
+      "parallax": 0.15,
+      "opacity": 1,
+      "mask": "masks/band-5.png"
+    },
+    {
+      "id": "hall-mid",
+      "label": "Central hall",
+      "depthBand": 3,
+      "texture": "layers/hall-mid.webp",
+      "z": -2.4,
+      "parallax": 0.35,
+      "opacity": 1,
+      "mask": "masks/band-3.png"
+    },
+    {
+      "id": "figures-near",
+      "label": "Philosophers foreground",
+      "depthBand": 1,
+      "texture": "layers/figures-near.webp",
+      "z": -0.8,
+      "parallax": 0.65,
+      "opacity": 1,
+      "mask": "masks/band-1.png"
+    },
+    {
+      "id": "hero-painting",
+      "label": "Hero match frame",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "plato",
+      "type": "figure",
+      "label": "Plato",
+      "promptPoint": [0.468, 0.385],
+      "position": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.95,
+      "evidence": "observed",
+      "mask": "masks/entity-plato.png",
+      "cutoutWidth": 1.4,
+      "cutoutHeight": 2.8
+    },
+    {
+      "id": "aristotle",
+      "type": "figure",
+      "label": "Aristotle",
+      "promptPoint": [0.532, 0.385],
+      "position": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.95,
+      "evidence": "observed",
+      "mask": "masks/entity-aristotle.png",
+      "cutoutWidth": 1.4,
+      "cutoutHeight": 2.8
+    }
+  ],
+  "architecture": [
+    {
+      "id": "floor",
+      "type": "plane",
+      "position": [0, -3.2, -4],
+      "rotation": [-1.5708, 0, 0],
+      "size": [28, 20],
+      "opacity": 0.12
+    },
+    {
+      "id": "column-l",
+      "type": "cylinder",
+      "position": [-3.4, 0.2, -3.8],
+      "radius": 0.38,
+      "height": 6.2,
+      "opacity": 0.14
+    },
+    {
+      "id": "column-r",
+      "type": "cylinder",
+      "position": [3.4, 0.2, -3.8],
+      "radius": 0.38,
+      "height": 6.2,
+      "opacity": 0.14
+    },
+    {
+      "id": "steps-block",
+      "type": "box",
+      "position": [0, -2.6, -1.2],
+      "size": [14, 0.55, 2.4],
+      "opacity": 0.1
+    }
+  ],
+  "assets": [],
+  "lighting": {
+    "ambient": 0.55,
+    "directional": [0.35, 0.85, 0.25],
+    "directionalIntensity": 0.75,
+    "color": "#f0e6d2"
+  },
+  "palette": ["#2a2218", "#c9a24a", "#efe6d6", "#5a4a34"]
+}

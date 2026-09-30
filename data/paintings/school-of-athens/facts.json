@@ -1,0 +1,201 @@
+{
+  "facts": [
+    {
+      "id": "painting-overview",
+      "title": "A library of minds",
+      "body": "Raphael painted The School of Athens for Julius II’s private library in the Vatican. This wall stands for Philosophy — imaginary company of thinkers gathered under one vault, as if every age of reason shared a single room.",
+      "category": "painting",
+      "confidence": "documented",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "plato-timeline",
+      "entityId": "plato",
+      "title": "Plato — the upward finger",
+      "body": "Plato (c. 427–347 BCE) founded the Academy in Athens and wrote dialogues that shaped Western metaphysics. Here he is the elder in crimson, holding his Timaeus and pointing to the heavens — Ideal Forms above the changing world. In Raphael’s hall he anchors the idealist half of philosophy, walking beside Aristotle as if teacher and student still debate.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "aristotle-ethics",
+      "entityId": "aristotle",
+      "title": "Aristotle — the level palm",
+      "body": "Aristotle (384–322 BCE), Plato’s student, founded the Lyceum and wrote on logic, biology, politics, and ethics. Raphael gives him a blue robe and the Nicomachean Ethics, hand opened toward the earth — knowledge grounded in observation. Opposite Plato’s skyward point, he is the fresco’s emblem of empirical, practical philosophy.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "timaeus-book",
+      "entityId": "timaeus-book",
+      "title": "Timaeus in Plato’s hand",
+      "body": "The book under Plato’s arm is labeled TIMAEO — his dialogue on the creation of the cosmos. Raphael makes the title readable so viewers catch the joke and the thesis at once: this gathering is not only people, but books that built the Renaissance mind.",
+      "category": "object",
+      "confidence": "documented",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "ethics-book",
+      "entityId": "ethics-book",
+      "title": "Ethics in Aristotle’s hand",
+      "body": "Aristotle’s volume is marked ETICA. Where Plato’s Timaeus looks to cosmic order, the Ethics asks how humans should live. The paired books turn the central stroll into a visual syllabus — metaphysics and morals side by side.",
+      "category": "object",
+      "confidence": "documented",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "socrates-argument",
+      "entityId": "socrates",
+      "title": "Socrates among the young",
+      "body": "Socrates (c. 470–399 BCE) left no writings; we know him through Plato and others. He taught by questioning — the elenchus — and was executed by Athens for “corrupting the youth.” Raphael places the snub-nosed sage on the left, counting points on his fingers while armored and cloaked listeners lean in: dialectic as a living circle, not a throne.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "pythagoras-tablet",
+      "entityId": "pythagoras",
+      "title": "Pythagoras and the ratios",
+      "body": "Pythagoras (6th century BCE) linked number, music, and cosmos — “all is number.” In the lower left he bends over a tablet of harmonic ratios while pupils crowd the slate. Raphael casts him as the fountain of mathematical order that later geometry (Euclid, lower right) will extend.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "averroes-listener",
+      "entityId": "averroes",
+      "title": "Averroes in the circle",
+      "body": "Ibn Rushd — Averroes (1126–1198) — was the Cordoban commentator who carried Aristotle into medieval Europe through Arabic and Latin. The green-turbaned listener near Pythagoras marks that bridge: Islamic philosophy inside a Christian pope’s library, proof that Raphael’s “Athens” is a world school, not a Greek club.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "heraclitus-block",
+      "entityId": "heraclitus",
+      "title": "Heraclitus on the stone",
+      "body": "Heraclitus of Ephesus (c. 500 BCE) taught that all flows — “you cannot step twice into the same river.” Raphael isolates him on a marble block in the foreground, chin on fist, often with Michelangelo’s features: melancholy genius writing apart from the crowd. He is change itself, sitting inside a fresco about eternal Ideas.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "diogenes-steps",
+      "entityId": "diogenes",
+      "title": "Diogenes on the stair",
+      "body": "Diogenes the Cynic (c. 412–323 BCE) scorned convention — living in a jar, mocking Alexander. Here he sprawls across the marble steps with a dish nearby, refusing the standing dignity of Plato and Aristotle above him. His laziness is philosophy: virtue without ceremony, planted in the path of every viewer climbing the stairs.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "euclid-compass",
+      "entityId": "euclid",
+      "title": "Euclid’s demonstration",
+      "body": "Euclid (c. 300 BCE) wrote the Elements, the geometry textbook of two millennia. Bent low at right with compass and slate, he teaches pupils by construction — proof you can see. The face is often said to resemble Bramante, Raphael’s architectural mentor: geometry as the bones of the vault you are standing under.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "ptolemy-globe",
+      "entityId": "ptolemy",
+      "title": "Ptolemy and the earth",
+      "body": "Claudius Ptolemy (2nd century CE) mapped stars and earth in works that guided explorers and scholars for ages. At the right he presents a terrestrial globe — the known world as a sphere you can hold. Paired with the celestial globe nearby, he stands for cosmology made measurable.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "zoroaster-sphere",
+      "entityId": "zoroaster",
+      "title": "Zoroaster and the heavens",
+      "body": "Zoroaster (Zarathustra), prophet of ancient Iran, was read in the Renaissance as a sage of celestial wisdom. Holding a starry sphere beside Ptolemy’s earth, he completes the sky–ground pair: stars and continents, prophecy and geography, gathered into one corner of Raphael’s academy.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "raphael-cameo",
+      "entityId": "raphael-self",
+      "title": "Raphael looking back at you",
+      "body": "Raphael Sanzio (1483–1520) painted himself among the philosophers — young, dark-capped, meeting your eye from the right edge. He is both author and guest: the High Renaissance artist claiming a place in the lineage of wisdom, and inviting you, the viewer, into the conversation.",
+      "category": "figure",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "apollo-niche",
+      "entityId": "apollo-statue",
+      "title": "Apollo in the niche",
+      "body": "Apollo, god of light, music, and prophecy, stands in the left niche with his lyre. He frames the hall with art and clarity — the poetic twin to Athena’s wisdom opposite. Raphael’s philosophers argue under pagan guardians that Renaissance Rome still honored as emblems of culture.",
+      "category": "architecture",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "athena-niche",
+      "entityId": "athena-statue",
+      "title": "Athena guarding the right",
+      "body": "Athena (Minerva), goddess of wisdom and strategy, holds spear and shield in the right niche. She balances Apollo: intellect and armed reason watching over Euclid’s geometry school below. The statues turn the fresco into a temple of mind as much as a crowd of men.",
+      "category": "architecture",
+      "confidence": "scholarly_interpretation",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "vault-coffer",
+      "entityId": "vault-perspective",
+      "title": "Perspective as argument",
+      "body": "The coffered barrel vaults race to a vanishing point between Plato and Aristotle. Architecture here is not backdrop — it is proof. Raphael’s Roman arches teach that reason, like perspective, organizes chaos into a single ordered view.",
+      "category": "architecture",
+      "confidence": "documented",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    },
+    {
+      "id": "marble-steps",
+      "entityId": "marble-steps",
+      "title": "Steps into the academy",
+      "body": "Broad marble stairs lift Diogenes, Euclid’s pupils, and your eye toward the central pair. You enter the painting the way a visitor enters a temple — climbing into debate. The steps are the fresco’s invitation: philosophy is a place you walk into, not a wall you only look at.",
+      "category": "architecture",
+      "confidence": "documented",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/stanza-della-segnatura.html"
+      ]
+    }
+  ]
+}

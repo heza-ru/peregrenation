@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "sunday-on-la-grande-jatte",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "A Sunday on La Grande Jatte",
+    "artist": "Georges Seurat",
+    "date": "1884–1886",
+    "medium": "Oil on canvas",
+    "source": "Art Institute of Chicago"
+  },
+  "composition": {
+    "aspectRatio": 1.502,
+    "horizon": 0.42,
+    "vanishingPoint": [
+      0.5,
+      0.42
+    ],
+    "cameraFov": 44,
+    "planeWidth": 16,
+    "planeHeight": 10.65
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "couple",
+      "type": "figure",
+      "label": "Fashionable couple",
+      "promptPoint": [
+        0.82,
+        0.42
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "monkey",
+      "type": "animal",
+      "label": "Monkey on a leash",
+      "promptPoint": [
+        0.8,
+        0.82
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "parasol",
+      "type": "object",
+      "label": "Parasols",
+      "promptPoint": [
+        0.58,
+        0.42
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "river",
+      "type": "landscape",
+      "label": "The Seine",
+      "promptPoint": [
+        0.28,
+        0.28
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "sailboats",
+      "type": "object",
+      "label": "Sailboats",
+      "promptPoint": [
+        0.36,
+        0.24
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "girl-white",
+      "type": "figure",
+      "label": "Girl in white",
+      "promptPoint": [
+        0.52,
+        0.48
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "shadows",
+      "type": "landscape",
+      "label": "Tree shadows",
+      "promptPoint": [
+        0.14,
+        0.52
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "dots",
+      "type": "object",
+      "label": "Pointillist dots",
+      "promptPoint": [
+        0.48,
+        0.72
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.6,
+    "directional": [
+      0.3,
+      0.85,
+      0.4
+    ],
+    "directionalIntensity": 0.85,
+    "color": "#f2ecd8"
+  },
+  "palette": [
+    "#6b8cae",
+    "#c9d8a8",
+    "#efe6d6",
+    "#3a2a1c"
+  ]
+}

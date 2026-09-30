@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "paintingId": "calling-of-saint-matthew",
+  "pipelineVersion": "0.1.0",
+  "sceneAnalysisVersion": "manual-curiosities-v3",
+  "segmentationVersion": "none",
+  "depthVersion": "none",
+  "painting": {
+    "title": "The Calling of Saint Matthew",
+    "artist": "Caravaggio",
+    "date": "c. 1599–1600",
+    "medium": "Oil on canvas",
+    "source": "San Luigi dei Francesi, Rome"
+  },
+  "composition": {
+    "aspectRatio": 0.973,
+    "horizon": 0.45,
+    "vanishingPoint": [
+      0.5,
+      0.45
+    ],
+    "cameraFov": 44,
+    "planeWidth": 15.572,
+    "planeHeight": 16
+  },
+  "layers": [
+    {
+      "id": "hero-painting",
+      "label": "Painting plane",
+      "depthBand": 0,
+      "texture": "painting.jpg",
+      "z": 0,
+      "parallax": 1,
+      "opacity": 1,
+      "hero": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "christ",
+      "type": "figure",
+      "label": "Christ",
+      "promptPoint": [
+        0.92,
+        0.4
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "peter",
+      "type": "figure",
+      "label": "Saint Peter",
+      "promptPoint": [
+        0.82,
+        0.45
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 7,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "matthew",
+      "type": "figure",
+      "label": "Matthew at the table",
+      "promptPoint": [
+        0.48,
+        0.48
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 10,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "beam",
+      "type": "object",
+      "label": "Diagonal light",
+      "promptPoint": [
+        0.68,
+        0.32
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 9,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "coins",
+      "type": "object",
+      "label": "Coins and tax table",
+      "promptPoint": [
+        0.36,
+        0.64
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 8,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "window",
+      "type": "architecture",
+      "label": "Closed window",
+      "promptPoint": [
+        0.55,
+        0.18
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 2,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    },
+    {
+      "id": "youths",
+      "type": "figure",
+      "label": "Fashionable youths",
+      "promptPoint": [
+        0.22,
+        0.42
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "depth": 1,
+      "importance": 6,
+      "interactive": true,
+      "confidence": 0.88,
+      "evidence": "observed"
+    }
+  ],
+  "architecture": [],
+  "lighting": {
+    "ambient": 0.35,
+    "directional": [
+      0.85,
+      0.5,
+      0.2
+    ],
+    "directionalIntensity": 1.05,
+    "color": "#f0d9b0"
+  },
+  "palette": [
+    "#1a1612",
+    "#c9a06a",
+    "#3a4a2a",
+    "#efe6d6"
+  ]
+}
