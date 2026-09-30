@@ -274,10 +274,11 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
           /* ignore */
         }
       }
+      // Shrink the buffer only. Never canvas.remove() — React still owns this node;
+      // detaching it first makes commitDeletion throw NotFoundError and wipe #root.
       try {
         canvas.width = 1
         canvas.height = 1
-        canvas.remove()
       } catch {
         /* ignore */
       }
