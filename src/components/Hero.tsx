@@ -5,7 +5,7 @@ import { usePrefersReducedMotion } from '../hooks/useMotion'
 import { addFrame, FramePriority } from '../motion/frameLoop'
 import { burst } from '../scene/fxBus'
 import { heroBus } from '../scene/heroBus'
-import { boundaryProgress, HERO_LAYERS, REACH_RADIUS, SPARK } from '../scene/scenes'
+import { boundaryProgress, HERO_LAYERS, heroFocalX, REACH_RADIUS, SPARK } from '../scene/scenes'
 import { CompositionGrid, SparkField } from './MotionChrome'
 import { Pill } from './Pill'
 import { SiteHeader } from './SiteHeader'
@@ -55,14 +55,16 @@ export function Hero({ onBegin }: HeroProps) {
       section.style.setProperty('--dolly', '0')
       section.style.setProperty('--ignite', '0')
       section.style.setProperty('--spark', '0.4')
+      const focalX = heroFocalX(1.2 * window.innerWidth, 1.2 * window.innerHeight)
+      section.style.setProperty('--focal-x', `${(focalX * 100).toFixed(2)}%`)
       return
     }
 
     const pointer = { x: 0, y: 0, active: false }
     const cur = { x: 0, y: 0, dolly: 0, ignite: 0, spark: 0, ctaX: 0, ctaY: 0, touch: 0 }
-    let start = performance.now()
+    let start = Infinity
     let alive = true
-    // The dolly-in intro should play as the doorway opens, not behind the preloader.
+    // The dolly-in intro should play as the scene forms, not behind the preloader.
     void whenPreloaded().then(() => {
       if (alive) start = performance.now()
     })
@@ -98,7 +100,7 @@ export function Hero({ onBegin }: HeroProps) {
 
     const frame = (now: number, dt: number) => {
       if (!visible) return
-      const t = (now - start) / 1000
+      const t = Math.max(0, (now - start) / 1000)
       const vh = window.innerHeight
       const rect = section.getBoundingClientRect()
       const dollyRun = Math.max(1, rect.height - vh * (1 + IGNITE_LEAD))
@@ -135,7 +137,9 @@ export function Hero({ onBegin }: HeroProps) {
       }
       const pr = pill && settle > 0 ? pill.getBoundingClientRect() : null
       const vw = document.documentElement.clientWidth
+      const focalX = heroFocalX(1.2 * vw, 1.2 * vh)
       section.style.setProperty('--touch', (cur.touch * settle).toFixed(3))
+      section.style.setProperty('--focal-x', `${(focalX * 100).toFixed(2)}%`)
 
       PLANES.forEach((plane, i) => {
         const d = plane.depth
@@ -168,7 +172,7 @@ export function Hero({ onBegin }: HeroProps) {
           const rh = img.naturalHeight * cover
           const ox = SPARK.x * bw
           const oy = SPARK.y * bh
-          const lx = (bw - rw) * SPARK.x + tip[0] * rw
+          const lx = (bw - rw) * focalX + tip[0] * rw
           const ly = (bh - rh) * SPARK.y + tip[1] * rh
           const sx = -0.1 * vw + ox + (lx - ox) * scale + x
           const sy = -0.1 * vh + oy + (ly - oy) * scale + y

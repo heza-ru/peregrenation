@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { preloaderProgress, whenPreloaded } from '../boot/preloader'
 import { addFrame, FramePriority } from '../motion/frameLoop'
 import { burst, fxBus } from '../scene/fxBus'
 import { loseWebGlContext, registerLandingGl, releaseLandingGl } from '../scene/glHandoff'
@@ -6,6 +7,7 @@ import { heroBus } from '../scene/heroBus'
 import { SceneEngine, TRAIL_MAX, type LayerDraw, type TrailPoint } from '../scene/SceneEngine'
 import {
   boundaryProgress,
+  heroFocalX,
   isSceneId,
   isVariant,
   REACH_RADIUS,
@@ -34,6 +36,8 @@ const TAIL_R_FAST = 8
 const TAIL_LIFE = 560
 const HEAD_R = 4.5
 const HEAD_IDLE = 1800
+/** Hero forming out of the preloader's void */
+const INTRO_MS = 2600
 /** Must match BURST_LIFE in the composite shader, seconds */
 const BURST_LIFE = 1.5
 const INTERACTIVE = 'a, button, input, textarea, select, label, video, [role="button"], [data-cursor]'
@@ -76,6 +80,14 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
     let live = false
     let paperEl: HTMLElement | null = null
     const start = performance.now()
+    // First visit: the preloader sits over this canvas's void, then the hero forms out of it.
+    let intro = engine && root.classList.contains('has-preloader') ? 0 : 1
+    let introStart = -1
+    if (intro < 1) {
+      void whenPreloaded().then(() => {
+        introStart = performance.now()
+      })
+    }
     const pointer = { x: 0, y: 0, tx: 0, ty: 0 }
 
     const remeasure = () => {
@@ -147,12 +159,13 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
       if (ch.scene === 'hero') {
         const box = [-0.1 * w, -0.1 * h, 1.2 * w, 1.2 * h] as const
         const origin = [SPARK.x * box[2], SPARK.y * box[3]] as const
+        const focal = [heroFocalX(box[2], box[3]), def.focal[1]] as const
         return def.layers.map((layer, i) => {
           const plane = heroBus.planes[i] ?? { x: 0, y: 0, scale: 1, pullX: 0, pullY: 0 }
           return {
             src: layer.src,
             box,
-            focal: def.focal,
+            focal,
             origin,
             tx: plane.x,
             ty: plane.y,
@@ -221,13 +234,30 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
       const toDef = SCENES[to.scene]
       const transitioning = from !== to
 
+      if (intro < 1 && introStart >= 0) {
+        intro = Math.min(1, (now - introStart) / INTRO_MS)
+        if (intro >= 1) {
+          root.classList.remove('gl-void')
+          // Nothing uploaded (e.g. cached 404s): hand back to the DOM planes.
+          if (!engine.hasAnyTexture(SCENES.hero.layers.map((l) => l.src))) {
+            live = false
+            root.classList.remove('gl-scene')
+          }
+        }
+      }
+
       if (!live) {
-        const layerSrcs = fromDef.layers.map((l) => l.src)
-        if (!engine.isReady(layerSrcs)) return
-        // All layers failed (e.g. cached 404s): keep DOM fallback visible.
-        if (!engine.hasAnyTexture(layerSrcs)) return
-        live = true
-        root.classList.add('gl-scene')
+        if (intro < 1) {
+          live = true
+          root.classList.add('gl-scene', 'gl-void')
+        } else {
+          const layerSrcs = fromDef.layers.map((l) => l.src)
+          if (!engine.isReady(layerSrcs)) return
+          // All layers failed (e.g. cached 404s): keep DOM fallback visible.
+          if (!engine.hasAnyTexture(layerSrcs)) return
+          live = true
+          root.classList.add('gl-scene')
+        }
       }
 
       paperEl ??= document.querySelector<HTMLElement>('[data-paper]')
@@ -247,6 +277,8 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
         voidTint: toDef.void,
         paper,
         trail: trailFrame(now, dt),
+        intro,
+        load: preloaderProgress(),
         bursts: fxBus.bursts.flatMap((b) => {
           const age = (now - b.born) / 1000
           return age < BURST_LIFE ? [{ x: b.x, y: b.y, age, strength: b.strength }] : []
@@ -267,7 +299,7 @@ export function SceneCanvas({ reduced }: { reduced: boolean }) {
       window.removeEventListener('pointermove', onTrail)
       window.removeEventListener('pointerdown', onIgnite)
       document.documentElement.removeEventListener('pointerleave', onTrailLeave)
-      root.classList.remove('gl-scene')
+      root.classList.remove('gl-scene', 'gl-void')
       const gl = engine?.context
       engine?.dispose()
       if (gl) {

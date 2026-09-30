@@ -110,6 +110,10 @@ uniform vec4 uTrailBox;
 /** Ring bursts: device px (y up), age in seconds, strength */
 uniform vec4 uBurst[4];
 uniform int uBurstN;
+/** First-visit reveal of scene A out of the void: 0 = void only, 1 = done */
+uniform float uIntro;
+/** Preloader progress 0–1, gathers light at the origin while uIntro is 0 */
+uniform float uLoad;
 
 float hash(vec2 p) {
   p = fract(p * vec2(123.34, 456.21));
@@ -304,8 +308,79 @@ vec3 lantern(vec3 col, vec2 uv, float onA) {
   return c + flash;
 }
 
+/**
+ * First visit, told with the chapter transition's own vocabulary. While loading, a porthole
+ * burns open in the void at the origin, its rim the same broken ember front, and scene A
+ * glows through it as engraved line art. On release the front races to the corners and A
+ * condenses behind it out of overexposed light, as an incoming chapter does.
+ */
+vec3 intro(vec2 uv) {
+  float asp = uRes.x / uRes.y;
+  vec2 np = vec2(uv.x * asp, uv.y);
+  vec2 far = max(uOrigin, 1.0 - uOrigin) * vec2(asp, 1.0);
+  float r = length((uv - uOrigin) * vec2(asp, 1.0));
+  float p = uIntro;
+  float ease = p * p * (3.0 - 2.0 * p);
+
+  float hole = mix(0.045, 0.19, uLoad) + sin(uTime * 1.3) * 0.003;
+  float front = mix(hole, 1.8, pow(ease, 1.2));
+  // A small porthole wobbles in proportion to its size; the open front uses the transition's noise
+  float n1 = fbm(np * 2.4 + uSeed) - 0.5;
+  float n2 = fbm(np * 9.0 - uSeed + vec2(uTime * 0.12, -uTime * 0.08)) - 0.5;
+  float big = smoothstep(0.2, 0.7, front);
+  float d = r / length(far);
+  d = mix(d * (1.0 + n1 * 0.5 + n2 * 0.45), d + n1 * 0.32 + n2 * 0.07, big);
+  float t = front - d;
+
+  // Heat haze just around the front
+  float heat = exp(-abs(t) * 26.0);
+  vec2 haze = vec2(noise(np * 16.0 + vec2(0.0, uTime * 1.6)), noise(np * 16.0 + vec2(7.3, -uTime * 1.3))) - 0.5;
+  vec2 wuv = uv + haze * heat * vec2(1.0 / asp, 1.0) * 0.01;
+
+  vec3 A = texture(uA, wuv).rgb;
+  float edge = sobel(uA, wuv);
+  vec3 lineArt = sketch(A, edge);
+  vec3 lit = A * 1.65 + vec3(1.0, 0.96, 0.9) * smoothstep(0.04, 0.5, edge) * 1.1 + 0.05;
+  vec3 paint = mix(A, lit, smoothstep(0.38, 0.0, t) * 0.8);
+  paint = mix(paint, lineArt + A * 0.45, smoothstep(0.2, 0.0, t) * 0.35);
+  vec3 inside = mix(lineArt, paint, smoothstep(0.0, 0.3, p) * smoothstep(0.0, 0.4, t));
+  float grain = hash(floor(uv * uRes / (1.25 * uDpr)) + uSeed);
+  float aIn = smoothstep(0.0, mix(0.03, 0.16, big), t + (grain - 0.5) * 0.1 * big);
+
+  vec3 col = mix(starfield(uv), inside, aIn);
+  col *= 1.0 - 0.5 * smoothstep(0.05, 0.0, t) * step(0.0, t) * (1.0 - big);
+
+  float fade = 1.0 - smoothstep(0.85, 1.0, p);
+  float wait = 1.0 - smoothstep(0.0, 0.3, p);
+  float catchFire = smoothstep(0.3, 0.72, fbm(np * 11.0 + vec2(uTime * 0.3, -uTime * 0.2) + uSeed));
+  float rim = smoothstep(0.022, 0.0, abs(t - 0.004));
+  float rimCore = smoothstep(0.0045, 0.0, abs(t));
+  float charSide = smoothstep(0.05, 0.0, t) * smoothstep(-0.005, 0.02, t);
+  float voidSide = smoothstep(-0.07, 0.0, t) * step(t, 0.0);
+  float boost = 1.0 + 0.5 * wait;
+  vec3 ember = vec3(1.0, 0.42, 0.12) * (rim * 0.45 + charSide * 0.18) * (0.35 + 0.65 * catchFire);
+  ember += vec3(1.0, 0.86, 0.62) * rimCore * (0.25 + 0.9 * catchFire);
+  ember += vec3(1.0, 0.8, 0.52) * glitter(uv, 0.1, 0.0) * voidSide * (0.5 + catchFire);
+  // Warm bloom the fire throws onto the void around the porthole
+  ember += vec3(1.0, 0.5, 0.22) * exp(min(t, 0.0) * 14.0) * step(t, 0.0) * 0.1 * wait;
+  col += ember * fade * boost;
+  col += vec3(0.88, 0.92, 1.0) * glitter(uv, 0.08, 7.7) * smoothstep(0.05, 0.0, abs(t)) * 0.8 * smoothstep(0.0, 0.05, p);
+
+  // Embers drift toward the porthole while it gathers
+  float pull = exp(min(t, 0.0) * 7.0) * step(t, 0.0) * wait;
+  col += vec3(1.0, 0.8, 0.52) * glitter(uv, 0.01 + 0.025 * uLoad, 4.4) * pull * 0.5;
+
+  float flash = exp(-r * r * 40.0) * smoothstep(0.0, 0.04, p) * smoothstep(0.24, 0.04, p);
+  col += vec3(1.0, 0.92, 0.76) * flash * 2.4;
+  return col;
+}
+
 void main() {
   vec2 uv = vUv;
+  if (uIntro < 1.0) {
+    outColor = vec4(finish(intro(uv), uv), 1.0);
+    return;
+  }
   if (uP <= 0.0) {
     vec3 A = texture(uA, uv).rgb * (1.0 - uDimA);
     outColor = vec4(paper(finish(lantern(A, uv, 1.0), uv), uv), 1.0);

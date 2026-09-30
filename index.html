@@ -11,7 +11,7 @@
       content="Pérégrination — Turn a Renaissance painting into a world you can walk through, and uncover its curiosities as you go."
     />
     <script>
-      // World routes have their own boot screen; the doorway preloader is for `/` only.
+      // World routes have their own boot screen; the void preloader is for `/` only.
       ;(function () {
         if (location.pathname.indexOf('/world/') === 0) return
         document.documentElement.classList.add('has-preloader', 'is-preloading')
@@ -41,7 +41,9 @@
     <link rel="preload" as="image" type="image/webp" href="/assets/parallax/2-clouds.webp?v=2" />
     <title>Pérégrination — Le Voyage des Curiosités</title>
     <style>
-      /* Critical preloader styles — inline so the loader paints before the app bundle. */
+      /* Critical preloader styles — inline so the loader paints before the app bundle.
+         The scene canvas draws the void and the burning porthole underneath (html.gl-void);
+         this overlay is only the editorial chrome, plus a CSS stand-in without WebGL. */
       html.is-preloading,
       html.is-preloading body {
         overflow: hidden;
@@ -60,273 +62,331 @@
       }
       #preloader {
         --p: 0;
-        --sx: 47%;
+        --sx: 50%;
         --sy: 42%;
+        --edge: clamp(1.25rem, 3.2vw, 2.75rem);
+        --gold: #c9a24a;
+        --ease: cubic-bezier(0.16, 1, 0.3, 1);
+        --ease-io: cubic-bezier(0.76, 0, 0.24, 1);
         position: fixed;
         inset: 0;
         z-index: 99;
-        color: #efe6d6;
+        overflow: hidden;
+        color: #f2eadb;
         font-family: 'Hanken Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       }
       #preloader.is-leaving {
         pointer-events: none;
       }
+
+      /* ——— Backdrop: CSS void until the canvas takes over ——— */
       .preloader__veil {
         --hole: -80px;
         position: absolute;
         inset: 0;
-        overflow: hidden;
         background:
-          radial-gradient(ellipse 70% 60% at var(--sx) var(--sy), rgba(201, 162, 74, 0.1) 0%, rgba(201, 162, 74, 0) 60%),
-          radial-gradient(ellipse at var(--sx) var(--sy), #211912 0%, #15120f 55%, #0b0907 100%);
+          radial-gradient(ellipse 55% 42% at 32% 30%, rgba(70, 56, 140, 0.28), transparent 70%),
+          radial-gradient(ellipse 50% 46% at 72% 66%, rgba(104, 56, 128, 0.22), transparent 70%),
+          #030307;
+        transition: opacity 0.9s ease;
         -webkit-mask: radial-gradient(circle at var(--sx) var(--sy), transparent var(--hole), #000 calc(var(--hole) + 56px));
         mask: radial-gradient(circle at var(--sx) var(--sy), transparent var(--hole), #000 calc(var(--hole) + 56px));
       }
+      html.gl-void .preloader__veil {
+        opacity: 0;
+      }
       .is-leaving .preloader__veil {
         --hole: 160vmax;
-        transition:
-          --hole 1.3s cubic-bezier(0.76, 0, 0.24, 1),
-          opacity 0.5s ease 0.85s;
         opacity: 0;
+        transition:
+          --hole 1.3s var(--ease-io),
+          opacity 0.5s ease 0.85s;
       }
-      .preloader__corner {
+      /* Without WebGL: an ember ring stands in for the burning porthole */
+      .preloader__ember {
         position: absolute;
-        width: clamp(2.5rem, 6vw, 4.5rem);
-        height: clamp(2.5rem, 6vw, 4.5rem);
-        overflow: visible;
+        left: var(--sx);
+        top: var(--sy);
+        width: calc(4rem + var(--p) * 14rem);
+        aspect-ratio: 1;
+        translate: -50% -50%;
+        border-radius: 50%;
+        box-shadow:
+          0 0 0 1px rgba(255, 214, 160, 0.9),
+          0 0 18px 2px rgba(255, 120, 50, 0.55),
+          0 0 60px 10px rgba(255, 110, 40, 0.18),
+          inset 0 0 26px 4px rgba(255, 120, 50, 0.35);
       }
-      .preloader__corner path {
-        fill: none;
-        stroke: #c9a24a;
-        stroke-width: 1;
-        stroke-dasharray: 1;
-        stroke-dashoffset: calc(1 - var(--p));
-        opacity: 0.8;
+      html.gl-void .preloader__ember {
+        display: none;
       }
-      .preloader__corner--tl { top: clamp(0.9rem, 2.4vw, 1.75rem); left: clamp(0.9rem, 2.4vw, 1.75rem); }
-      .preloader__corner--tr { top: clamp(0.9rem, 2.4vw, 1.75rem); right: clamp(0.9rem, 2.4vw, 1.75rem); scale: -1 1; }
-      .preloader__corner--bl { bottom: clamp(0.9rem, 2.4vw, 1.75rem); left: clamp(0.9rem, 2.4vw, 1.75rem); scale: 1 -1; }
-      .preloader__corner--br { bottom: clamp(0.9rem, 2.4vw, 1.75rem); right: clamp(0.9rem, 2.4vw, 1.75rem); scale: -1 -1; }
-      /* Two hands of light reach for the spark as the doorway loads */
-      .preloader__reach {
+
+      /* ——— Drafting chrome (Shopify Editions-style hairlines) ——— */
+      .preloader__rule {
         position: absolute;
+        background: rgba(242, 234, 219, 0.16);
+        transition: opacity 0.5s ease;
+      }
+      .preloader__rule--top,
+      .preloader__rule--bottom {
+        left: var(--edge);
+        right: var(--edge);
+        height: 1px;
+        transform-origin: left center;
+        scale: 0 1;
+        animation: preloaderDraw 1.4s var(--ease-io) 0.1s forwards;
+      }
+      .preloader__rule--top {
+        top: calc(var(--edge) + 1.9rem);
+      }
+      .preloader__rule--bottom {
+        bottom: calc(var(--edge) + 1.9rem);
+        transform-origin: right center;
+      }
+      /* Crosshair arms converge on the gap between the fingertips as the load fills */
+      .preloader__arm {
+        position: absolute;
+        background: linear-gradient(var(--dir), rgba(201, 162, 74, 0), rgba(201, 162, 74, 0.55));
+      }
+      .preloader__arm--l,
+      .preloader__arm--r {
         top: var(--sy);
         height: 1px;
-        transform: scaleX(var(--p));
+        width: calc(var(--sx) - var(--edge) - 7rem);
+        scale: var(--p) 1;
       }
-      .preloader__reach--l {
-        left: 0;
-        width: calc(var(--sx) - 9px);
+      .preloader__arm--l {
+        --dir: 90deg;
+        left: var(--edge);
         transform-origin: left center;
-        background: linear-gradient(90deg, rgba(201, 162, 74, 0), rgba(201, 162, 74, 0.35) 55%, #f3d58f);
       }
-      .preloader__reach--r {
-        right: 0;
-        width: calc(100% - var(--sx) - 9px);
+      .preloader__arm--r {
+        --dir: 270deg;
+        right: var(--edge);
         transform-origin: right center;
-        background: linear-gradient(270deg, rgba(201, 162, 74, 0), rgba(201, 162, 74, 0.35) 55%, #f3d58f);
       }
-      .preloader__spark {
+      .preloader__arm--t,
+      .preloader__arm--b {
+        left: var(--sx);
+        width: 1px;
+        scale: 1 var(--p);
+      }
+      .preloader__arm--t {
+        --dir: 180deg;
+        top: calc(var(--edge) + 1.9rem);
+        height: calc(var(--sy) - var(--edge) - 1.9rem - 7rem);
+        transform-origin: center top;
+      }
+      .preloader__arm--b {
+        --dir: 0deg;
+        bottom: calc(var(--edge) + 1.9rem);
+        height: calc(100% - var(--sy) - var(--edge) - 1.9rem - 7rem);
+        transform-origin: center bottom;
+      }
+      .preloader__tick {
         position: absolute;
         left: var(--sx);
         top: var(--sy);
-        width: 6px;
-        height: 6px;
-        margin: -3px 0 0 -3px;
+        width: 13rem;
+        aspect-ratio: 1;
+        translate: -50% -50%;
         border-radius: 50%;
-        background: #ffe9b8;
-        box-shadow:
-          0 0 10px 2px rgba(255, 223, 150, 0.75),
-          0 0 44px 10px rgba(224, 98, 58, 0.28);
-        scale: calc(0.55 + var(--p) * 0.75);
-        animation: preloaderPulse 1.8s ease-in-out infinite;
-      }
-      .is-complete .preloader__spark {
-        animation: preloaderFlare 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      }
-      .preloader__text {
-        position: absolute;
-        left: var(--sx);
-        top: calc(var(--sy) + clamp(2.25rem, 6vh, 3.5rem));
-        translate: -50% 0;
-        display: grid;
-        justify-items: center;
-        gap: 0.55rem;
-        width: max-content;
-        max-width: 88vw;
-        text-align: center;
-        transition:
-          opacity 0.45s ease,
-          translate 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-      .preloader__kicker {
-        margin: 0;
-        font-family: 'IM Fell English SC', Georgia, serif;
-        font-size: 0.8125rem;
-        letter-spacing: 0.32em;
-        text-transform: uppercase;
-        color: #c9a24a;
+        border: 1px dashed rgba(201, 162, 74, 0.22);
+        rotate: calc(var(--p) * 90deg);
         opacity: 0;
-        animation: preloaderRise 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+        animation: preloaderFade 1.6s ease 0.6s forwards;
       }
-      .preloader__title {
-        margin: 0;
-        font-family: 'IM Fell French Canon', Georgia, serif;
-        font-weight: 400;
-        font-size: clamp(1.6rem, 3.4vw, 2.4rem);
-        line-height: 1;
-        color: #f7f1e4;
-        opacity: 0;
-        animation: preloaderRise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+
+      /* ——— Type ——— */
+      .preloader__mask {
+        display: block;
+        overflow: hidden;
+        padding-block: 0.1em;
+        margin-block: -0.1em;
       }
-      .preloader__title em {
-        font-style: italic;
-        color: #e8c886;
+      .preloader__mask > * {
+        display: block;
+        translate: 0 110%;
+        animation: preloaderLineIn 1.1s var(--ease) var(--d, 0.2s) forwards;
       }
+      .is-leaving .preloader__mask > * {
+        translate: 0 -110%;
+        transition: translate 0.8s var(--ease-io) var(--o, 0s);
+        animation: none;
+      }
+      .preloader__head,
       .preloader__foot {
         position: absolute;
-        left: clamp(1.5rem, 4.5vw, 3.5rem);
-        right: clamp(1.5rem, 4.5vw, 3.5rem);
-        bottom: clamp(1.5rem, 4.5vw, 3.25rem);
+        left: var(--edge);
+        right: var(--edge);
         display: flex;
-        align-items: flex-end;
+        align-items: baseline;
         justify-content: space-between;
         gap: 1rem;
+      }
+      .preloader__head {
+        top: var(--edge);
+      }
+      .preloader__foot {
+        bottom: var(--edge);
+      }
+      .preloader__mark {
+        font-family: 'IM Fell English SC', Georgia, serif;
+        font-size: 0.95rem;
+        letter-spacing: 0.22em;
+        color: var(--gold);
+      }
+      .preloader__label {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.625rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(242, 234, 219, 0.58);
+      }
+      .preloader__label b {
+        font-weight: 500;
+        color: rgba(242, 234, 219, 0.92);
+      }
+      .preloader__verse {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: calc(var(--sy) + 8.25rem);
+        text-align: center;
+        font-family: 'IM Fell French Canon', Georgia, serif;
+        font-style: italic;
+        font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+        color: rgba(242, 234, 219, 0.82);
+      }
+      .preloader__verse em {
+        color: #e8c886;
+      }
+      /* Big editorial counter */
+      .preloader__count {
+        position: absolute;
+        right: var(--edge);
+        bottom: calc(var(--edge) + 2.6rem);
+        display: flex;
+        align-items: flex-start;
+        font-family: 'Hanken Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: clamp(4rem, 11vw, 8.5rem);
+        line-height: 0.8;
+        letter-spacing: -0.055em;
+        font-variant-numeric: tabular-nums;
+        color: #f7f1e4;
+      }
+      .preloader__count sup {
+        margin: 0.08em 0 0 0.1em;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        color: var(--gold);
+      }
+      .preloader__bar {
+        position: absolute;
+        left: var(--edge);
+        right: var(--edge);
+        bottom: calc(var(--edge) + 1.9rem);
+        height: 1px;
+        background: linear-gradient(90deg, rgba(201, 162, 74, 0.4), #f3d58f);
+        transform-origin: left center;
+        scale: var(--p) 1;
+        box-shadow: 0 0 10px rgba(243, 213, 143, 0.6);
+      }
+      .is-complete .preloader__arm,
+      .is-complete .preloader__tick,
+      .is-complete .preloader__bar,
+      .is-complete .preloader__ember {
+        opacity: 0;
         transition: opacity 0.45s ease;
       }
-      .preloader__status {
-        font-size: 0.6875rem;
-        font-weight: 500;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-        color: rgba(239, 230, 214, 0.55);
-      }
-      .preloader__count {
-        font-size: clamp(2.25rem, 5vw, 3.5rem);
-        font-weight: 400;
-        line-height: 0.85;
-        letter-spacing: -0.02em;
-        font-variant-numeric: tabular-nums;
-        color: rgba(247, 241, 228, 0.9);
-      }
-      .preloader__count::after {
-        content: '%';
-        margin-left: 0.15em;
-        font-size: 0.34em;
-        letter-spacing: 0.1em;
-        vertical-align: top;
-        color: #c9a24a;
-      }
-      .is-complete .preloader__text {
+      .is-leaving .preloader__rule,
+      .is-leaving .preloader__count sup {
         opacity: 0;
-        translate: -50% -10px;
+        transition: opacity 0.5s ease;
       }
-      .is-complete .preloader__foot,
-      .is-complete .preloader__reach {
-        opacity: 0;
-        transition: opacity 0.4s ease;
-      }
-      /* Gilt edge that rides the iris outward */
-      .preloader__ring {
-        position: absolute;
-        left: var(--sx);
-        top: var(--sy);
-        width: 320vmax;
-        height: 320vmax;
-        margin: -160vmax 0 0 -160vmax;
-        border-radius: 50%;
-        border: 1px solid rgba(243, 213, 143, 0.9);
-        box-shadow: 0 0 40px 6px rgba(224, 160, 80, 0.35);
-        scale: 0;
-        opacity: 0;
-        pointer-events: none;
-      }
-      .is-leaving .preloader__ring {
-        scale: 1;
-        transition: scale 1.3s cubic-bezier(0.76, 0, 0.24, 1);
-        animation: preloaderRing 1.3s linear forwards;
-      }
-      @keyframes preloaderPulse {
-        50% {
-          filter: brightness(1.35);
-          box-shadow:
-            0 0 14px 3px rgba(255, 223, 150, 0.9),
-            0 0 60px 16px rgba(224, 98, 58, 0.34);
-        }
-      }
-      @keyframes preloaderFlare {
-        40% {
-          scale: 3.4;
-          filter: brightness(1.6);
-        }
+
+      @keyframes preloaderDraw {
         to {
-          scale: 1.4;
-          filter: brightness(1.2);
+          scale: 1 1;
         }
       }
-      @keyframes preloaderRise {
-        from {
-          opacity: 0;
-          translate: 0 0.5em;
-          filter: blur(8px);
-        }
+      @keyframes preloaderFade {
         to {
           opacity: 1;
-          translate: 0 0;
-          filter: blur(0);
         }
       }
-      @keyframes preloaderRing {
-        0% { opacity: 0; }
-        12% { opacity: 1; }
-        100% { opacity: 0; }
+      @keyframes preloaderLineIn {
+        to {
+          translate: 0 0;
+        }
       }
       @media (max-width: 640px) {
-        .preloader__foot {
-          flex-direction: row;
+        .preloader__label--hide-sm {
+          display: none;
         }
-        .preloader__status {
-          font-size: 0.625rem;
-          letter-spacing: 0.16em;
+        .preloader__tick {
+          width: 10rem;
         }
       }
       @media (prefers-reduced-motion: reduce) {
-        .preloader__spark,
-        .preloader__kicker,
-        .preloader__title {
+        .preloader__rule--top,
+        .preloader__rule--bottom,
+        .preloader__tick,
+        .preloader__mask > * {
           animation: none !important;
+          scale: 1 1;
+          translate: none;
           opacity: 1;
+        }
+        .is-leaving .preloader__mask > * {
+          translate: none;
         }
         .is-leaving .preloader__veil {
           --hole: -80px;
           transition: opacity 0.45s ease;
         }
-        .preloader__ring {
-          display: none;
+        #preloader.is-leaving {
+          opacity: 0;
+          transition: opacity 0.45s ease;
         }
       }
     </style>
   </head>
   <body>
     <div id="preloader" role="status" aria-live="polite" aria-busy="true" aria-label="Loading Pérégrination">
-      <div class="preloader__veil">
-        <svg class="preloader__corner preloader__corner--tl" viewBox="0 0 72 72" aria-hidden="true"><path d="M1 71 V1 H71" pathLength="1" /></svg>
-        <svg class="preloader__corner preloader__corner--tr" viewBox="0 0 72 72" aria-hidden="true"><path d="M1 71 V1 H71" pathLength="1" /></svg>
-        <svg class="preloader__corner preloader__corner--bl" viewBox="0 0 72 72" aria-hidden="true"><path d="M1 71 V1 H71" pathLength="1" /></svg>
-        <svg class="preloader__corner preloader__corner--br" viewBox="0 0 72 72" aria-hidden="true"><path d="M1 71 V1 H71" pathLength="1" /></svg>
-        <span class="preloader__reach preloader__reach--l" aria-hidden="true"></span>
-        <span class="preloader__reach preloader__reach--r" aria-hidden="true"></span>
-        <span class="preloader__spark" aria-hidden="true"></span>
-        <div class="preloader__text">
-          <p class="preloader__kicker">Pérégrination</p>
-          <p class="preloader__title">Le Voyage des <em>Curiosités</em></p>
-        </div>
-        <div class="preloader__foot">
-          <span class="preloader__status" data-preloader-status>Stretching the canvas</span>
-          <span class="preloader__count" data-preloader-count>00</span>
-        </div>
+      <div class="preloader__veil" aria-hidden="true"></div>
+      <span class="preloader__ember" aria-hidden="true"></span>
+
+      <span class="preloader__rule preloader__rule--top" aria-hidden="true"></span>
+      <span class="preloader__rule preloader__rule--bottom" aria-hidden="true"></span>
+      <span class="preloader__arm preloader__arm--l" aria-hidden="true"></span>
+      <span class="preloader__arm preloader__arm--r" aria-hidden="true"></span>
+      <span class="preloader__arm preloader__arm--t" aria-hidden="true"></span>
+      <span class="preloader__arm preloader__arm--b" aria-hidden="true"></span>
+      <span class="preloader__tick" aria-hidden="true"></span>
+
+      <div class="preloader__head">
+        <span class="preloader__mask"><span class="preloader__mark" style="--d: 0.15s">Pérégrination</span></span>
+        <span class="preloader__mask preloader__label--hide-sm"><span class="preloader__label" style="--d: 0.25s; --o: 0.05s">Le Voyage des Curiosités</span></span>
+        <span class="preloader__mask"><span class="preloader__label" style="--d: 0.35s; --o: 0.1s">Ch. <b>00</b> — The Void</span></span>
       </div>
-      <span class="preloader__ring" aria-hidden="true"></span>
+
+      <p class="preloader__verse">
+        <span class="preloader__mask"><span style="--d: 0.55s; --o: 0.05s">Between two hands, <em>a world</em> waits to be lit.</span></span>
+      </p>
+
+      <div class="preloader__count" aria-hidden="true">
+        <span class="preloader__mask"><span style="--d: 0.3s; --o: 0.12s" data-preloader-count>00</span></span>
+        <sup>%</sup>
+      </div>
+      <span class="preloader__bar" aria-hidden="true"></span>
+
+      <div class="preloader__foot">
+        <span class="preloader__mask"><span class="preloader__label" style="--d: 0.4s; --o: 0.1s"><b data-preloader-status>Gathering the stars</b></span></span>
+        <span class="preloader__mask preloader__label--hide-sm"><span class="preloader__label" style="--d: 0.5s; --o: 0.15s">Michelangelo · The Creation of Adam, c. 1512</span></span>
+      </div>
     </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

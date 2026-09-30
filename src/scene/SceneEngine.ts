@@ -32,6 +32,10 @@ export type CompositeParams = {
   /** Cursor tail, oldest first, CSS px from the top-left */
   trail: readonly TrailPoint[]
   bursts: readonly BurstDraw[]
+  /** Scene A forming out of the void on first load; 1 = normal compositing */
+  intro: number
+  /** Preloader progress shown in the void while intro is 0 */
+  load: number
 }
 
 export type TrailPoint = { x: number; y: number; r: number; life: number }
@@ -257,6 +261,8 @@ export class SceneEngine {
     gl.uniform1f(u.get('uDimB')!, c.dimB)
     gl.uniform3f(u.get('uVoid')!, c.voidTint[0], c.voidTint[1], c.voidTint[2])
     gl.uniform1f(u.get('uDpr')!, this.dpr)
+    gl.uniform1f(u.get('uIntro')!, c.intro)
+    gl.uniform1f(u.get('uLoad')!, c.load)
     const cssH = this.height / this.dpr
     gl.uniform1f(u.get('uPaperOn')!, c.paper ? 1 : 0)
     gl.uniform2f(u.get('uPaper')!, c.paper ? 1 - c.paper[0] / cssH : 0, c.paper ? 1 - c.paper[1] / cssH : 0)

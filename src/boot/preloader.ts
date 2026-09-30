@@ -2,17 +2,18 @@ import { assets } from '../data'
 import { lockScroll } from '../motion/scroll'
 
 const STATUS: readonly (readonly [number, string])[] = [
-  [0, 'Stretching the canvas'],
+  [0, 'Gathering the stars'],
   [0.3, 'Grinding the pigments'],
-  [0.62, 'Gilding the frame'],
-  [0.9, 'Opening the doorway'],
+  [0.62, 'Tracing the sinopia'],
+  [0.9, 'Parting the heavens'],
 ]
+const READY_LABEL = 'Fiat lux'
 
 /** Chapter backdrops: warmed while the hero loads so scrolling never waits on them. */
 const CHAPTER_BACKDROPS = [assets.annunciation, assets.explorePoster, assets.cranach, assets.pontormo]
 
-const MIN_FIRST_VISIT_MS = 1300
-const MIN_REPEAT_MS = 450
+const MIN_FIRST_VISIT_MS = 2200
+const MIN_REPEAT_MS = 700
 /** Slow networks still get the doorway; the hero finishes loading behind the iris. */
 const MAX_WAIT_MS = 8000
 const SEEN_KEY = 'pg:doorway-seen'
@@ -22,9 +23,16 @@ const done = new Promise<void>((resolve) => {
   resolveDone = resolve
 })
 
+let progress = 0
+
 /** Resolves when the doorway is revealed (immediately on routes without a preloader). */
 export function whenPreloaded(): Promise<void> {
   return done
+}
+
+/** Displayed load progress 0–1, for the WebGL void behind the loader. */
+export function preloaderProgress(): number {
+  return progress
 }
 
 const sleep = (ms: number) => new Promise<void>((r) => window.setTimeout(r, ms))
@@ -75,7 +83,8 @@ export function startPreloader(appMounted: Promise<void>) {
   }
 
   const countEl = root.querySelector<HTMLElement>('[data-preloader-count]')
-  const statusEl = root.querySelector<HTMLElement>('[data-preloader-status]')
+  const statusEls = root.querySelectorAll<HTMLElement>('[data-preloader-status]')
+  const setStatus = (text: string) => statusEls.forEach((el) => (el.textContent = text))
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   const minMs = seenThisSession() ? MIN_REPEAT_MS : MIN_FIRST_VISIT_MS
 
@@ -103,26 +112,29 @@ export function startPreloader(appMounted: Promise<void>) {
   let raf = 0
 
   const render = (p: number) => {
+    progress = p
     root.style.setProperty('--p', p.toFixed(4))
     if (countEl) countEl.textContent = String(Math.round(p * 100)).padStart(2, '0')
     let idx = 0
     for (let i = 0; i < STATUS.length; i++) if (p >= STATUS[i][0]) idx = i
-    if (idx !== statusIdx && statusEl) {
+    if (idx !== statusIdx) {
       statusIdx = idx
-      statusEl.textContent = STATUS[idx][1]
+      setStatus(STATUS[idx][1])
     }
   }
 
   const finish = () => {
     render(1)
     markSeen()
+    setStatus(READY_LABEL)
     root.classList.add('is-complete')
     root.setAttribute('aria-busy', 'false')
     window.setTimeout(
       () => {
         root.classList.add('is-leaving')
-        // Hero entrance plays as the iris opens, not behind the veil.
+        // Hero entrance plays as the scene forms (or the iris opens), not behind the veil.
         html.classList.remove('is-preloading')
+        html.classList.add('is-revealing')
         lockScroll(false)
         resolveDone()
         window.setTimeout(
@@ -132,23 +144,26 @@ export function startPreloader(appMounted: Promise<void>) {
           },
           reduced ? 600 : 1500,
         )
+        window.setTimeout(() => html.classList.remove('is-revealing'), reduced ? 600 : 3200)
       },
       reduced ? 150 : 480,
     )
   }
 
   const tick = (now: number) => {
-    const dt = Math.min(0.1, (now - last) / 1000)
+    const dt = Math.min(0.1, Math.max(0, (now - last) / 1000))
     last = now
-    const target = ready ? 1 : settled / tasks.length
+    // Never outrun the minimum hold, so a warm cache still fills the porthole evenly.
+    const paced = 1 - Math.pow(1 - Math.min(1, now / minMs), 2)
+    const target = Math.min(paced, ready ? 1 : settled / tasks.length)
     // Catch up to real progress quickly; creep toward the next step so a big layer never looks frozen.
-    const ceiling = ready ? 1 : Math.min(0.96, target + 0.55 / tasks.length)
+    const ceiling = Math.min(paced, ready ? 1 : Math.min(0.96, target + 0.55 / tasks.length))
     const behind = shown < target
-    const rate = ready ? 6 : behind ? 5 : 0.45
-    shown += ((behind || ready ? target : ceiling) - shown) * (1 - Math.exp(-dt * rate))
+    const rate = behind ? 5 : 0.45
+    shown += ((behind ? target : ceiling) - shown) * (1 - Math.exp(-dt * rate))
     render(shown)
 
-    if (ready && shown > 0.995 && now >= minMs) {
+    if (ready && shown > 0.99 && now >= minMs) {
       finish()
       return
     }

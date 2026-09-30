@@ -1386,7 +1386,7 @@ html.has-cursor * {
   inset: -10%;
   z-index: 0;
   pointer-events: none;
-  transform-origin: 47% 42%;
+  transform-origin: 50% 42%;
   will-change: filter, transform;
 }
 
@@ -1396,7 +1396,7 @@ html.has-cursor * {
 .hero__plane {
   position: absolute;
   inset: 0;
-  transform-origin: 47% 42%;
+  transform-origin: 50% 42%;
   will-change: transform;
   backface-visibility: hidden;
 }
@@ -1406,7 +1406,7 @@ html.has-cursor * {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 47% 42%;
+  object-position: var(--focal-x, 47%) 42%;
   user-select: none;
   -webkit-user-drag: none;
 }
@@ -1421,7 +1421,7 @@ html.has-cursor * {
   inset: 0;
   z-index: 6;
   pointer-events: none;
-  background: radial-gradient(circle at 47% 42%, rgba(255, 238, 196, 0.9) 0, rgba(255, 238, 196, 0) 34%);
+  background: radial-gradient(circle at 50% 42%, rgba(255, 238, 196, 0.9) 0, rgba(255, 238, 196, 0) 34%);
   opacity: calc(0.15 + var(--spark) * 0.55);
   mix-blend-mode: soft-light;
 }
@@ -1445,7 +1445,7 @@ html.has-cursor * {
   z-index: 8;
   pointer-events: none;
   opacity: clamp(0, calc(1 - var(--dolly) * 1.85), 1);
-  transform-origin: 47% 42%;
+  transform-origin: 50% 42%;
   will-change: transform, opacity;
 }
 
@@ -2994,6 +2994,21 @@ html.has-cursor * {
 
 .gl-scene .hero__scene {
   visibility: hidden;
+}
+
+/* The preloader's void shows the bare canvas; hero chrome settles in as the scene forms */
+html.is-preloading .hero :is(.hero__glow, .hero__vignette, .comp-grid, .site-header, .hero__credit, .spark-field) {
+  opacity: 0 !important;
+}
+
+html.is-revealing .hero :is(.hero__glow, .hero__vignette, .comp-grid, .site-header, .hero__credit) {
+  animation: heroChromeIn 1.4s var(--ease-out) 0.9s backwards;
+}
+
+@keyframes heroChromeIn {
+  from {
+    opacity: 0;
+  }
 }
 
 .chapter {

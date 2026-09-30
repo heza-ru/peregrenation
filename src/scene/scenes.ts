@@ -37,12 +37,26 @@ export const HERO_LAYERS: readonly SceneLayer[] = [
 ]
 
 /** Gap between the fingertips, in viewport fractions (top-left origin) */
-export const SPARK = { x: 0.47, y: 0.42 } as const
+export const SPARK = { x: 0.5, y: 0.42 } as const
+
+/** Gap between the fingertips in the hero plates' uv, and the plates' shared pixel size */
+const GAP_UV = [0.47, 0.42] as const
+const HERO_IMG = [2560, 1103] as const
+
+/**
+ * object-position x that lands the fingertip gap on the centre of a cover-fit box.
+ * Only possible while the plate overflows horizontally; ultra-wide boxes keep the gap at GAP_UV.
+ */
+export function heroFocalX(boxW: number, boxH: number): number {
+  const rw = HERO_IMG[0] * Math.max(boxW / HERO_IMG[0], boxH / HERO_IMG[1])
+  if (rw - boxW < 1) return GAP_UV[0]
+  return Math.min(1, Math.max(0, (GAP_UV[0] * rw - 0.5 * boxW) / (rw - boxW)))
+}
 
 export const SCENES: Record<SceneId, SceneDef> = {
   hero: {
     layers: HERO_LAYERS,
-    focal: [SPARK.x, SPARK.y],
+    focal: [GAP_UV[0], SPARK.y],
     bg: [0.25, 0.42, 0.55],
     void: [0.1, 0.09, 0.2],
   },
