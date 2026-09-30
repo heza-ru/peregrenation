@@ -8,6 +8,7 @@ import {
   type PointerEvent,
   type RefObject,
 } from 'react'
+import { Link } from 'react-router-dom'
 import { assets, curiosities, exportFormats, galleryWorldKind, galleryWorks } from '../data'
 import { usePrefersReducedMotion } from '../hooks/useMotion'
 import { addFrame, FramePriority } from '../motion/frameLoop'
@@ -519,14 +520,20 @@ export function GallerySection() {
             <div ref={railRef} className="gallery__rail">
               {galleryWorks.map((work, i) => {
                 const kind = galleryWorldKind(work)
+                const worldPath = work.worldId ? `/world/${work.worldId}` : null
                 return (
-                <a
+                <Link
                   key={work.id}
-                  href={`#w-${work.id}`}
+                  to={worldPath ?? '/'}
                   className={`gallery__card gallery__card--${work.widthClass}`}
                   data-reveal-child
                   data-cursor="View"
+                  aria-label={work.worldId ? `Enter ${work.title}` : work.title}
                   style={{ '--reveal-delay': `${180 + i * 90}ms` } as CSSProperties}
+                  onClick={(e) => {
+                    // No shipped world yet — stay on the landing.
+                    if (!worldPath) e.preventDefault()
+                  }}
                 >
                   <GalleryFrame src={work.src} alt={work.alt} kind={kind} eager={i < 3} />
                   <span className="gallery__meta">
@@ -535,7 +542,7 @@ export function GallerySection() {
                       {work.artist} · {work.year}
                     </span>
                   </span>
-                </a>
+                </Link>
                 )
               })}
             </div>
