@@ -44,60 +44,78 @@ The doorway is a scroll through the painting. The worlds on the other side are p
 
 Two WebGL stacks, and only one of them is mounted at a time. The doorway uses a custom WebGL2 engine. A world unmounts that canvas and lazy-loads React Three Fiber, so Three.js never sits in the landing bundle.
 
-```
-                    ┌─────────────────────────────────────────┐
-                    │  Offline, once per painting             │
-                    │  Opus  →  scene manifest, entity ids    │
-                    │  Python  →  masks, depth, baked meshes  │
-                    └──────────────────┬──────────────────────┘
-                                       │  data/paintings/<id>/
-                                       ▼
-┌──────────────────────────────────────────────────────────────────┐
-│  Browser                                                         │
-│                                                                  │
-│   /                          /world/:paintingId                  │
-│   Doorway                    Explore (lazy)                      │
-│   ├─ preloader               ├─ 3D hall   Athens, Arnolfini      │
-│   ├─ SceneEngine (WebGL2)    ├─ 2D wander  the other works       │
-│   ├─ Lenis (desktop)         └─ HUD, proximity facts, sources    │
-│   └─ Enter painting                                              │
-└──────────────────────────────────────────────────────────────────┘
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor':'#221b15','primaryTextColor':'#efe6d6','primaryBorderColor':'#c9a24a','secondaryColor':'#1a1612','secondaryTextColor':'#efe6d6','secondaryBorderColor':'#a8843c','tertiaryColor':'#15120f','tertiaryTextColor':'#efe6d6','tertiaryBorderColor':'#3a2a1c','lineColor':'#c9a24a','textColor':'#efe6d6','clusterBkg':'#1a1612','clusterBorder':'#a8843c','titleColor':'#c9a24a','edgeLabelBackground':'#15120f','fontFamily':'Georgia, serif'}}}%%
+flowchart TB
+  opus["Claude Opus<br/>scene manifest and entity ids"]
+  py["Python pipeline<br/>masks, depth, baked meshes"]
+  files["data/paintings/id"]
+
+  opus --> py --> files
+
+  subgraph browser ["Browser"]
+    direction LR
+    subgraph door ["Doorway · /"]
+      direction TB
+      pre["Preloader"]
+      engine["SceneEngine · WebGL2"]
+      lenis["Lenis · desktop"]
+      enter["Enter painting"]
+    end
+    subgraph explore ["Explore · /world/id · lazy"]
+      direction TB
+      hall["3D hall<br/>Athens, Arnolfini"]
+      wander["2D wander<br/>the other works"]
+      hud["HUD · proximity facts and sources"]
+    end
+    door -->|"unmount, then load"| explore
+  end
+
+  files --> door
+  files --> explore
 ```
 
 Opus decides what a world contains. Code executes that decision. Nothing calls a model per frame, per step, or when someone uploads a scan.
 
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor':'#221b15','primaryTextColor':'#efe6d6','primaryBorderColor':'#c9a24a','lineColor':'#c9a24a','textColor':'#efe6d6','clusterBkg':'#1a1612','clusterBorder':'#a8843c','titleColor':'#c9a24a','fontFamily':'Georgia, serif'}}}%%
+flowchart LR
+  subgraph src ["src"]
+    direction TB
+    app["app · routes and world shell"]
+    boot["boot · doorway preloader"]
+    components["components · landing and gallery"]
+    scene["scene · WebGL2 chapters"]
+    world["world · halls, figures, wander"]
+    camera["camera · walk, look, collision"]
+    painting["painting · manifest and recognition"]
+    knowledge["knowledge · facts and sources"]
+    ui["ui/world · explore HUD"]
+  end
+  subgraph disk ["On disk"]
+    direction TB
+    data["data/paintings/id<br/>source of truth"]
+    public["public/data<br/>what the browser fetches"]
+    scripts["scripts/pipeline<br/>offline bake"]
+    docsnode["docs"]
+  end
+  scripts --> data --> public
 ```
-src/
-  app/          routes, world shell
-  boot/         doorway preloader
-  components/   landing, gallery, Enter painting
-  scene/        WebGL2 chapter engine and shaders
-  world/        R3F halls, figures, layered wander
-  camera/       walk, look, collision
-  painting/     manifest types, recognize a scan
-  knowledge/    facts and sources
-  ui/world/     explore HUD
 
-data/paintings/<id>/     source of truth (manifest, facts, meshes)
-public/data/...          the copy the browser actually fetches
-scripts/pipeline/        offline bake (Athens hall, figures, textures)
-docs/                    product, decisions, pipeline
+**Authoring**, once per painting:
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor':'#221b15','primaryTextColor':'#efe6d6','primaryBorderColor':'#c9a24a','lineColor':'#c9a24a','textColor':'#efe6d6','fontFamily':'Georgia, serif'}}}%%
+flowchart LR
+  paint["Painting"] --> manifest["Opus manifest"] --> bake["Masks, depth,<br/>layers, baked textures"] --> store["data/paintings/id"] --> served["public/data"] --> ship["Shipped with the app"]
 ```
 
-**Authoring**
+**Runtime.** A scan is matched to the catalog. It never starts a new bake.
 
-```
-painting → Opus manifest → masks / depth / layers / baked textures
-        → data/paintings/<id>/ → public/data → shipped with the app
-```
-
-**Runtime**
-
-```
-gallery pick, or a dropped scan
-  → recognizePainting (match against the curated catalog)
-  → /world/:id loads static files
-  → no Opus, no segmentation, no new geometry
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor':'#221b15','primaryTextColor':'#efe6d6','primaryBorderColor':'#c9a24a','lineColor':'#c9a24a','textColor':'#efe6d6','fontFamily':'Georgia, serif'}}}%%
+flowchart LR
+  pick["Gallery pick<br/>or a dropped scan"] --> match["recognizePainting"] --> route["/world/id"] --> static["Static files only"]
 ```
 
 Deeper notes: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/PROJECT.md](docs/PROJECT.md), [docs/DECISIONS.md](docs/DECISIONS.md), [docs/PIPELINE.md](docs/PIPELINE.md).
